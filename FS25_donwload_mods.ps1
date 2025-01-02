@@ -13,7 +13,11 @@ $urls = @(
     "https://github.com/Stephan-S/FS25_AutoDrive/releases/latest/download/FS25_AutoDrive.zip",
     "https://github.com/Williwillswisse/AD_xCrossing/releases/latest/download/FS25_AutoDrive_xCrossing.zip",
     "https://github.com/Courseplay/Courseplay_FS25/releases/latest/download/FS25_Courseplay.zip",
-    "https://drive.google.com/uc?export=download&id=1OvsPBh4dScck_RuX8EltwKE2ZCzb9iJH" # Google Drive direct link workaround
+    # "https://drive.google.com/uc?export=download&id=1OvsPBh4dScck_RuX8EltwKE2ZCzb9iJH" # Google Drive direct link workaround
+    "https://github.com/urbanswelt/FS25_SiloKing/releases/latest/download/FS25_SiloKing.zip"
+
+    
+    
 )
 
 # Download each file
