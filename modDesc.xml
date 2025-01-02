@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+    <author>SiloKing</author>
+    <version>1.0.0.1</version>
+    <title>
+        <en>Silo King Configurations</en>
+    </title>
+    <description>
+<en><![CDATA[Silo King Configurations - The ultimate loading capacity for your farm!
+
+Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
+
+Vehicles:
+
+MaxiRoll 630 Greenline
+Working speed: 30 kph
+Seed Capacity: 10,000 L
+Prefilled Seed: 10,000 L
+
+JUMBO 8450 DB
+Working speed: 30 kph
+Capacity: 400,000 L
+Silage additive tank: 10,000 L
+Prefilled Silage Additive: 10,000 L
+
+VARIO-Master V140
+Capacity: 400,000 L
+Silage additive tank: 10,000 L
+Prefilled Silage Additive: 10,000 L
+
+Condor Endurance 2
+Working speed: 30 kph
+Capacity: 50,000 L
+Diesel Capacity: 10,000 L
+
+T-ForcePlus 950
+Working speed: 30 kph
+Seed Capacity: 10,000 L
+Fertilizer Capacity: 10,000 L
+Prefilled Seed: 10,000 L
+Prefilled Fertilizer: 10,000 L
+
+Bredal K105
+Working speed: 30 kph
+Fertilizer Lime Capacity: 50,000 L
+
+Crop Chaser 1000
+Capacity: 400,000 L
+
+NOVACAT 301 AM ED Pro
+Working speed: 30 kph
+Working width: 3.1 m
+
+NOVACAT A10 Cross Flow
+Working speed: 30 kph
+Working width: 10.02 m
+
+Placeables:
+
+Diesel + Silage Additive Tank
+Capacity: 200,000 L
+Prefilled Diesel: 100,000 L
+Prefilled Silage Additive: 100,000 L
+
+Script Mods:
+
+ThundR - Extended Filenames
+
+Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. As far as I know, vanilla only allows this in certain places. This mod extends that functionality to most xml files, including placeables and vehicles.
+    - Allows use of $mapdir$path/to/filename.xml
+    - Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+    - Allows use of $pdlcdir$path/to/filename.xml
+    - Allows use of $FS22_MOD_NAME$path/to/filename.xml
+
+    - Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
+
+    - Adding "!" after the tag ($moddir$!) allows accessing files from mods that are not loaded
+        + Use with caution, could cause unexpected results
+        https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
+
+Mod Dependencies:
+
+FS25_increasedWorkAreasForPickups
+FS25_superCharger
+FS25_poettingerMowerPack
+FS25_bremerTransportwagen
+FS25_ObjectBaleStorage
+
+
+]]></en>
+<de><![CDATA[Silo King Konfigurationen - Die ultimative Ladekapazität für deinen Hof!
+
+Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in den vollen Genuss der großen Ladekapazität zu kommen!
+
+
+
+]]></de>
+    </description>
+    <iconFilename>store_jumbo8450DB.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+	<extraSourceFiles>
+		<sourceFile filename="scripts/Main.lua"/>
+	</extraSourceFiles>
+
+    <storeItems>
+    <!-- vehicles -->
+        <storeItem xmlFilename="SK_Pack/vehicles/jumbo8450DB.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/maxiroll630Greenline.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/varioMaster.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/condorEndurance2.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/tForcePlus950.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/k105.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/cc1000.xml"/>
+    <!-- mods -->
+        <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
+    <!-- placeables -->    
+        <storeItem xmlFilename="SK_Pack/placeables/dieselTanksLevel03.xml"/>
+    </storeItems>
+
+<l10n>
+
+<text name="Tank_SK">
+<en>Diesel + Silage Additive</en>
+<de>Diesel + Siliermittel</de>
+</text>
+
+</l10n>
+
+<dependencies>
+<dependency>FS25_increasedWorkAreasForPickups</dependency>
+<dependency>FS25_superCharger</dependency>
+<dependency>FS25_poettingerMowerPack</dependency>
+<dependency>FS25_bremerTransportwagen</dependency>
+<dependency>FS25_ObjectBaleStorage</dependency>
+</dependencies>
+
+</modDesc>
