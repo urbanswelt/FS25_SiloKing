@@ -1,12 +1,26 @@
 $ErrorActionPreference = "Stop"
 
-# Define the download folder
-$downloadFolder = "C:\Users\$env:UserName\OneDrive\Documents\My Games\FarmingSimulator2025\mods_dev"
+# Define potential download folders
+$folders = @(
+    "C:\Users\$env:UserName\OneDrive\Documents\My Games\FarmingSimulator2025\mods",
+    "C:\Users\$env:UserName\Documents\My Games\FarmingSimulator2025\mods"
+)
 
-# Create the folder if it does not exist
-if (-not (Test-Path -Path $downloadFolder)) {
-    New-Item -ItemType Directory -Path $downloadFolder -Force | Out-Null
+# Check if folders exist
+$existingFolders = @()
+foreach ($folder in $folders) {
+    if (Test-Path -Path $folder) {
+        $existingFolders += $folder
+    }
 }
+
+# If no folders exist, exit the script
+if (-not $existingFolders) {
+    Write-Host "None of the specified folders exist. Exiting the script." -ForegroundColor Red
+    exit
+}
+
+Write-Host "Using the following download folders: $($existingFolders -join ', ')"
 
 # Define the URLs to download
 $urls = @(
@@ -16,15 +30,17 @@ $urls = @(
     "https://github.com/urbanswelt/FS25_SiloKing/releases/latest/download/FS25_SiloKing.zip"
 )
 
-# Download each file
+# Download each file to all existing folders
 foreach ($url in $urls) {
     # Extract the file name from the URL
     $fileName = ($url -split '/')[-1]
-    $destinationPath = Join-Path -Path $downloadFolder -ChildPath $fileName
+    foreach ($folder in $existingFolders) {
+        $destinationPath = Join-Path -Path $folder -ChildPath $fileName
 
-    # Download the file
-    Write-Host "Downloading $url to $destinationPath"
-    Invoke-WebRequest -Uri $url -OutFile $destinationPath -UseBasicParsing
+        # Download the file
+        Write-Host "Downloading $url to $destinationPath"
+        Invoke-WebRequest -Uri $url -OutFile $destinationPath -UseBasicParsing
+    }
 }
 
-Write-Host "Download completed! Files saved to $downloadFolder."
+Write-Host "Download completed! Files saved to: $($existingFolders -join ', ')"
