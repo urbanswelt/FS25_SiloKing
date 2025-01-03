@@ -115,15 +115,25 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
     <!-- mods -->
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/smallHayVentilation.xml"/>
     <!-- placeables -->    
         <storeItem xmlFilename="SK_Pack/placeables/dieselTanksLevel03.xml"/>
     </storeItems>
 
 <l10n>
 
-<text name="Tank_SK">
-<en>Diesel + Silage Additive</en>
-<de>Diesel + Siliermittel</de>
+<text name="shopItem_tankSK">
+    <en>Diesel + Silage Additive</en>
+    <de>Diesel + Siliermittel</de>
+</text>
+
+<text name="shopItem_hayVentilation">
+    <en>Hay Ventilation / Fermenter</en>
+    <de>Heubelüftung / Fermenter</de>
+</text>
+<text name="function_hayVentilation">
+    <en>Here you can make hay/silage from grass. This building accepts bulk material and bales.</en>
+    <de>Hier kannst du Heu/Silage aus Gras herstellen. Dieses Gebäude nimmt sowohl Schüttgut als auch Ballen an.</de>
 </text>
 
 </l10n>
@@ -134,6 +144,7 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 <dependency>FS25_poettingerMowerPack</dependency>
 <dependency>FS25_bremerTransportwagen</dependency>
 <dependency>FS25_ObjectBaleStorage</dependency>
+<dependency>FS25_hayStorageAndVentilation</dependency>
 </dependencies>
 
 </modDesc>
