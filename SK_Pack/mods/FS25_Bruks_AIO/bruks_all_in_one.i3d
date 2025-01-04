@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bruks_all_in_one.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="Shaders/vehicleShader.xml"/>
+    <File fileId="10" filename="Textures/Decals.dds"/>
+    <File fileId="2" filename="Textures/brucks_d2.dds"/>
+    <File fileId="9" filename="Textures/brucks_d3.dds"/>
+    <File fileId="14" filename="Textures/brucks_dec.dds"/>
+    <File fileId="13" filename="Textures/default_normal.dds"/>
+    <File fileId="16" filename="logo.dds"/>
+    <File fileId="18" filename="logo1.dds"/>
+    <File fileId="3" filename="$data/shared/default_normal.dds"/>
+    <File fileId="4" filename="$data/shared/default_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="20 - Default" materialId="5" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="21 - Roller" materialId="6" customShaderId="5">
+      <Texture fileId="9"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="24 - Default" materialId="7" specularColor="1 1 1">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="acmat_0" materialId="8" alphaBlending="true">
+    </Material>
+    <Material name="adStrip" materialId="9" specularColor="0.164706 1 0.164706" alphaBlending="true">
+    </Material>
+    <Material name="Default" materialId="11" customShaderId="5">
+      <Texture fileId="16"/>
+    </Material>
+    <Material name="Default" materialId="12" customShaderId="5">
+      <Texture fileId="18"/>
+    </Material>
+    <Material name="default" materialId="13">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="default" materialId="14" diffuseColor="0.584314 0.584314 0.584314 1">
+    </Material>
+    <Material name="default_mat" materialId="15" diffuseColor="0.713726 0.713726 0.713726 1">
+      <Normalmap fileId="13"/>
+    </Material>
+    <Material name="dfmTools_mat" materialId="16" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="5">
+    </Material>
+    <Material name="lambert1" materialId="19" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="pipe" materialId="20" customShaderId="5">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bruks_all_in_one.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="Box001" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="52" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14">
+      <TransformGroup name="bruks" nodeId="53">
+        <Shape name="TaBLE" translation="-0.589 0.145 -0.805" rotation="0 0 -87" shapeId="2" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="5">
+          <TransformGroup name="drums W" translation="-4.22181e-08 -0.117 0.965812" nodeId="55">
+            <TransformGroup name="crusherCutNode" translation="-0.196148 -0.03 -0.743" rotation="3.53026e-12 2.48656e-12 130" nodeId="56"/>
+            <TransformGroup name="crusherDownForceNode" translation="-0.45 -0.03 -0.743239" rotation="0 0 110" nodeId="57"/>
+            <TransformGroup name="crushParticles" nodeId="58"/>
+            <TransformGroup name="drumMainRefNodeBase" translation="-1.24959 0.272772 -0.125995" nodeId="59">
+              <TransformGroup name="drumMainRefNode" translation="0 0 6.11751e-08" rotation="30.1 -90 0" nodeId="60"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="rolls" translation="0 0.0447277 0" nodeId="61">
+            <Shape name="rollsmall" translation="-0.353081 -0.118 0.0752299" rotation="0 -0 -19.5882" shapeId="3" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="6"/>
+            <Shape name="rollsmall" translation="-0.672418 -0.118 0.0752299" shapeId="3" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          </TransformGroup>
+          <Shape name="animcol" translation="0.259937 -0.19835 0.794" rotation="0 90 0" scale="1 3 1" shapeId="4" kinematic="true" trigger="true" collisionFilterGroup="0x8ff" collisionFilterMask="0x8ff" nodeId="64" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+          <Shape name="animcol" translation="0.259937 0.0343607 0.794" rotation="0 90 0" shapeId="4" kinematic="true" trigger="true" nodeId="65" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+          <TransformGroup name="drums W" translation="-0.660857 -0.117 0.965812" nodeId="66">
+            <TransformGroup name="crusherCutNode" translation="-0.171088 -0.047 -0.743" rotation="3.45689e-12 2.58759e-12 -1.657" nodeId="67"/>
+            <TransformGroup name="crusherDownForceNode" translation="-0.45 -0.03 -0.743239" rotation="0 0 110" nodeId="68"/>
+            <TransformGroup name="crushParticles" nodeId="69"/>
+            <TransformGroup name="drumMainRefNodeBase" translation="-1.24959 0.272772 -0.125995" nodeId="70">
+              <TransformGroup name="drumMainRefNode" translation="0 0 6.11751e-08" rotation="30.1 -90 0" nodeId="71"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="treeSaw" nodeId="72">
+            <TransformGroup name="drums W" translation="-1.269 0.0190491 0.158202" nodeId="73">
+              <TransformGroup name="crusherCutNode" translation="0.197214 0.0689305 -0.124362" rotation="0 1.07613 55.674" nodeId="74"/>
+              <TransformGroup name="crusherDownForceNode" translation="-0.45 -0.03 -0.743239" rotation="0 0 110" nodeId="75"/>
+              <TransformGroup name="crushParticles" nodeId="76"/>
+              <TransformGroup name="drumMainRefNodeBase" translation="-1.24959 0.272772 -0.125995" nodeId="77">
+                <TransformGroup name="drumMainRefNode" translation="0 0 6.11751e-08" rotation="30.1 -90 0" nodeId="78"/>
+              </TransformGroup>
+              <TransformGroup name="crusher" translation="1.56106 -1.31869 3.965" nodeId="79">
+                <TransformGroup name="effects" translation="2.18045 -0.766286 -2.1254" rotation="58.9473 5.09576 89.1959" nodeId="80">
+                  <Shape name="emitterShapeWood" translation="2.556 0.338681 -0.648365" rotation="13.724 3.41509e-06 0" scale="1 1.83096 0.857053" shapeId="5" clipDistance="300" nodeId="81" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+                  <Shape name="emitterShapeDust" translation="2.62273 -0.0643529 -0.308545" rotation="17.0257 3.41509e-06 -1.70755e-06" scale="1 2.58833 1" shapeId="5" clipDistance="300" nodeId="82" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="particleSystem" nodeId="83"/>
+          </TransformGroup>
+          <TransformGroup name="stumpGrinder" nodeId="84">
+            <TransformGroup name="drums W" translation="-1.269 0.0190491 0.158202" nodeId="85">
+              <TransformGroup name="crusherCutNode" translation="0.0303954 0 -0.100304" rotation="91.942 1.04569 56.575" nodeId="86"/>
+              <TransformGroup name="crusherDownForceNode" translation="-0.45 -0.03 -0.743239" rotation="0 0 110" nodeId="87"/>
+              <TransformGroup name="crushParticles" nodeId="88"/>
+              <TransformGroup name="drumMainRefNodeBase" translation="-1.24959 0.272772 -0.125995" nodeId="89">
+                <TransformGroup name="drumMainRefNode" translation="0 0 6.11751e-08" rotation="30.1 -90 0" nodeId="90"/>
+              </TransformGroup>
+              <TransformGroup name="crusher" translation="1.56106 -1.31869 3.965" nodeId="91">
+                <TransformGroup name="effects" translation="2.18045 -0.766286 -2.1254" rotation="58.9473 5.09576 89.1959" nodeId="92">
+                  <Shape name="emitterShapeWood" translation="2.59349 0.141498 -0.511422" rotation="15.7535 3.41509e-06 -1.70755e-06" scale="1 1.83096 0.857053" shapeId="5" clipDistance="300" nodeId="93" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+                  <Shape name="emitterShapeDust" translation="2.56299 -0.180798 -0.17283" rotation="17.11 3.41509e-06 -1.70755e-06" scale="1 2.58833 1" shapeId="5" clipDistance="300" nodeId="94" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="particleSystem" nodeId="95"/>
+          </TransformGroup>
+          <TransformGroup name="treeSaw" translation="-0.494467 0.144978 -0.805395" nodeId="96">
+            <TransformGroup name="treeCutNode" translation="0.174441 0.06 0" rotation="0 0 90" nodeId="97">
+              <TransformGroup name="cutWidth" translation="-0.0968401 0.737 1.5423" nodeId="98"/>
+            </TransformGroup>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="Pipe" translation="0 1.828 -1.26198" nodeId="99">
+          <Shape name="TurnTable" translation="0.430869 -0.39825 0.768228" rotation="-4.01569e-05 -90 0" shapeId="6" nodeId="100" castsShadows="true" receiveShadows="true" materialIds="5">
+            <TransformGroup name="transform" translation="0 0.397 0.21" rotation="-4 0 0" nodeId="101">
+              <Shape name="Pipe" translation="0 -0.002 -0.005" rotation="103 0 -180" shapeId="7" nodeId="102" castsShadows="true" receiveShadows="true" materialIds="5">
+                <TransformGroup name="RaycastPipe" translation="0 3.01699 -2.863" rotation="20 -6.36111e-15 2.54444e-14" nodeId="103">
+                  <Shape name="PipeOverLapping" rotation="175 0 0" shapeId="8" nodeId="104" castsShadows="true" receiveShadows="true" materialIds="5"/>
+                  <TransformGroup name="pipeEnd" translation="-5.68434e-16 7.38964e-15 0" rotation="0 1.04068e-11 0" clipDistance="50" nodeId="111">
+                    <TransformGroup name="pipeEndArmRef" translation="-0.00391391 0.101715 -0.00204567" rotation="36.1437 4.89461e-16 -180" nodeId="112"/>
+                    <TransformGroup name="pipeRaycastNode" translation="1.7053e-15 1.74083e-15 0" rotation="-90 0 0" nodeId="113"/>
+                    <TransformGroup name="fillVolumeDischargeNode" translation="0 2.22884e-08 0" rotation="-90 0 0" nodeId="114"/>
+                    <Shape name="pipeEffect" translation="1.31049e-08 -0.00722949 -0.0173273" rotation="5.19529 -2.34089e-12 -180" shapeId="9" clipDistance="100" nodeId="115" castsShadows="true" receiveShadows="true" materialIds="15"/>
+                    <TransformGroup name="transform" translation="4.83204e-09 -0.00299886 0.277" rotation="-86.2626 -0 180" nodeId="116"/>
+                  </TransformGroup>
+                  <TransformGroup name="blind" nodeId="117">
+                    <TransformGroup name="transform" nodeId="118"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <Shape name="WarningSticker" translation="0 0.210296 0.0559905" rotation="-90 0 0" scale="0.729595 0.113638 0.925925" shapeId="10" nodeId="119" castsShadows="true" receiveShadows="true" materialIds="13"/>
+                <Shape name="pipeEffect" translation="-3.22144e-14 2.58153 -1.56793" rotation="26.1989 1.7175e-13 6.10666e-13" scale="1.1 1.1 1" shapeId="11" clipDistance="100" nodeId="120" castsShadows="true" receiveShadows="true" materialIds="19"/>
+              </Shape>
+              <TransformGroup name="transform" translation="0 0.242991 0.767592" rotation="-45.269 0 0" nodeId="121"/>
+            </TransformGroup>
+            <Shape name="Crosshair" translation="0 -1.81596 -0.00207198" shapeId="12" visibility="false" nodeId="122" castsShadows="true" receiveShadows="true" materialIds="8"/>
+          </Shape>
+          <TransformGroup name="blind" rotation="-45.269 -0 0" nodeId="123">
+            <TransformGroup name="transform" translation="0 0 0.198641" nodeId="124"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="TRTig" translation="2.54333 0 4.08555" nodeId="125">
+          <TransformGroup name="transform" nodeId="126"/>
+          <Shape name="liftUpTrigger" translation="-4.25373 -0.445692 -4.06643" shapeId="13" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x800" collisionFilterMask="0x800" nodeId="127" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+        </TransformGroup>
+        <TransformGroup name="crusher" translation="0.271232 -1.31869 3.965" nodeId="128">
+          <Shape name="roll big" translation="-0.61156 1.897 -4.68356" shapeId="14" nodeId="129" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          <Shape name="rollsmall" translation="-0.718947 1.368 -4.68109" shapeId="3" nodeId="130" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          <Shape name="crusher" translation="0.44 1.792 -3.97" rotation="90 -90 0" shapeId="15" nodeId="131" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="Object002" translation="0.441 1.669 -3.96965" rotation="89.9985 -90 0" shapeId="16" nodeId="132" castsShadows="true" receiveShadows="true" materialIds="7"/>
+          <TransformGroup name="crushParticles" translation="-0.774446 1.712 -4.017" nodeId="133">
+            <Shape name="emitterWood" rotation="0 0 73.639" shapeId="17" clipDistance="300" nodeId="134" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+            <Shape name="emitterSmoke" rotation="0 0 73.6386" shapeId="18" clipDistance="300" nodeId="135" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+          </TransformGroup>
+          <TransformGroup name="col" translation="-0.850111 1.36776 -4.87547" nodeId="136">
+            <Shape name="tablecol" translation="0.944742 0.0655315 0.851" rotation="0 90 0" shapeId="19" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.01" nodeId="137" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="adStrip" nodeId="138">
+          <Shape name="adStrip" translation="0 0.5 0.76" scale="1 1.5 1" shapeId="20" nodeId="139" castsShadows="false" receiveShadows="false" materialIds="11,9"/>
+          <Shape name="adStrip" translation="0 0.5 -0.768" rotation="0 180 0" scale="1 1.5 1" shapeId="20" nodeId="140" castsShadows="false" receiveShadows="false" materialIds="11,9"/>
+          <Shape name="adStrip" translation="0.0489315 0.5 0.771467" scale="1 1.5 1" shapeId="20" nodeId="141" castsShadows="false" receiveShadows="false" materialIds="12,9"/>
+          <Shape name="adStrip" translation="0.0443432 0.5 -0.774332" rotation="0 180 0" scale="1 1.5 1" shapeId="20" nodeId="142" castsShadows="false" receiveShadows="false" materialIds="12,9"/>
+        </TransformGroup>
+        <TransformGroup name="ai" translation="0 -0.0504558 0" rotation="0 90 0" nodeId="143">
+          <Shape name="trailerTrigger" translation="0.474354 1.95 -0.648196" shapeId="21" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="144" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="19"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Attach" translation="0.863039 0.192331 -2.24387e-08" rotation="-180 0 -180" nodeId="145"/>
+      <TransformGroup name="topReferenceNode" translation="0.892354 0.942835 0" nodeId="146"/>
+      <TransformGroup name="particleSystem" nodeId="147"/>
+      <Shape name="main" translation="0.716688 0.527 -3.19303e-08" rotation="0 90 0" shapeId="22" nodeId="148" castsShadows="true" receiveShadows="true" materialIds="5"/>
+      <Shape name="PTO" translation="0.648868 0.512844 -8.6491e-09" rotation="-180 -90 -180" shapeId="23" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="5">
+        <TransformGroup name="pto" translation="-0.000294586 0 0" rotation="0 0 5.32993e-15" nodeId="150"/>
+      </Shape>
+      <TransformGroup name="tipOccluderArea" nodeId="151">
+        <TransformGroup name="tipOccluderAreaStart" translation="2 0 1.4" nodeId="152"/>
+        <TransformGroup name="tipOccluderAreaWidth" translation="-2 0 1.4" nodeId="153"/>
+        <TransformGroup name="tipOccluderAreaHeight" translation="2 0 -0.5" nodeId="154"/>
+      </TransformGroup>
+      <TransformGroup name="Attach" translation="0.813655 0.75467 2.67226e-08" rotation="-180 0 -180" nodeId="155"/>
+      <TransformGroup name="Attach" translation="0.823448 0.415199 -2.95494e-09" rotation="-180 0 -180" nodeId="156"/>
+      <TransformGroup name="Attach" translation="0.771651 0.763102 2.74597e-08" rotation="-180 0 -180" nodeId="157"/>
+      <TransformGroup name="transform" nodeId="158"/>
+      <TransformGroup name="stumpGrinder" translation="0.357227 0.0456426 -0.805356" rotation="0 -2.03555e-13 0" nodeId="159">
+        <TransformGroup name="stumpGrinderNode" translation="0.00165401 -0.00429487 9.57785e-09" rotation="0 0 130" nodeId="160"/>
+        <TransformGroup name="effects" translation="-0.646431 0.641336 0.789099" rotation="2.03555e-13 -0 87.0538" nodeId="161">
+          <Shape name="woodEmitter2" translation="-0.502 -0.447 0" rotation="3.05333e-12 -3.00244e-12 22.409" shapeId="24" clipDistance="100" nodeId="162" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="20"/>
+          <Shape name="dustEmitter2" translation="-0.502 -0.447 0" rotation="0 0 22.409" shapeId="25" clipDistance="100" nodeId="163" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="20"/>
+          <Shape name="woodEmitter3" translation="-0.502 -0.215 0" rotation="0 0 22.409" shapeId="24" clipDistance="100" nodeId="164" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="20"/>
+          <Shape name="dustEmitter3" translation="-0.502 -0.215 0" rotation="-8.14222e-13 -1.42489e-12 22.409" shapeId="25" clipDistance="100" nodeId="165" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="20"/>
+          <Shape name="woodChipsEmitter1" rotation="-90 -90 3.97199e-06" shapeId="26" clipDistance="150" nodeId="166" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          <Shape name="woodDustEmitter1" rotation="-90 -90 3.97e-06" shapeId="26" clipDistance="150" nodeId="167" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          <Shape name="woodChipsEmitter2" translation="-0.610194 0 -1.4091e-14" rotation="1.32311e-12 0 -90" shapeId="26" clipDistance="150" nodeId="168" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          <Shape name="woodDustEmitter2" translation="-0.610194 0 0" rotation="0 0 -90" shapeId="26" clipDistance="150" nodeId="169" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          <Shape name="woodChipsEmitter3" translation="-0.610194 0 -1.4091e-14" rotation="-180 0 90" shapeId="26" clipDistance="150" nodeId="170" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+          <Shape name="woodDustEmitter3" translation="-0.610194 0 0" rotation="-180 0 90" shapeId="26" clipDistance="150" nodeId="171" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="16"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="treeSaw" translation="-0.494467 0.144978 -0.805395" nodeId="172">
+        <TransformGroup name="treeCutNode" translation="0.174441 0.06 0" rotation="0 0 90" nodeId="173">
+          <TransformGroup name="cutWidth" translation="-0.0968401 0.737 1.5423" nodeId="174"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

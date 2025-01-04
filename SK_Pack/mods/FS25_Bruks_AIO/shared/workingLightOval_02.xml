@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>SK_Pack/mods/FS25_Bruks_AIO/shared/workingLightOval_02.i3d</filename>
+    <rootNode node="0" />
+    <defaultLight node="0|0|0" lightTypes="2" intensity="100"/>
+    <rotationNode1 node="0|0" />
+</light>

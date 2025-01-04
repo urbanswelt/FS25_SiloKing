@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>SiloKing</author>
-    <version>1.0.0.2</version>
+    <version>1.0.0.3</version>
     <title>
         <en>Silo King Configurations</en>
     </title>
@@ -78,6 +78,12 @@ Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration
         + Use with caution, could cause unexpected results
         https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
 
+
+BRUCKS_ALL_IN_ONE
+https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
+Equipment for the production of wood chips and stump grinding.
+
+
 Mod Dependencies:
 
 FS25_increasedWorkAreasForPickups
@@ -103,6 +109,21 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 		<sourceFile filename="scripts/Main.lua"/>
 	</extraSourceFiles>
 
+
+	<vehicleTypes>
+        <type name="bruksAllInOne" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">		
+			<specialization name="groundReference" />				
+			<specialization name="dischargeable" /> 
+			<specialization name="pipe" />
+			<specialization name="turnOnVehicle" />
+			<specialization name="woodCrusher" />
+			<specialization name="treeSaw" /> 
+			<specialization name="stumpCutter" />
+			<specialization name="attacherJointControl" />			
+		</type>
+    </vehicleTypes>
+
+
     <storeItems>
     <!-- vehicles -->
         <storeItem xmlFilename="SK_Pack/vehicles/jumbo8450DB.xml"/>
@@ -116,6 +137,7 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/smallHayVentilation.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/FS25_Bruks_AIO/bruks_all_in_one.xml"/>
     <!-- placeables -->    
         <storeItem xmlFilename="SK_Pack/placeables/dieselTanksLevel03.xml"/>
     </storeItems>
@@ -134,6 +156,13 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 <text name="function_hayVentilation">
     <en>Here you can make hay/silage from grass. This building accepts bulk material and bales.</en>
     <de>Hier kannst du Heu/Silage aus Gras herstellen. Dieses Gebäude nimmt sowohl Schüttgut als auch Ballen an.</de>
+</text>
+
+<text name="typeDesc_bruksAllInOne">
+    <en>Processor</en>
+</text>
+<text name="function_bruksAllInOne">
+    <en>Tree Cutter, Chipper and Stump Grinder all in one.</en>
 </text>
 
 </l10n>
