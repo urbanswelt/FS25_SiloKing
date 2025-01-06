@@ -86,20 +86,20 @@
                 </outputs>
             </production>
 
-            <production id="Silage" name="$l10n_fillType_silage" cyclesPerHour="2" costsPerActiveHour="2">
+            <production id="Silage" name="$l10n_fillType_silage" cyclesPerHour="1" costsPerActiveHour="1">
                 <inputs>
-                    <input fillType="GRASS_WINDROW" amount="1000" />
+                    <input fillType="GRASS_WINDROW" amount="8484" />
                 </inputs>
                 <outputs>
-                    <output fillType="Silage" amount="1000" />
+                    <output fillType="Silage" amount="8484" />
                 </outputs>
             </production>
 
         </productions>
 
         <sellingStation node="sellingStation" appearsOnStats="true" supportsExtension="true">
-            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="GRASS_WINDROW DRYGRASS_WINDROW" aiNode="aiNodeUnlading"/>
-			<unloadTrigger fillTypes="GRASS_WINDROW DRYGRASS_WINDROW">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="SILAGE GRASS_WINDROW DRYGRASS_WINDROW" aiNode="aiNodeUnlading"/>
+			<unloadTrigger fillTypes="SILAGE GRASS_WINDROW DRYGRASS_WINDROW">
 				<baleTrigger triggerNode="baleTrigger" />
 			</unloadTrigger>
 			<sounds>
@@ -108,7 +108,7 @@
         </sellingStation>
 
         <loadingStation>
-			<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="GRASS_WINDROW DRYGRASS_WINDROW" aiNode="aiNodeLoading">
+			<loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="2000" dischargeNode="dischargeNode" fillTypes="SILAGE GRASS_WINDROW DRYGRASS_WINDROW" aiNode="aiNodeLoading">
                 <effectNode effectNode="pipeEffect"      materialType="pipe"           fadeTime="0.5" scale="1 1 1" />
                 <effectNode effectNode="pipeEffectSmoke" materialType="unloadingSmoke" fadeTime="0.5" />
             </loadTrigger>
