@@ -22,13 +22,15 @@ if (-not $existingFolders) {
 
 Write-Host "Using the following download folders: $($existingFolders -join ', ')"
 
-# Define the URLs to download
-$urls = @(
-    "https://github.com/Stephan-S/FS25_AutoDrive/releases/latest/download/FS25_AutoDrive.zip",
-    "https://github.com/Williwillswisse/AD_xCrossing/releases/latest/download/FS25_AutoDrive_xCrossing.zip",
-    "https://github.com/Courseplay/Courseplay_FS25/releases/latest/download/FS25_Courseplay.zip",
-    "https://github.com/urbanswelt/FS25_SiloKing/releases/latest/download/FS25_SiloKing.zip"
-)
+# Fetch URLs from external source
+$urlsFile = "https://raw.githubusercontent.com/urbanswelt/FS25_SiloKing/main/urls.txt"
+try {
+    $urlContent = Invoke-WebRequest -Uri $urlsFile -UseBasicParsing
+    $urls = $urlContent.Content -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" }
+} catch {
+    Write-Host "Failed to fetch URLs from $urlsFile. Exiting." -ForegroundColor Red
+    exit
+}
 
 # Download each file to all existing folders
 foreach ($url in $urls) {
