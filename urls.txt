@@ -1,0 +1,4 @@
+https://github.com/Stephan-S/FS25_AutoDrive/releases/latest/download/FS25_AutoDrive.zip
+https://github.com/Williwillswisse/AD_xCrossing/releases/latest/download/FS25_AutoDrive_xCrossing.zip
+https://github.com/Courseplay/Courseplay_FS25/releases/latest/download/FS25_Courseplay.zip
+https://github.com/urbanswelt/FS25_SiloKing/releases/latest/download/FS25_SiloKing.zip
