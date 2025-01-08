@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>SiloKing</author>
-    <version>1.0.0.6</version>
+    <version>1.0.0.7</version>
     <title>
         <en>Silo King Configurations</en>
     </title>
@@ -121,8 +121,22 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 			<specialization name="stumpCutter" />
 			<specialization name="attacherJointControl" />			
 		</type>
+        <type name="mowerBatwing" parent="mower" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="mulcher"/>
+            <specialization name="stumpCutter"/>
+        </type>
     </vehicleTypes>
 
+    <materialTemplates>
+        <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0 0 0" parentTemplate="calibratedPaint"/>
+        <template name="GMNG_HELLABLACK_OLD" title="$l10n_color_hellaBlack_old" colorScale="0 0 0" parentTemplate="metalPaintedOld"/>
+        <template name="GMNG_HELLABLACK_MATTE" title="$l10n_color_hellaBlack_matte" colorScale="0 0 0" parentTemplate="calibratedMatPaint"/>
+        <template name="GMNG_HELLABLACK_METALLIC" title="$l10n_color_hellaBlack_metallic" colorScale="0 0 0" parentTemplate="calibratedMetallicPaint"/>
+        <template name="GMNG_HELLABLACK_ROUGH" title="$l10n_color_hellaBlack_rough" colorScale="0 0 0" parentTemplate="metalPaintedRoughBlack"/>
+        <template name="GMNG_HELLABLACK_SCRATCHED" title="$l10n_color_hellaBlack_scratched" colorScale="0 0 0" parentTemplate="palladiumScratched"/>
+        <template name="GMNG_HELLABLACK_GALVANIZED" title="$l10n_color_hellaBlack_galvanized" colorScale="0 0 0" parentTemplate="metalGalvanized"/>
+        <template name="GMNG_HELLABLACK_PLASTIC" title="$l10n_color_hellaBlack_plastic" colorScale="0 0 0" parentTemplate="plasticPaintedBlack"/>
+    </materialTemplates>
 
     <storeItems>
     <!-- vehicles -->
@@ -140,34 +154,12 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/smallHayVentilation.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/FS25_Bruks_AIO/bruks_all_in_one.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/mm8000_batwing.xml"/>
     <!-- placeables -->    
         <storeItem xmlFilename="SK_Pack/placeables/dieselTanksLevel03.xml"/>
     </storeItems>
 
-<l10n>
-
-<text name="shopItem_tankSK">
-    <en>Diesel + Silage Additive</en>
-    <de>Diesel + Siliermittel</de>
-</text>
-
-<text name="shopItem_hayVentilation">
-    <en>Hay Ventilation / Fermenter</en>
-    <de>Heubelüftung / Fermenter</de>
-</text>
-<text name="function_hayVentilation">
-    <en>Here you can make hay/silage from grass. This building accepts bulk material and bales.</en>
-    <de>Hier kannst du Heu/Silage aus Gras herstellen. Dieses Gebäude nimmt sowohl Schüttgut als auch Ballen an.</de>
-</text>
-
-<text name="typeDesc_bruksAllInOne">
-    <en>Processor</en>
-</text>
-<text name="function_bruksAllInOne">
-    <en>Tree Cutter, Chipper and Stump Grinder all in one.</en>
-</text>
-
-</l10n>
+<l10n filenamePrefix="languages/l10n"/>
 
 <dependencies>
 <dependency>FS25_increasedWorkAreasForPickups</dependency>
