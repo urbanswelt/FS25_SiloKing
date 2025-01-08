@@ -16,7 +16,7 @@
         <!--dailyUpkeep>130</dailyUpkeep-->
         <lifetime>600</lifetime>
         <brand>LIZARD</brand>
-        <category>wood</category>
+        <category>woodChippers</category>
         <vertexBufferMemoryUsage>1045192</vertexBufferMemoryUsage>
         <indexBufferMemoryUsage>158754</indexBufferMemoryUsage>
         <textureMemoryUsage>17651416</textureMemoryUsage>

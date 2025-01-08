@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>SiloKing</author>
-    <version>1.0.0.4</version>
+    <version>1.0.0.5</version>
     <title>
         <en>Silo King Configurations</en>
     </title>
@@ -133,6 +133,7 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
         <storeItem xmlFilename="SK_Pack/vehicles/tForcePlus950.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/k105.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/cc1000.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/vario1000.xml"/>
     <!-- mods -->
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
