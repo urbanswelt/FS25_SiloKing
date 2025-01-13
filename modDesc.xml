@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>SiloKing</author>
-    <version>1.0.0.7</version>
+    <version>1.0.0.8</version>
     <title>
         <en>Silo King Configurations</en>
     </title>
@@ -143,7 +143,7 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
         <storeItem xmlFilename="SK_Pack/vehicles/jumbo8450DB.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/maxiroll630Greenline.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/varioMaster.xml"/>
-        <storeItem xmlFilename="SK_Pack/vehicles/condorEndurance2.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/ux5201Super.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/tForcePlus950.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/k105.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/cc1000.xml"/>
@@ -168,6 +168,11 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 <dependency>FS25_bremerTransportwagen</dependency>
 <dependency>FS25_ObjectBaleStorage</dependency>
 <dependency>FS25_hayStorageAndVentilation</dependency>
+<!-- external --> 
+<dependency>FS25_BednarBatWing</dependency>
+<dependency>FS25_Courseplay</dependency>
+<dependency>FS25_AutoDrive_xCrossing</dependency>
+<dependency>FS25_AutoDrive</dependency>
 </dependencies>
 
 </modDesc>
