@@ -35,12 +35,28 @@ version-resolver:
   major:
     labels:
       - 'major'
+      - 'feature'
+      - 'enhancement'
   minor:
     labels:
       - 'minor'
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
   patch:
     labels:
       - 'patch'
+      - 'infrastructure'
+      - 'automation'
+      - 'documentation'
+      - 'dependencies'
+      - 'ci'
+      - 'test'
+      - 'codecov'
+      - 'testing'
+      - 'refactor'
+      - 'unit tests'
+      - 'release'
   default: patch
 template: |
   ## Changes
