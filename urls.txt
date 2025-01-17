@@ -3,4 +3,3 @@ https://github.com/Williwillswisse/AD_xCrossing/releases/latest/download/FS25_Au
 https://github.com/Courseplay/Courseplay_FS25/releases/latest/download/FS25_Courseplay.zip
 https://github.com/urbanswelt/FS25_SiloKing/releases/latest/download/FS25_SiloKing.zip
 https://github.com/GMNGjoy/FS25_BednarBatWing/releases/latest/download/FS25_BednarBatWing.zip
-https://github.com/Williwillswisse/AD_T_intersection/releases/latest/download/FS25_AutoDrive_T_intersection.zip
