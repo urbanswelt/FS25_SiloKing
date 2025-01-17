@@ -1,7 +1,5 @@
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
-prerelease: true
-include-pre-releases: true
+name-template: '$RESOLVED_VERSION 🌈'
+tag-template: '$RESOLVED_VERSION'
 
 categories:
   - title: '🚀 Features'
