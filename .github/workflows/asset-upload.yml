@@ -16,7 +16,7 @@ jobs:
       - name: Zip Folder
         run: |
           rm -rf FS25_SiloKing.zip
-          zip -r FS25_SiloKing.zip * -x ".git/*" ".github/*"
+          zip -r FS25_SiloKing.zip * -x ".git/*" ".github/*" "LICENSE" "README.md" "url.txt" "*.ps1"
           echo "#### Zip Done ####"
           pwd
           ls -l
