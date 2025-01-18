@@ -14,7 +14,10 @@ jobs:
       - name: Build
         run: echo ${{ github.sha }} > Release.txt
       - name: Zip Folder
-        run: zip -r FS25_SiloKing.zip FS25_SiloKing -x ".git/*" ".github/*"
+        run: |
+          cd ../ # I added this
+          rm -rf FS25_SiloKing.zip
+          zip -r FS25_SiloKing.zip FS25_SiloKing -x ".git/*" ".github/*"
       - name: Test
         run: cat Release.txt
       - name: Release
