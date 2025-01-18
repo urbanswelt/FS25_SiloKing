@@ -12,11 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build
-        run: echo ${{ github.sha }} > Release.txt
-      - name: Zip Folder
+        run: echo ${{ github.repository }} > Release.txt
+      - name: Zip MOD
         run: |
           rm -rf FS25_SiloKing.zip
-          zip -r FS25_SiloKing.zip * -x ".git/*" ".github/*" "LICENSE" "README.md" "url.txt" "*.ps1"
+          zip -r FS25_SiloKing.zip * -x ".git/*" ".github/*" "LICENSE" "README.md" "urls.txt" "*.ps1"
           echo "#### Zip Done ####"
           pwd
           ls -l
