@@ -11,19 +11,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build
-        run: echo ${{ github.repository }} > Release.txt
-      - name: Zip MOD
+
+      - name: Create Zip
+        id: zip_step  # Set an ID for the step to refer to outputs later
         run: |
-          rm -rf FS25_SiloKing.zip
-          zip -r FS25_SiloKing.zip * -x ".git/*" ".github/*" "LICENSE" "README.md" "urls.txt" "*.ps1"
-          echo "#### Zip Done ####"
-          pwd
-          ls -l
-      - name: Test
-        run: cat Release.txt
-      - name: Release
+          repo_name="${{ github.repository }}"
+          mod_name="${repo_name#*/}"  # Extract the part after the '/'
+          zip_file="${mod_name}.zip"  # Create the dynamic file name
+          rm -rf "$zip_file"  # Remove existing zip file if any
+          zip -r "$zip_file" * -x ".git/*" ".github/*" "LICENSE" "README.md" "urls.txt" "*.ps1"
+          echo "::set-output name=zipfile::$zip_file"  # Set the output for later use
+
+      - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: FS25_SiloKing.zip
+          files: ${{ steps.zip_step.outputs.zipfile }}  # Use the dynamic output from the previous step
