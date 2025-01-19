@@ -14,7 +14,7 @@ jobs:
 
       - name: Update Changelog
         run: |
-          date +%s > CHANGELOG.md
+          ${{ github.event.release.tag_name }} > CHANGELOG.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
