@@ -26,6 +26,7 @@ jobs:
         with:
           title: ${{ steps.vars.outputs.pr_title }}
           body: ${{ steps.vars.outputs.pr_body }}
+          base: main
 
       - name: Create Zip
         run: |
