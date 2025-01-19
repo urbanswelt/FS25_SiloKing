@@ -1,0 +1,78 @@
+# Lua
+*.luac
+*.out
+*.log
+
+# PowerShell
+*.ps1xml
+*.psd1
+*.psm1
+*.pssc
+*.psrc
+*.ps1
+*.ps1.*
+
+# Windows OS Specific
+Thumbs.db
+Desktop.ini
+*.lnk
+*.bat
+*.cmd
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+*.log
+*.swp
+*.swo
+*.tmp
+~*
+
+# IDEs and Editors
+.idea/
+*.code-workspace
+.vscode/
+*.sublime-*
+*.kate-swp
+*.nvimlog
+
+# Compiled files
+*.dll
+*.exe
+*.obj
+*.o
+*.pdb
+*.lib
+*.so
+*.dylib
+
+# Backup Files
+*.bak
+*.old
+*.orig
+*.save
+*.backup
+*.bak
+*.swp
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Miscellaneous
+*.class
+*.pyc
+*.out
+*.lock
+*.bak
+*.swp
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# specific to this project
+snippets.md
