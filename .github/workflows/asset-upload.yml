@@ -12,6 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set output variables
+        id: vars
+        run: |
+          pr_title="[Test] Add report file $(date +%d-%m-%Y)"
+          pr_body="This PR was auto-generated on $(date +%d-%m-%Y) \
+            by [create-pull-request](https://github.com/peter-evans/create-pull-request)."
+          echo "pr_title=$pr_title" >> $GITHUB_OUTPUT
+          echo "pr_body=$pr_body" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: ${{ steps.vars.outputs.pr_title }}
+          body: ${{ steps.vars.outputs.pr_body }}
+
       - name: Create Zip
         run: |
           repo_name="${{ github.repository }}"
