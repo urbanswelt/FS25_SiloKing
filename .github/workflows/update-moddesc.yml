@@ -22,4 +22,5 @@ jobs:
       id: tag-as-latest
       if: ${{ github.ref_name == env.latest_tag }}
       run: |
-        echo "Tagging Docker image as latest"
+        echo ${{ env.latest_tag }}
+        echo ${{ github.ref_name }}
