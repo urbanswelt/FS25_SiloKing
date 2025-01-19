@@ -13,7 +13,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create Zip
-        id: zip_step  # Set an ID for the step to refer to outputs later
         run: |
           repo_name="${{ github.repository }}"
           mod_name="${repo_name#*/}"  # Extract the part after the '/'
