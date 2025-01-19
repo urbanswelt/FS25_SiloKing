@@ -15,6 +15,13 @@ jobs:
       - name: Update Changelog
         run: |
           echo ${{ github.event.release.tag_name }} > CHANGELOG.md
+
+      - name: Get the latest tag
+        id: get_latest_tag
+        run: |
+            latest_tag=${{ github.event.push.tag_name }}
+            echo "Latest tag: $latest_tag"
+            echo "latest_tag=$latest_tag" >> $GITHUB_ENV
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
