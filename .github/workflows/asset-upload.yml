@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'  # Ensure the workflow runs only on the main branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
