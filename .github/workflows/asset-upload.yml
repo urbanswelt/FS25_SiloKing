@@ -19,7 +19,7 @@ jobs:
       - name: Get the latest tag
         id: get_latest_tag
         run: |
-            latest_tag=${{ github.event.push.tag_name }}
+            latest_tag=${{ github.event.release.tag_name }}
             echo "Latest tag: $latest_tag"
             echo "latest_tag=$latest_tag" >> $GITHUB_ENV
           
