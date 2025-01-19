@@ -39,3 +39,10 @@ jobs:
         #   disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get the latest tag
+        id: get_latest_tag
+        run: |
+            latest_tag=${{ steps.update_release_draft.outputs.tag_name }}
+            echo "Latest tag: $latest_tag"
+            echo "latest_tag=$latest_tag" >> $GITHUB_ENV
