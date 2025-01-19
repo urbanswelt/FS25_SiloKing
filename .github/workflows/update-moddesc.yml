@@ -17,7 +17,4 @@ jobs:
     - name: Get the latest tag
       id: get_latest_tag
       run: |
-        latest_tag=$(github.ref, 'refs/tags/')
-        echo "Latest tag: $latest_tag"
-        echo "latest_tag=$latest_tag" >> $GITHUB_ENV
-
+        echo ${{ github.ref_name }}
