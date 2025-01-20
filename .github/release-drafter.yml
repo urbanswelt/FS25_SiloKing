@@ -1,6 +1,5 @@
 name-template: 'v$RESOLVED_VERSION 🌈'
 tag-template: '$RESOLVED_VERSION'
-
 categories:
   - title: '🚀 Features'
     labels:
@@ -12,76 +11,45 @@ categories:
       - 'bugfix'
       - 'bug'
   - title: '🧰 Maintenance'
-    labels:
-      - 'infrastructure'
-      - 'automation'
-      - 'documentation'
-      - 'dependencies'
-      - 'ci'
-      - 'test'
-      - 'codecov'
-      - 'testing'
-      - 'refactor'
-      - 'unit tests'
-      - 'release'
-  - title: '🏎 Performance'
-    labels: 
-      - 'performance'
-      - 'load'
+    label: 'chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
   major:
     labels:
-      - 'major'
       - 'feature'
       - 'enhancement'
   minor:
     labels:
-      - 'minor'
       - 'fix'
       - 'bugfix'
       - 'bug'
   patch:
     labels:
-      - 'patch'
-      - 'infrastructure'
-      - 'automation'
-      - 'documentation'
-      - 'dependencies'
-      - 'ci'
-      - 'test'
-      - 'codecov'
-      - 'testing'
-      - 'refactor'
-      - 'unit tests'
-      - 'release'
+      - 'chore'
   default: patch
 template: |
   ## Changes
 
   $CHANGES
+exclude-labels:
+  - 'skip-changelog'
+  - 'automated pr'
+  - 'dependencies'
+
 autolabeler:
-  - label: 'documentation'
+  - label: 'chore'
+    files:
+      - '*.md'
     branch:
       - '/docs{0,1}\/.+/'
-      - '/documentation\/.+/'
-    files:
-      - 'README.md'
   - label: 'bug'
     branch:
       - '/fix\/.+/'
-      - '/bug\/.+/'
-      - '^fix.*'
     title:
       - '/fix/i'
-      - '/bug/i'
-      - '^fix.*'
   - label: 'enhancement'
     branch:
       - '/feature\/.+/'
-  - label: 'maintenance'
-    branch:
-      - '/maintenance\/.+/'
-  - label: 'dependencies'
-    branch:
-      - '/dependencies\/.+/'
+    body:
+      - '/JIRA-[0-9]{1,4}/'
