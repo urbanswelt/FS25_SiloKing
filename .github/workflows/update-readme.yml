@@ -20,7 +20,7 @@ jobs:
         python-version: 3.x
 
     - name: Install dependencies
-      run: pip install xmltodict markdown
+      run: pip install xmltodict
 
     - name: Extract data from XML and update README
       run: |
