@@ -1,7 +1,7 @@
 
 # Silo King Configurations
 
-**Version:** 0.1.0.0  
+**Version:** 1.0.0.0  
 **Author:** SiloKing  
 
 ## Description
@@ -53,6 +53,12 @@ NOVACAT 301 AM ED Pro
 NOVACAT A10 Cross Flow
 - Working speed: 30 kph
 - Working width: 10.02 m
+
+Swadro TS 970
+- Working speed: 30 kph
+
+Vendro 820 Highland
+- Working speed: 30 kph
 
 ### Placeables
 Diesel + Silage Additive Tank
