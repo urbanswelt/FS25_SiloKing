@@ -10,8 +10,7 @@ Silo King Configurations - The ultimate loading capacity for your farm!
 
 Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
 
-Vehicles:
-
+### Vehicles
 MaxiRoll 630 Greenline
 Working speed: 30 kph
 Seed Capacity: 10,000 L
@@ -55,15 +54,13 @@ NOVACAT A10 Cross Flow
 Working speed: 30 kph
 Working width: 10.02 m
 
-Placeables:
-
+### Placeables
 Diesel + Silage Additive Tank
 Capacity: 200,000 L
 Prefilled Diesel: 100,000 L
 Prefilled Silage Additive: 100,000 L
 
-Script Mods:
-
+### Script Mods
 ThundR - Extended Filenames
 
 Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. As far as I know, vanilla only allows this in certain places. This mod extends that functionality to most xml files, including placeables and vehicles.
@@ -83,9 +80,7 @@ BRUCKS_ALL_IN_ONE
 https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
 Equipment for the production of wood chips and stump grinding.
 
-
-Mod Dependencies:
-
+### Mod Dependencies
 FS25_increasedWorkAreasForPickups
 FS25_superCharger
 FS25_poettingerMowerPack
