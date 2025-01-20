@@ -59,7 +59,7 @@ jobs:
               [1]: https://github.com/peter-evans/create-pull-request
 
             labels: |
-              report
+              chore
               automated pr
             assignees: urbanswelt
             reviewers: urbanswelt
