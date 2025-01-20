@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors/>
+    <texts>
+    <!-- FS25_BednarBatWing -->
+        <text name="storeItem_batwing" text="BatWing MM8000" />
+
+        <text name="workMode_Mower" text="Mower" />
+        <text name="workMode_Swather" text="Swathing Mower" />
+        <text name="workMode_BrushHog" text="Brush Hog" />
+        <text name="workMode_Mulcher" text="Mulcher" />
+        <text name="workMode_StumpGrinder" text="Stump Grinder" />
+        <text name="workMode_Destroyer" text="Destroyer" />
+
+        <text name="color_hellaBlack" text="Hella Black, Yo!" />
+        <text name="color_hellaBlack_old" text="Hella Black &amp; Old" />
+        <text name="color_hellaBlack_matte" text="Hella Black &amp; Matte" />
+        <text name="color_hellaBlack_metallic" text="Hella Black &amp; Metallic" />
+        <text name="color_hellaBlack_rough" text="Hella Black &amp; Rough" />
+        <text name="color_hellaBlack_scratched" text="Hella Black &amp; Scratched" />
+        <text name="color_hellaBlack_galvanized" text="Hella Black &amp; Galvanized" />
+        <text name="color_hellaBlack_plastic" text="Hella Black &amp; Plastic" />
+    <!-- dieselTanksLevel03 -->
+        <text name="shopItem_tankSK" text="Diesel + Silage Additive" />
+    <!-- hayVentilation -->
+        <text name="shopItem_hayVentilation" text="Hay Ventilation / Fermenter" />
+        <text name="function_hayVentilation" text="Here you can make hay/silage from grass. This building accepts bulk material and bales." />
+    <!-- bruksAllInOne -->
+        <text name="typeDesc_bruksAllInOne" text="Processor" />
+        <text name="function_bruksAllInOne" text="Tree Cutter, Chipper and Stump Grinder all in one." />
+    </texts>
+</l10n>
