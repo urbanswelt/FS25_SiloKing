@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+    <author>SiloKing</author>
+    <version>1.0.1.0</version>
+    <title>
+        <en>Silo King Configurations</en>
+    </title>
+    <description>
+<en><![CDATA[Silo King Configurations - The ultimate loading capacity for your farm!
+
+Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
+
+Vehicles:
+
+MaxiRoll 630 Greenline
+Working speed: 30 kph
+Seed Capacity: 10,000 L
+Prefilled Seed: 10,000 L
+
+JUMBO 8450 DB
+Working speed: 30 kph
+Capacity: 400,000 L
+Silage additive tank: 10,000 L
+Prefilled Silage Additive: 10,000 L
+
+VARIO-Master V140
+Capacity: 400,000 L
+Silage additive tank: 10,000 L
+Prefilled Silage Additive: 10,000 L
+
+Condor Endurance 2
+Working speed: 30 kph
+Capacity: 50,000 L
+Diesel Capacity: 10,000 L
+
+T-ForcePlus 950
+Working speed: 30 kph
+Seed Capacity: 10,000 L
+Fertilizer Capacity: 10,000 L
+Prefilled Seed: 10,000 L
+Prefilled Fertilizer: 10,000 L
+
+Bredal K105
+Working speed: 30 kph
+Fertilizer Lime Capacity: 50,000 L
+
+Crop Chaser 1000
+Capacity: 400,000 L
+
+NOVACAT 301 AM ED Pro
+Working speed: 30 kph
+Working width: 3.1 m
+
+NOVACAT A10 Cross Flow
+Working speed: 30 kph
+Working width: 10.02 m
+
+Placeables:
+
+Diesel + Silage Additive Tank
+Capacity: 200,000 L
+Prefilled Diesel: 100,000 L
+Prefilled Silage Additive: 100,000 L
+
+Script Mods:
+
+ThundR - Extended Filenames
+
+Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. As far as I know, vanilla only allows this in certain places. This mod extends that functionality to most xml files, including placeables and vehicles.
+    - Allows use of $mapdir$path/to/filename.xml
+    - Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+    - Allows use of $pdlcdir$path/to/filename.xml
+    - Allows use of $FS22_MOD_NAME$path/to/filename.xml
+
+    - Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
+
+    - Adding "!" after the tag ($moddir$!) allows accessing files from mods that are not loaded
+        + Use with caution, could cause unexpected results
+        https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
+
+
+BRUCKS_ALL_IN_ONE
+https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
+Equipment for the production of wood chips and stump grinding.
+
+
+Mod Dependencies:
+
+FS25_increasedWorkAreasForPickups
+FS25_superCharger
+FS25_poettingerMowerPack
+FS25_bremerTransportwagen
+FS25_ObjectBaleStorage
+
+
+]]></en>
+<de><![CDATA[Silo King Konfigurationen - Die ultimative Ladekapazität für deinen Hof!
+
+Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in den vollen Genuss der großen Ladekapazität zu kommen!
+
+
+
+]]></de>
+    </description>
+    <iconFilename>store_jumbo8450DB.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+	<extraSourceFiles>
+		<sourceFile filename="scripts/Main.lua"/>
+	</extraSourceFiles>
+
+
+	<vehicleTypes>
+        <type name="bruksAllInOne" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">		
+			<specialization name="groundReference" />				
+			<specialization name="dischargeable" /> 
+			<specialization name="pipe" />
+			<specialization name="turnOnVehicle" />
+			<specialization name="woodCrusher" />
+			<specialization name="treeSaw" /> 
+			<specialization name="stumpCutter" />
+			<specialization name="attacherJointControl" />			
+		</type>
+        <type name="mowerBatwing" parent="mower" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="mulcher"/>
+            <specialization name="stumpCutter"/>
+        </type>
+    </vehicleTypes>
+
+    <materialTemplates>
+        <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0 0 0" parentTemplate="calibratedPaint"/>
+        <template name="GMNG_HELLABLACK_OLD" title="$l10n_color_hellaBlack_old" colorScale="0 0 0" parentTemplate="metalPaintedOld"/>
+        <template name="GMNG_HELLABLACK_MATTE" title="$l10n_color_hellaBlack_matte" colorScale="0 0 0" parentTemplate="calibratedMatPaint"/>
+        <template name="GMNG_HELLABLACK_METALLIC" title="$l10n_color_hellaBlack_metallic" colorScale="0 0 0" parentTemplate="calibratedMetallicPaint"/>
+        <template name="GMNG_HELLABLACK_ROUGH" title="$l10n_color_hellaBlack_rough" colorScale="0 0 0" parentTemplate="metalPaintedRoughBlack"/>
+        <template name="GMNG_HELLABLACK_SCRATCHED" title="$l10n_color_hellaBlack_scratched" colorScale="0 0 0" parentTemplate="palladiumScratched"/>
+        <template name="GMNG_HELLABLACK_GALVANIZED" title="$l10n_color_hellaBlack_galvanized" colorScale="0 0 0" parentTemplate="metalGalvanized"/>
+        <template name="GMNG_HELLABLACK_PLASTIC" title="$l10n_color_hellaBlack_plastic" colorScale="0 0 0" parentTemplate="plasticPaintedBlack"/>
+    </materialTemplates>
+
+    <storeItems>
+    <!-- vehicles -->
+        <storeItem xmlFilename="SK_Pack/vehicles/jumbo8450DB.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/maxiroll630Greenline.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/varioMaster.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/ux5201Super.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/tForcePlus950.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/k105.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/cc1000.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/vario1000.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/rexius1230.xml"/>
+    <!-- mods -->
+        <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/smallHayVentilation.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/FS25_Bruks_AIO/bruks_all_in_one.xml"/>
+        <storeItem xmlFilename="SK_Pack/mods/mm8000_batwing.xml"/>
+    <!-- placeables -->    
+        <storeItem xmlFilename="SK_Pack/placeables/dieselTanksLevel03.xml"/>
+    </storeItems>
+
+<l10n filenamePrefix="languages/l10n"/>
+
+<dependencies>
+<dependency>FS25_increasedWorkAreasForPickups</dependency>
+<dependency>FS25_superCharger</dependency>
+<dependency>FS25_poettingerMowerPack</dependency>
+<dependency>FS25_bremerTransportwagen</dependency>
+<dependency>FS25_ObjectBaleStorage</dependency>
+<dependency>FS25_hayStorageAndVentilation</dependency>
+<!-- external --> 
+<dependency>FS25_BednarBatWing</dependency>
+<dependency>FS25_Courseplay</dependency>
+<dependency>FS25_AutoDrive_xCrossing</dependency>
+<dependency>FS25_AutoDrive</dependency>
+</dependencies>
+
+</modDesc>

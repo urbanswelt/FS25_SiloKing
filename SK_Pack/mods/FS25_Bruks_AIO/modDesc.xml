@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+
+    <author>dimanix/bigdaddy012678 converted To FS22 By bigdaddy012678 and Fummins03</author>
+	
+    <version>1.0</version>
+	
+    <title>
+        <en>BRUCKS_ALL_IN_ONE </en>
+        <de>BRUCKS_ALL_IN_ONE </de>
+    </title>
+	
+    <description>
+        <en>
+          Equipment for the production of wood chips and stump grinding.
+		</en>
+    </description>
+	
+    <iconFilename>store_bruks.png</iconFilename>
+	
+    <multiplayer supported="true" />
+	
+    <storeItems>
+        <storeItem xmlFilename="bruks_all_in_one.xml"/>
+    </storeItems>
+	
+	<brands>
+        <brand name="LIZARD" title="MODS-HUB.COM" image="brand_lizard.dds"/>
+    </brands>
+	
+	<vehicleTypes>
+        <type name="bruksAllInOne" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<!--specialization name="baseMaterial" /> 
+			<specialization name="cylindered" />
+			<specialization name="cylinderedFoldable" /> 			
+			<specialization name="tipOccluder" />
+			<specialization name="foliageBending" />
+			<specialization name="washable" />
+			<specialization name="wearable" />
+			<specialization name="animatedVehicle" />
+			<specialization name="dashboard" />
+			<specialization name="mountable" />
+			<specialization name="attachable" /> 
+			<specialization name="lights" />
+			<specialization name="powerTakeOffs" />
+			<specialization name="powerConsumer" />
+			<specialization name="aiImplement" />
+			<specialization name="attacherJoints" />
+			<specialization name="foldable" />
+			<specialization name="fillUnit" />
+			<specialization name="fillVolume" /-->			
+			<specialization name="groundReference" />				
+			<specialization name="dischargeable" /> 
+			<specialization name="pipe" />
+			<specialization name="turnOnVehicle" />
+			<specialization name="woodCrusher" />
+			<specialization name="treeSaw" /> 
+			<specialization name="stumpCutter" />	
+			<!--specialization name="connectionHoses" /-->
+			<specialization name="attacherJointControl" />			
+		</type>
+    </vehicleTypes>
+	
+	<l10n>
+        <text name="typeDesc_bruksAllInOne">
+            <en>Processor</en>
+        </text>
+		<text name="function_bruksAllInOne">
+            <en>Tree Cutter, Chipper and Stump Grinder all in one.</en>
+        </text>
+	</l10n>
+	
+</modDesc>

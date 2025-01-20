@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <!-- FS25_BednarBatWing -->
+    <translationContributors>
+        <translationContributor>Farmsim Tim</translationContributor>
+    </translationContributors>
+    <texts>
+        <text name="storeItem_batwing" text="BatWing MM8000" />
+
+        <text name="workMode_Mower" text="Mähwerk" />
+        <text name="workMode_Swather" text="Schwader" />
+        <text name="workMode_BrushHog" text="Buschhacker" />
+        <text name="workMode_Mulcher" text="Mulcher" />
+        <text name="workMode_StumpGrinder" text="Stubbenfräse" />
+        <text name="workMode_Destroyer" text="Zerstörer" />
+
+        <text name="color_hellaBlack" text="So Richtig Schwarz" />
+        <text name="color_hellaBlack_old" text="So Richtig Schwarz Vintage " />
+        <text name="color_hellaBlack_matte" text="Hella Black &amp; Matte" />
+        <text name="color_hellaBlack_metallic" text="Hella Black &amp; Metallic" />
+        <text name="color_hellaBlack_rough" text="Hella Black &amp; Rough" />
+        <text name="color_hellaBlack_scratched" text="Hella Black &amp; Scratched" />
+        <text name="color_hellaBlack_galvanized" text="Hella Black &amp; Galvanized" />
+        <text name="color_hellaBlack_plastic" text="Hella Black &amp; Plastic" />
+    <!-- dieselTanksLevel03 -->
+        <text name="shopItem_tankSK" text="Diesel + Siliermittel" />
+    <!-- hayVentilation -->
+        <text name="shopItem_hayVentilation" text="Heubelüftung / Fermenter" />
+        <text name="function_hayVentilation" text="Hier kannst du Heu/Silage aus Gras herstellen. Dieses Gebäude nimmt sowohl Schüttgut als auch Ballen an." />
+    <!-- bruksAllInOne -->
+        <text name="typeDesc_bruksAllInOne" text="Prozessor" />
+        <text name="function_bruksAllInOne" text="Baumschneider, Häcksler und Baumstumpffräse in einem." />
+    </texts>
+</l10n>
