@@ -12,53 +12,53 @@ Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the lar
 
 ### Vehicles
 MaxiRoll 630 Greenline
-Working speed: 30 kph
-Seed Capacity: 10,000 L
-Prefilled Seed: 10,000 L
+- Working speed: 30 kph
+- Seed Capacity: 10,000 L
+- Prefilled Seed: 10,000 L
 
 JUMBO 8450 DB
-Working speed: 30 kph
-Capacity: 400,000 L
-Silage additive tank: 10,000 L
-Prefilled Silage Additive: 10,000 L
+- Working speed: 30 kph
+- Capacity: 400,000 L
+- Silage additive tank: 10,000 L
+- Prefilled Silage Additive: 10,000 L
 
 VARIO-Master V140
-Capacity: 400,000 L
-Silage additive tank: 10,000 L
-Prefilled Silage Additive: 10,000 L
+- Capacity: 400,000 L
+- Silage additive tank: 10,000 L
+- Prefilled Silage Additive: 10,000 L
 
 Condor Endurance 2
-Working speed: 30 kph
-Capacity: 50,000 L
-Diesel Capacity: 10,000 L
+- Working speed: 30 kph
+- Capacity: 50,000 L
+- Diesel Capacity: 10,000 L
 
 T-ForcePlus 950
-Working speed: 30 kph
-Seed Capacity: 10,000 L
-Fertilizer Capacity: 10,000 L
-Prefilled Seed: 10,000 L
-Prefilled Fertilizer: 10,000 L
+- Working speed: 30 kph
+- Seed Capacity: 10,000 L
+- Fertilizer Capacity: 10,000 L
+- Prefilled Seed: 10,000 L
+- Prefilled Fertilizer: 10,000 L
 
 Bredal K105
-Working speed: 30 kph
-Fertilizer Lime Capacity: 50,000 L
+- Working speed: 30 kph
+- Fertilizer Lime Capacity: 50,000 L
 
 Crop Chaser 1000
-Capacity: 400,000 L
+- Capacity: 400,000 L
 
 NOVACAT 301 AM ED Pro
-Working speed: 30 kph
-Working width: 3.1 m
+- Working speed: 30 kph
+- Working width: 3.1 m
 
 NOVACAT A10 Cross Flow
-Working speed: 30 kph
-Working width: 10.02 m
+- Working speed: 30 kph
+- Working width: 10.02 m
 
 ### Placeables
 Diesel + Silage Additive Tank
-Capacity: 200,000 L
-Prefilled Diesel: 100,000 L
-Prefilled Silage Additive: 100,000 L
+- Capacity: 200,000 L
+- Prefilled Diesel: 100,000 L
+- Prefilled Silage Additive: 100,000 L
 
 ### Script Mods
 ThundR - Extended Filenames
@@ -81,8 +81,8 @@ https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
 Equipment for the production of wood chips and stump grinding.
 
 ### Mod Dependencies
-FS25_increasedWorkAreasForPickups
-FS25_superCharger
-FS25_poettingerMowerPack
-FS25_bremerTransportwagen
-FS25_ObjectBaleStorage
+- FS25_increasedWorkAreasForPickups
+- FS25_superCharger
+- FS25_poettingerMowerPack
+- FS25_bremerTransportwagen
+- FS25_ObjectBaleStorage
