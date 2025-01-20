@@ -39,7 +39,19 @@ jobs:
           # Extract the first three digits of the version (e.g., 1.0.0)
           new_version=$(echo "$latest_version" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+')
           # Update the version in modDesc.xml, keeping the fourth digit unchanged
-          sed -i -E 's|(<version>[0-9]+\.[0-9]+\.[0-9]+)(\.[0-9]+)</version>|\1\2</version>|; s|<version>[0-9]+\.[0-9]+\.[0-9]+|<version>'"$new_version"'|' modDesc.xml         
+          sed -i -E 's|(<version>[0-9]+\.[0-9]+\.[0-9]+)(\.[0-9]+)</version>|\1\2</version>|; s|<version>[0-9]+\.[0-9]+\.[0-9]+|<version>'"$new_version"'|' modDesc.xml
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: 3.x
+    
+      - name: Install dependencies
+        run: pip install xmltodict
+    
+      - name: Extract data from XML and update README
+        run: |
+            python .github/scripts/update_readme.py
               
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
