@@ -63,17 +63,21 @@ Diesel + Silage Additive Tank
 ### Script Mods
 ThundR - Extended Filenames
 
-Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. As far as I know, vanilla only allows this in certain places. This mod extends that functionality to most xml files, including placeables and vehicles.
-    - Allows use of $mapdir$path/to/filename.xml
-    - Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
-    - Allows use of $pdlcdir$path/to/filename.xml
-    - Allows use of $FS22_MOD_NAME$path/to/filename.xml
+Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. 
+As far as I know, vanilla only allows this in certain places. 
+This mod extends that functionality to most xml files, including placeables and vehicles.
 
-    - Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
+- Allows use of $mapdir$path/to/filename.xml
+- Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+- Allows use of $pdlcdir$path/to/filename.xml
+- Allows use of $FS22_MOD_NAME$path/to/filename.xml
 
-    - Adding "!" after the tag ($moddir$!) allows accessing files from mods that are not loaded
-        + Use with caution, could cause unexpected results
-        https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
+- Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
+
+- Adding "!" after the tag ($moddir$!) allows accessing files from mods that are not loaded
+
++ Use with caution, could cause unexpected results
+https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
 
 
 BRUCKS_ALL_IN_ONE
