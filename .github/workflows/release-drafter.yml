@@ -26,20 +26,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get the latest tag
+      - name: Get the latest draft tag
         id: get_latest_tag
         run: |
           latest_tag="${{ steps.update_release_draft.outputs.tag_name }}"
           echo "Latest tag: $latest_tag"
-          echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+          echo "latest_tag=$latest_tag" >> "$GITHUB_OUTPUT"
 
-      - name: Use the latest tag
+      - name: Use the latest draft tag
         run: |
-          echo "The latest tag is: ${{ env.latest_tag }}"
+          echo "The latest tag is: ${{ steps.get_latest_tag.outputs.latest_tag }}"
 
       - name: Update modDesc.xml version
         run: |
-          latest_version="${{ env.latest_tag }}"
+          latest_version="${{ steps.get_latest_tag.outputs.latest_tag }}"
           # Extract the first three digits of the version (e.g., 1.0.0)
           new_version=$(echo "$latest_version" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+')
           # Update the version in modDesc.xml, keeping the fourth digit unchanged
@@ -49,7 +49,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
             commit-message: update Mod version
-            title: Update Mod Version in modDesc.xml to ${{ env.latest_tag }}
+            title: Update Mod Version in modDesc.xml to ${{ steps.get_latest_tag.outputs.latest_tag }}
             body: Update Mod Version to reflect upcoming release changes
             branch: update-mod-version
             base: main
