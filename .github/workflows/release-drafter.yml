@@ -63,8 +63,5 @@ jobs:
               automated pr
             assignees: urbanswelt
             reviewers: urbanswelt
-            team-reviewers: |
-              developers
-              qa-team
             draft: false
             base: main
