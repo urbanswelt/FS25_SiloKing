@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>SiloKing</author>
-    <version>0.1.0.0</version>
+    <version>1.0.0.0</version>
     <title>
         <en>Silo King Configurations</en>
     </title>
@@ -54,6 +54,12 @@ NOVACAT 301 AM ED Pro
 NOVACAT A10 Cross Flow
 - Working speed: 30 kph
 - Working width: 10.02 m
+
+Swadro TS 970
+- Working speed: 30 kph
+
+Vendro 820 Highland
+- Working speed: 30 kph
 
 Placeables:
 
@@ -153,6 +159,8 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
         <storeItem xmlFilename="SK_Pack/vehicles/cc1000.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/vario1000.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/rexius1230.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/swadroTS970.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/vendroKW820Highland.xml"/>
     <!-- mods -->
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
@@ -177,6 +185,8 @@ Hinweis: Denk daran, die Option "Anhänger Füll Limit" zu deaktivieren, um in d
 <dependency>FS25_Courseplay</dependency>
 <dependency>FS25_AutoDrive_xCrossing</dependency>
 <dependency>FS25_AutoDrive</dependency>
+<dependency>FS25_AutoDrive_T_intersection</dependency>
+<dependency>FS25_AutoDrive_reverseToMarker</dependency>
 </dependencies>
 
 </modDesc>
