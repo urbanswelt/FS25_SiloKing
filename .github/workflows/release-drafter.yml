@@ -2,8 +2,7 @@ name: Release Drafter
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
     types: [opened, reopened, synchronize]
 
@@ -23,6 +22,8 @@ jobs:
       - name: Run Release Drafter
         id: update_release_draft
         uses: release-drafter/release-drafter@v6
+        with:
+          commitish: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
