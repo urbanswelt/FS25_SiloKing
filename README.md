@@ -1,7 +1,7 @@
 
 # Silo King Configurations
 
-**Version:** 1.0.0.0  
+**Version:** 1.0.1.0  
 **Author:** SiloKing  
 
 ## Description
@@ -11,28 +11,27 @@ Silo King Configurations - The ultimate loading capacity for your farm!
 Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
 
 ### Vehicles
-MaxiRoll 630 Greenline
+Poettinger JUMBO 8450 DB
+- Working speed: 30 kph
+- Capacity: 400,000 L
+- Silage additive tank: 10,000 L
+- Prefilled Silage Additive: 10,000 L
+
+Dalbo MaxiRoll 630 Greenline
 - Working speed: 30 kph
 - Seed Capacity: 10,000 L
 - Prefilled Seed: 10,000 L
 
-JUMBO 8450 DB
-- Working speed: 30 kph
+Goeweil VARIO-Master V140
 - Capacity: 400,000 L
 - Silage additive tank: 10,000 L
 - Prefilled Silage Additive: 10,000 L
 
-VARIO-Master V140
-- Capacity: 400,000 L
-- Silage additive tank: 10,000 L
-- Prefilled Silage Additive: 10,000 L
-
-Condor Endurance 2
+Amazone UX 5201 Super
 - Working speed: 30 kph
-- Capacity: 50,000 L
-- Diesel Capacity: 10,000 L
+- Sprayer Capacity: 15,000 L
 
-T-ForcePlus 950
+Novag T-ForcePlus 950
 - Working speed: 30 kph
 - Seed Capacity: 10,000 L
 - Fertilizer Capacity: 10,000 L
@@ -43,16 +42,16 @@ Bredal K105
 - Working speed: 30 kph
 - Fertilizer Lime Capacity: 50,000 L
 
-Crop Chaser 1000
+AmityTechnology Crop Chaser 1000
 - Capacity: 400,000 L
 
-NOVACAT 301 AM ED Pro
-- Working speed: 30 kph
-- Working width: 3.1 m
 
-NOVACAT A10 Cross Flow
+Fendt Vario 1000
+- Max speed: 80 kph
+- color configurations
+
+Vaderstad Rexius 1230
 - Working speed: 30 kph
-- Working width: 10.02 m
 
 Swadro TS 970
 - Working speed: 30 kph
@@ -60,11 +59,27 @@ Swadro TS 970
 Vendro 820 Highland
 - Working speed: 30 kph
 
+NOVACAT 301 AM ED Pro(MOD)
+- Working speed: 30 kph
+- Working width: 3.1 m
+
+NOVACAT A10 Cross Flow(MOD)
+- Working speed: 30 kph
+- Working width: 10.02 m
+
+Bednar MM8000 Batwing(MOD)
+- Working speed: 30 kph
+
 ### Placeables
 Diesel + Silage Additive Tank
 - Capacity: 200,000 L
 - Prefilled Diesel: 100,000 L
 - Prefilled Silage Additive: 100,000 L
+
+Small Hay Ventilation(MOD)
+- Capacity Grass: 10,000,000 L
+- Capacity Dry Grass: 1,000,000 L
+- Capacity Silage: 1,000,000 L
 
 ### Script Mods
 ThundR - Extended Filenames
@@ -96,3 +111,12 @@ Equipment for the production of wood chips and stump grinding.
 - FS25_poettingerMowerPack
 - FS25_bremerTransportwagen
 - FS25_ObjectBaleStorage
+- FS25_hayStorageAndVentilation
+
+From external sources
+- FS25_BednarBatWing
+- FS25_Courseplay
+- FS25_AutoDrive_xCrossing
+- FS25_AutoDrive
+- FS25_AutoDrive_T_intersection
+- FS25_AutoDrive_reverseToMarker
