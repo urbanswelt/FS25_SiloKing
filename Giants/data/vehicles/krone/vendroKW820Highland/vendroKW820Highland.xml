@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tedder" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Vendro 820 Highland</name>
+        <specs>
+            <workingWidth>8.2</workingWidth>
+            <neededPower>65</neededPower>
+            <combination filterCategory="weights" filterSpec="weight" filterSpecMin="400" filterSpecMax="600"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_tedder</function>
+        </functions>
+        <image>$data/vehicles/krone/vendroKW820Highland/store_vendroKW820Highland.png</image>
+        <price>15500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>tedders</category>
+        <shopTranslationOffset>0 0.073 0</shopTranslationOffset>
+        <shopRotationOffset>16.37 0 0</shopRotationOffset>
+        <shopLoadingDelay initial="0.2"/>
+        <shopHeight>3.5</shopHeight>
+        <vertexBufferMemoryUsage>1734144</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>455424</indexBufferMemoryUsage>
+        <textureMemoryUsage>458752</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tedder</typeDesc>
+        <filename>$data/vehicles/krone/vendroKW820Highland/vendroKW820Highland.i3d</filename>
+        <size width="2.8" length="2.2" height="3.2" lengthOffset="0.3"/>
+        <speedLimit value="15"/>
+        <components>
+            <component centerOfMass="0 0.3 0"     solverIterationCount="10" mass="235"/>
+            <component centerOfMass="0 0 0"       solverIterationCount="25" mass="200"/>
+            <component centerOfMass="0.5 -0.2 0"  solverIterationCount="15" mass="150"/>
+            <component centerOfMass="-0.3 -0.2 0" solverIterationCount="15" mass="50"/>
+            <component centerOfMass="-0.5 -0.2 0" solverIterationCount="15" mass="150"/>
+            <component centerOfMass="0.3 -0.2 0"  solverIterationCount="15" mass="50"/>
+            <joint component1="1" component2="2" node="componentJointAttacher"   rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="3" node="componentJointArmLeft01"  rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="3" component2="4" node="componentJointArmLeft03"  rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="5" node="componentJointArmRight01" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="5" component2="6" node="componentJointArmRight03" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <collisionPair component1="1" component2="4" enabled="false"/>
+            <collisionPair component1="1" component2="6" enabled="false"/>
+            <collisionPair component1="3" component2="5" enabled="false"/>
+            <collisionPair component1="3" component2="6" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL"/>
+    </base>
+
+    <powerConsumer ptoRpm="400" neededMinPtoPower="10" neededMaxPtoPower="10"/>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels>
+                    <!-- Wheels Left -->
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="false">
+                        <physics restLoad="0.1" repr="wheelLeft01"  forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="-0.01" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="true">
+                        <physics restLoad="0.1" repr="wheelLeft02"  forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="1.8"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="false">
+                        <physics restLoad="0.1" repr="wheelLeft03"  forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="1.2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="true">
+                        <physics restLoad="0.1" repr="wheelLeft04"  forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="0.8"/>
+                    </wheel>
+                    <!-- Wheels Right -->
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="true">
+                        <physics restLoad="0.1" repr="wheelRight01" forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="-0.01" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="false">
+                        <physics restLoad="0.1" repr="wheelRight02" forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="1.8"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="true">
+                        <physics restLoad="0.1" repr="wheelRight03" forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="1.2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/140R6.xml" isLeft="true">
+                        <physics restLoad="0.1" repr="wheelRight04" forcePointRatio="0.4" initialCompression="10" suspTravel="0.1" mass="0.01" spring="15" damper="30" rotationDamping="0.0005" useReprDirection="true" yOffset="0.03" frictionScale="0.8"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimMaterial materialTemplateName="RIM_DEFAULT" />
+        <hubMaterial useRimColor="true" />
+
+        <hubs>
+            <hub linkNode="wheelLeft01"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.14 0.14 0.14" offset="-0.015"/>
+            <hub linkNode="wheelLeft02"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.13 0.13 0.13" offset="-0.012"/>
+            <hub linkNode="wheelLeft03"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.13 0.13 0.13" offset="-0.012"/>
+            <hub linkNode="wheelLeft04"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.13 0.13 0.13" offset="-0.012"/>
+            <hub linkNode="wheelRight01" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.14 0.14 0.14" offset="-0.015"/>
+            <hub linkNode="wheelRight02" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.13 0.13 0.13" offset="-0.012"/>
+            <hub linkNode="wheelRight03" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.13 0.13 0.13" offset="-0.012"/>
+            <hub linkNode="wheelRight04" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.13 0.13 0.13" offset="-0.012"/>
+        </hubs>
+    </wheels>
+
+    <lights>
+        <sharedLight linkNode="kroneRearLight01_left"  filename="$data/shared/assets/lights/krone/kroneRearLight01_left.xml"/>
+        <sharedLight linkNode="kroneRearLight01_right" filename="$data/shared/assets/lights/krone/kroneRearLight01_right.xml"/>
+
+        <sharedLight linkNode="yellowRound_02_01" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_02_02" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <brakeLight node="backLightsHigh"/>
+            </high>
+        </realLights>
+    </lights>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="implement" rootNode="vendroKW820Highland_attacher_component2" topReferenceNode="topReferenceNode" lowerTransLimitScale="0 0.3 0" lowerRotLimitScale="0 0 0" upperRotationOffset="35" lowerRotationOffset="13" needsLowering="true" allowsLowering="true">
+                <distanceToGround lower="0.45" upper="1"/>
+                <bottomArm categories="2" ballType="2"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="supportAnim" delayedOnLoad="true"/>
+        <support animationName="lockDrawbarLimit" delayedOnAttach="false" detachAfterAnimation="false" delayedOnLoad="true"/>
+        <brakeForce force="0.005"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" adapterNode="electric_connector" length="0.8" diameter="0.01" straighteningFactor="1.8">
+           <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" adapterNode="hydraulicIn01_connector" length="0.8" diameter="0.018" straighteningFactor="1.8">
+           <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" adapterNode="hydraulicOut01_connector" length="0.8" diameter="0.018" straighteningFactor="1.8">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <input inputAttacherJointIndices="1" inputNode="ptoInputNode" detachNode="ptoDetachNode" materialTemplateName="SHARED_DA_METAL_BLACK" decalMaterialTemplateName="WALTERSCHEID_YELLOW1" >
+            <objectChange node="ptoMount" rotationActive="0 0 -96" rotationInactive="0 0 0"/>
+        </input>
+    </powerTakeOffs>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="vendroKW820Highland_main_component1" threshold="0.25"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <!-- Work Areas -->
+        <workArea type="tedder" functionName="processTedderArea" preprocessFunctionName="preprocessTedderArea" disableBackwards="true" >
+            <area startNode="workAreaLeft01Start" widthNode="workAreaLeft01Width" heightNode="workAreaLeft01Height"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.18"/>
+            <tedder dropWindrowWorkAreaIndex="5"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+        <workArea type="tedder" functionName="processTedderArea" preprocessFunctionName="preprocessTedderArea" disableBackwards="true" >
+            <area startNode="workAreaLeft02Start" widthNode="workAreaLeft02Width" heightNode="workAreaLeft02Height"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.18"/>
+            <tedder dropWindrowWorkAreaIndex="6"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+        <workArea type="tedder" functionName="processTedderArea" preprocessFunctionName="preprocessTedderArea" disableBackwards="true" >
+            <area startNode="workAreaRight01Start" widthNode="workAreaRight01Width" heightNode="workAreaRight01Height"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.18"/>
+            <tedder dropWindrowWorkAreaIndex="7"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+        <workArea type="tedder" functionName="processTedderArea" preprocessFunctionName="preprocessTedderArea" disableBackwards="true" >
+            <area startNode="workAreaRight02Start" widthNode="workAreaRight02Width" heightNode="workAreaRight02Height"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.18"/>
+            <tedder dropWindrowWorkAreaIndex="8"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+        <!-- Drop Areas -->
+        <workArea type="auxiliary" >
+            <area startNode="dropAreaLeft01Start" widthNode="dropAreaLeft01Width" heightNode="dropAreaLeft01Height"/>
+        </workArea>
+        <workArea type="auxiliary" >
+            <area startNode="dropAreaLeft02Start" widthNode="dropAreaLeft02Width" heightNode="dropAreaLeft02Height"/>
+        </workArea>
+        <workArea type="auxiliary" >
+            <area startNode="dropAreaRight01Start" widthNode="dropAreaRight01Width" heightNode="dropAreaRight01Height"/>
+        </workArea>
+        <workArea type="auxiliary" >
+            <area startNode="dropAreaRight02Start" widthNode="dropAreaRight02Width" heightNode="dropAreaRight02Height"/>
+        </workArea>
+    </workAreas>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.18" turnOnFoldMaxLimit="0.18" ignoreFoldMiddleWhileFolded="true" lowerWhileDetach="true" >
+                    <foldingPart animationName="foldingAnim" speedScale="1.0"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="supportAnim">
+            <part node="supportArmFront"    startTime="0.00" endTime="0.70" startRot="0 0 0" endRot="-92 0 0"/>
+            <part node="supportArmFrontPhy" startTime="0.00" endTime="0.70" startRot="0 0 0" endRot="-92 0 0"/>
+            <part node="supportArmBack"     startTime="0.05" endTime="0.70" startRot="0 0 0" endRot="-197 0 0"/>
+            <part node="supportArmBackLock" startTime="0.00" endTime="0.05" startTrans="0.00 0.044 0.009" endTrans="0.02 0.044 0.009"/>
+            <part node="supportArmBackLock" startTime="0.70" endTime="0.75" startTrans="0.02 0.044 0.009" endTrans="0.00 0.044 0.009"/>
+
+            <part componentIndex="1" startTime="0.0" endTime="0.25" startCenterOfMass="0 0.3 0" endCenterOfMass="0 -0.2 -1" tangentType="spline"/>
+            <part componentIndex="2" startTime="0.0" endTime="0.25" startCenterOfMass="0 0 0" endCenterOfMass="0 -0.8 0" tangentType="spline"/>
+
+            <sound template="slideOpen"  startTime="0.01" endTime="0.7"  direction="0"   volumeScale="3" pitchScale="1.2" />
+            <sound template="metalClose" startTime="0.7"  direction="1"  volumeScale="3" pitchScale="2" />
+            <sound template="metalClose" startTime="0.01" direction="-1" volumeScale="3" pitchScale="2" />
+        </animation>
+
+        <animation name="foldingAnim">
+            <part node="componentJointArmLeft01"  startTime="1.3" endTime="10.0" startRot="0 0 0" endRot="-88 0 0"/>
+            <part node="componentJointArmRight01" startTime="1.3" endTime="10.0" startRot="0 0 0" endRot="-88 0 0"/>
+            <part node="armLeft02"                startTime="1.3" endTime="1.8" startRot="0 0 0" endRot="-7 0 0"/>
+            <part node="armLeft02Phy"             startTime="1.3" endTime="1.8" startRot="0 0 0" endRot="-7 0 0"/>
+            <part node="armRight02"               startTime="1.3" endTime="1.8" startRot="0 0 0" endRot="-7 0 0"/>
+            <part node="armRight02Phy"            startTime="1.3" endTime="1.8" startRot="0 0 0" endRot="-7 0 0"/>
+            <part node="componentJointArmLeft03"  startTime="1.3" endTime="8.0" startRot="0 0 0" endRot="-165 0 0"/>
+            <part node="componentJointArmRight03" startTime="1.3" endTime="8.0" startRot="0 0 0" endRot="-165 0 0"/>
+
+            <part node="wheelRight01Axle"         startTime="0" endTime="1.5" startRot="0 0 0" endRot="0 0 0"/>
+            <part node="dropAreas"                startTime="0" endTime="1.5" startTrans="0 0 0" endTrans="0 0 0"/>
+
+            <part componentJointIndex="1" startTime="0.0" endTime="1.18" startRotMinLimit="0 -22 0" endRotMinLimit="0 0 0" startRotMaxLimit="18 22 0" endRotMaxLimit="18 0 0"/>
+            <part componentJointIndex="2" startTime="0.0" endTime="1.18" startRotLimit="10 0 0" endRotLimit="0 0 0"/>
+            <part componentJointIndex="3" startTime="0.0" endTime="1.18" startRotLimit="10 0 0" endRotLimit="0 0 0"/>
+            <part componentJointIndex="4" startTime="0.0" endTime="1.18" startRotLimit="10 0 0" endRotLimit="0 0 0"/>
+            <part componentJointIndex="5" startTime="0.0" endTime="1.18" startRotLimit="10 0 0" endRotLimit="0 0 0"/>
+
+            <sound template="hydraulicOpen02"  startTime="1.81" endTime="9.99"    direction="-1"     volumeScale="2"    pitchScale="1.4" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose01" startTime="1.81" endTime="9.99"    direction="1"      volumeScale="3"    pitchScale="0.7" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="vibratingImp"     startTime="1.81" direction="-1"    volumeScale="1.0"  pitchScale="0.8" />
+            <sound template="sheetImp02"       startTime="1.81" direction="-1"    volumeScale="4.6"  pitchScale="0.7" />
+            <sound template="metalImpLow"      startTime="1.1"  direction="-1"    volumeScale="0.6"  pitchScale="1.0"/>
+            <sound template="foldStartMed02"   startTime="1.2"  direction="-1"    volumeScale="4"    pitchScale="0.9"/>
+            <sound template="foldStartMed02"   startTime="1.1"  direction="-1"    volumeScale="2"    pitchScale="1.4" linkNodeOffset="3 0 0"/>
+            <sound template="grabImp"          startTime="1.1"  direction="-1"    volumeScale="0.4"  pitchScale="0.9" linkNodeOffset="3 0 0"/>
+            <sound template="vibratingImp"     startTime="0.8"  direction="-1"    volumeScale="0.8"  pitchScale="1"   linkNodeOffset="-3 0 0"/>
+            <sound template="foldStartMed02"   startTime="0.8"  direction="-1"    volumeScale="1"    pitchScale="1.2" linkNodeOffset="-3 0 0"/>
+            <sound template="sheetImp02"       startTime="1.1"  direction="-1"    volumeScale="1.8"  pitchScale="1.4" linkNodeOffset="-3 0 0"/>
+            <sound template="sheetImp02"       startTime="1.1"  direction="1"     volumeScale="3.8"  pitchScale="0.8" linkNodeOffset="1 0 0" />
+            <sound template="foldStartMed02"   startTime="1.1"  direction="1"     volumeScale="3.8"  pitchScale="0.8" linkNodeOffset="-1 0 0" />
+            <sound template="sheetImp02"       startTime="1.3"  direction="1"     volumeScale="1.8"  pitchScale="1.5" linkNodeOffset="-2 0 0" />
+            <sound template="metalImpHigh03"   startTime="1.5"  direction="1"     volumeScale="0.3"  pitchScale="0.8" linkNodeOffset="2 0 0" />
+            <sound template="foldStartMed02"   startTime="1.5"  direction="1"     volumeScale="3.3"  pitchScale="0.8" linkNodeOffset="-2 0 0" />
+            <sound template="metalImpHigh02"   startTime="8"    direction="1"     volumeScale="0.5"  pitchScale="0.8" linkNodeOffset="1 3 0"/>
+            <sound template="metalImpHigh01"   startTime="8"    direction="1"     volumeScale="0.5"  pitchScale="0.8" linkNodeOffset="-1 3 0"/>
+            <sound template="sheetImp02"       startTime="8"    direction="1"     volumeScale="2.2"  pitchScale="1.8" linkNodeOffset="-1 3 0"/>
+            <sound template="sheetImp02"       startTime="8"    direction="1"     volumeScale="2.2"  pitchScale="1.5" linkNodeOffset="1 3 0"/>
+            <sound template="metalImpHigh02"   startTime="9.99" volumeScale="1"   direction="1"      pitchScale="0.7"/>
+            <sound template="sheetImp02"       startTime="9.99" volumeScale="3"   direction="1"      pitchScale="0.7"/>
+            <sound template="metalImpHigh03"   startTime="9.99" volumeScale="0.4" direction="1"      pitchScale="0.7"/>
+            <sound template="hydraulicOpen06"  startTime="0.01" endTime="1.79"    direction="-1"     volumeScale="1" pitchScale="0.6" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose03" startTime="0.01" endTime="1.79"    direction="1"      volumeScale="3" pitchScale="1.4" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"  startTime="1.81" endTime="8"       direction="0"      volumeScale="2" pitchScale="1.7" fadeIn="0.1" fadeOut="0.1"/>
+        </animation>
+
+        <animation name="lockDrawbarLimit">
+            <part componentJointIndex="1" startTime="0.0" endTime="0.5" startRotMinLimit="0 0 0" endRotMinLimit="0 0 0" startRotMaxLimit="18 0 0" endRotMaxLimit="18 0 0"/>
+            <part componentJointIndex="1" startTime="0.5" endTime="1.0" startRotMinLimit="0 0 0" endRotMinLimit="0 0 0" startRotMaxLimit="0 0 0" endRotMaxLimit="0 0 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="componentJointArmLeft01" playSound="true">
+                <componentJoint index="2"/>
+            </movingTool>
+            <movingTool node="componentJointArmLeft03" playSound="true">
+                <componentJoint index="3"/>
+            </movingTool>
+            <movingTool node="componentJointArmRight01" playSound="true">
+                <componentJoint index="4"/>
+            </movingTool>
+            <movingTool node="componentJointArmRight03" playSound="true">
+                <componentJoint index="5"/>
+            </movingTool>
+
+            <movingTool node="wheelRight01Axle" wheelNodes="wheelRight01" foldMaxLimit="0.1">
+                <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="true" mouseSpeedFactor="0.2" iconName="TOP_DOOR_ROTATE"/>
+                <rotation rotSpeed="25" rotAcceleration="75" rotationAxis="2" rotMin="-20" rotMax="20" startRot="0"/>
+                <dependentMovingTool node="dropAreas" speedScale="1"/>
+                <dependentPart node="wheelLeft01Axle"/>
+                <dependentPart node="wheelLeft02AxlePhys"/>
+                <dependentPart node="wheelLeft03AxlePhys"/>
+                <dependentPart node="wheelLeft04AxlePhys"/>
+                <dependentPart node="wheelRight02AxlePhys"/>
+                <dependentPart node="wheelRight03AxlePhys"/>
+                <dependentPart node="wheelRight04AxlePhys"/>
+                <dependentPart node="borderSpreadingHydraulic"/>
+            </movingTool>
+
+            <movingTool node="dropAreas">
+                <translation transSpeed="0.7" transAcceleration="3" translationAxis="1" transMin="-0.5" transMax="0.5" startTrans="0"/>
+            </movingTool>
+
+            <movingTool node="armLeft02Phy"  wheelNodes="wheelLeft03"/>
+            <movingTool node="armRight02Phy" wheelNodes="wheelRight03"/>
+
+            <movingTool node="supportArmFront">
+                <dependentPart node="supportArmFrontSpring"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <!-- Arm Left -->
+            <movingPart node="armLeft01" referencePoint="armLeft01Ref" referenceFrame="armLeft01RefFrame" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1">
+                <dependentPart node="armLeft03"/>
+                <dependentPart node="armLeftHydraulicMain"/>
+                <dependentPart node="armLeft01Align"/>
+                <dependentPart node="armLeft02Align"/>
+                <dependentPart node="armLeft03Align"/>
+                <dependentPart node="armLeft03AlignDamper"/>
+                <dependentPart node="borderSpreadingBarMain"/>
+            </movingPart>
+
+            <movingPart node="armLeft03" referencePoint="armLeft03Ref" referenceFrame="armLeft03Ref" limitedAxis="1">
+                <dependentPart node="borderSpreadingBarMain"/>
+            </movingPart>
+
+            <movingPart node="armLeftHydraulicMain" referencePoint="armLeftHydraulicMainRef" referenceFrame="armLeftHydraulicMainRef">
+                <translatingPart node="armLeftHydraulicMainPunch"/>
+            </movingPart>
+
+            <movingPart node="armLeft01Align" referencePoint="armLeft01AlignRef" localReferencePoint="armLeft01AlignPart" referenceFrame="armLeft01AlignRefFrame">
+                <dependentPart node="armLeft01AlignPart"/>
+            </movingPart>
+            <movingPart node="armLeft01AlignPart" referencePoint="armLeft01AlignRef" referenceFrame="armLeft01AlignPartRefFrame"/>
+
+            <movingPart node="armLeft02Align" referencePoint="armLeft02AlignRef" referenceFrame="armLeft02AlignRefFrame"/>
+
+            <movingPart node="armLeft03Align" referencePoint="armLeft03AlignRef" localReferencePoint="armLeft03AlignPart" referenceFrame="armLeft03AlignRefFrame">
+                <dependentPart node="armLeft03AlignPart"/>
+            </movingPart>
+            <movingPart node="armLeft03AlignPart" referencePoint="armLeft03AlignRef" referenceFrame="armLeft03AlignPartRefFrame"/>
+
+            <movingPart node="armLeft03AlignDamper" referencePoint="armLeft03AlignDamperRef" referenceFrame="armLeft03AlignDamperRefFrame">
+                <translatingPart node="armLeft03AlignDamperPunch"/>
+            </movingPart>
+
+            <!-- Arm Right -->
+            <movingPart node="armRight01" referencePoint="armRight01Ref" referenceFrame="armRight01RefFrame" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1">
+                <dependentPart node="armRight03"/>
+                <dependentPart node="armRightHydraulicMain"/>
+                <dependentPart node="armRight01Align"/>
+                <dependentPart node="armRight02Align"/>
+                <dependentPart node="armRight03Align"/>
+                <dependentPart node="armRight03AlignDamper"/>
+                <dependentPart node="borderSpreadingBarMain"/>
+            </movingPart>
+
+            <movingPart node="armRight03" referencePoint="armRight03Ref" referenceFrame="armRight03Ref" limitedAxis="1">
+                <dependentPart node="borderSpreadingBarMain"/>
+            </movingPart>
+
+            <movingPart node="armRightHydraulicMain" referencePoint="armRightHydraulicMainRef" referenceFrame="armRightHydraulicMainRef">
+                <translatingPart node="armRightHydraulicMainPunch"/>
+            </movingPart>
+
+            <movingPart node="armRight01Align" referencePoint="armRight01AlignRef" localReferencePoint="armRight01AlignPart" referenceFrame="armRight01AlignRefFrame">
+                <dependentPart node="armRight01AlignPart"/>
+            </movingPart>
+            <movingPart node="armRight01AlignPart" referencePoint="armRight01AlignRef" referenceFrame="armRight01AlignPartRefFrame"/>
+
+            <movingPart node="armRight02Align" referencePoint="armRight02AlignRef" referenceFrame="armRight02AlignRefFrame"/>
+
+            <movingPart node="armRight03Align" referencePoint="armRight03AlignRef" localReferencePoint="armRight03AlignPart" referenceFrame="armRight03AlignRefFrame">
+                <dependentPart node="armRight03AlignPart"/>
+            </movingPart>
+            <movingPart node="armRight03AlignPart" referencePoint="armRight03AlignRef" referenceFrame="armRight03AlignPartRefFrame"/>
+
+            <movingPart node="armRight03AlignDamper" referencePoint="armRight03AlignDamperRef" referenceFrame="armRight03AlignDamperRefFrame">
+                <translatingPart node="armRight03AlignDamperPunch"/>
+            </movingPart>
+
+            <!-- Attacher Block -->
+            <movingPart node="attacherBlock" referencePoint="attacherBlockRef" referenceFrame="attacherBlockRefFrame" isActiveDirty="true" maxUpdateDistance="150">
+                 <dependentPart node="steeringHydraulicLeft"/>
+                 <dependentPart node="steeringHydraulicRight"/>
+             </movingPart>
+
+             <movingPart node="steeringHydraulicLeft" referencePoint="steeringHydraulicLeftRef" referenceFrame="steeringHydraulicLeftRef">
+                <translatingPart node="steeringHydraulicLeftPunch"/>
+            </movingPart>
+             <movingPart node="steeringHydraulicRight" referencePoint="steeringHydraulicRightRef" referenceFrame="steeringHydraulicRightRef">
+                <translatingPart node="steeringHydraulicRightPunch"/>
+            </movingPart>
+
+            <movingPart node="supportArmFrontSpring" referencePoint="supportArmFrontSpringRef" referenceFrame="supportArmFrontSpringRef" scaleZ="true"/>
+
+            <!-- Border Spreading Control -->
+            <movingPart node="wheelLeft01Axle" referenceFrame="wheelRight01Axle"  doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1" wheelNodes="wheelLeft01">
+                <dependentPart node="borderSpreadingBarMain"/>
+            </movingPart>
+
+            <movingPart node="wheelLeft02AxlePhys"  referenceFrame="wheelRight01Axle" wheelNodes="wheelLeft02"  doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="wheelLeft03AxlePhys"  referenceFrame="wheelRight01Axle" wheelNodes="wheelLeft03"  doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="wheelLeft04AxlePhys"  referenceFrame="wheelRight01Axle" wheelNodes="wheelLeft04"  doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="wheelRight02AxlePhys" referenceFrame="wheelRight01Axle" wheelNodes="wheelRight02" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="wheelRight03AxlePhys" referenceFrame="wheelRight01Axle" wheelNodes="wheelRight03" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="wheelRight04AxlePhys" referenceFrame="wheelRight01Axle" wheelNodes="wheelRight04" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+
+            <movingPart node="borderSpreadingBarMain" referencePoint="borderSpreadingBarMainRef" referenceFrame="borderSpreadingBarMainRef">
+                <dependentPart node="wheelLeft02Axle"/>
+                <dependentPart node="wheelRight02Axle"/>
+            </movingPart>
+
+            <movingPart node="wheelLeft02Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarLeft01" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarLeft01" referencePoint="borderSpreadingBarLeft01Ref" referenceFrame="borderSpreadingBarLeft01RefFrame" scaleZ="true">
+                <dependentPart node="wheelLeft03Axle"/>
+            </movingPart>
+
+            <movingPart node="wheelLeft03Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarLeft02" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarLeft02" referencePoint="borderSpreadingBarLeft02Ref" referenceFrame="borderSpreadingBarLeft02RefFrame" scaleZ="true">
+                <dependentPart node="wheelLeft04Axle"/>
+            </movingPart>
+
+            <movingPart node="wheelLeft04Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarLeft03" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarLeft03" referencePoint="borderSpreadingBarLeft03Ref" referenceFrame="borderSpreadingBarLeft03RefFrame" scaleZ="true"/>
+
+            <movingPart node="wheelRight02Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarRight01" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarRight01" referencePoint="borderSpreadingBarRight01Ref" referenceFrame="borderSpreadingBarRight01RefFrame" scaleZ="true">
+                <dependentPart node="wheelRight03Axle"/>
+            </movingPart>
+
+            <movingPart node="wheelRight03Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarRight02" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarRight02" referencePoint="borderSpreadingBarRight02Ref" referenceFrame="borderSpreadingBarRight02RefFrame" scaleZ="true">
+                <dependentPart node="wheelRight04Axle"/>
+            </movingPart>
+
+            <movingPart node="wheelRight04Axle" referenceFrame="wheelRight01Axle" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1">
+                <dependentPart node="borderSpreadingBarRight03" />
+            </movingPart>
+
+            <movingPart node="borderSpreadingBarRight03" referencePoint="borderSpreadingBarRight03Ref" referenceFrame="borderSpreadingBarRight03RefFrame" scaleZ="true"/>
+
+            <movingPart node="borderSpreadingHydraulic" referencePoint="borderSpreadingHydraulicRef" referenceFrame="borderSpreadingHydraulicRef">
+                <translatingPart node="borderSpreadingHydraulicPunch"/>
+            </movingPart>
+        </movingParts>
+        <sounds>
+            <actionSound template="hydraulicSmallClose" volumeScale="1.4" pitchScale="0.8" linkNode="wheelRight01Axle" actionNames="TOOL_MOVE_POS TOOL_MOVE_NEG" nodes="wheelRight01Axle" fadeIn="0.1" fadeOut="0.1"/>
+            <actionSound template="clackVar2"           volumeScale="0.9" pitchScale="1.3" linkNode="wheelRight01Axle" actionNames="TOOL_MOVE_END_POS_LIMIT"     nodes="wheelRight01Axle" fadeIn="0.1" fadeOut="0.1"/>
+            <actionSound template="clackVar3"           volumeScale="1.2" pitchScale="0.9" linkNode="wheelRight01Axle" actionNames="TOOL_MOVE_END_POS_LIMIT"     nodes="wheelRight01Axle" fadeIn="0.1" fadeOut="0.1"/>
+            <actionSound template="clackVar2"           volumeScale="0.9" pitchScale="1.3" linkNode="wheelRight01Axle" actionNames="TOOL_MOVE_END_NEG_LIMIT"     nodes="wheelRight01Axle" fadeIn="0.1" fadeOut="0.1"/>
+            <actionSound template="clackVar3"           volumeScale="1.2" pitchScale="0.9" linkNode="wheelRight01Axle" actionNames="TOOL_MOVE_END_NEG_LIMIT"     nodes="wheelRight01Axle" fadeIn="0.1" fadeOut="0.1"/>
+
+        </sounds>
+    </cylindered>
+
+    <tedder fillTypeConverter="TEDDER">
+        <animationNodes>
+            <animationNode node="ptoCenterLeft01"  rotSpeed="-900" rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmLeft01"     rotSpeed="-900" rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmLeft02"     rotSpeed="-900" rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmLeft03"     rotSpeed="-900" rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoCenterRight01" rotSpeed="900"  rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmRight01"    rotSpeed="900"  rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmRight02"    rotSpeed="900"  rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="ptoArmRight03"    rotSpeed="900"  rotAxis="1" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+
+            <animationNode node="tedderLeft01"  rotSpeed="900"  rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderLeft02"  rotSpeed="-900" rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderLeft03"  rotSpeed="900"  rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderLeft04"  rotSpeed="-900" rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderRight01" rotSpeed="-900" rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderRight02" rotSpeed="900"  rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderRight03" rotSpeed="-900" rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+            <animationNode node="tedderRight04" rotSpeed="900"  rotAxis="2" turnOnFadeTime="1.5" turnOffFadeTime="3"/>
+        </animationNodes>
+
+        <effects>
+            <effect workAreaIndex="1">
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleLeft01">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayLeft.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleLeft02">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayRight.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+            </effect>
+            <effect workAreaIndex="2">
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleLeft03">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayLeft.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleLeft04">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayRight.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+            </effect>
+            <effect workAreaIndex="3">
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleRight01">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayRight.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleRight02">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayLeft.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+            </effect>
+            <effect workAreaIndex="4">
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleRight03">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayRight.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+                <effectNode effectClass="TypedMotionPathEffect" effectType="TEDDER" linkNode="particleRight04">
+                    <motionPathEffect textureFilename="$data/effects/tedder/arrays/sharedTedderArrayLeft.dds" numRows="4" rowLength="28" minFade="0.03"/>
+                </effectNode>
+            </effect>
+        </effects>
+    </tedder>
+
+    <turnOnVehicle turnOffIfNotAllowed="true">
+        <sounds>
+            <work template="defaultTedder" linkNodeOffset="2 0 0" volumeScale="1.2" pitchScale="1.2" fadeIn="0.3" fadeOut="2"/>
+            <work template="defaultTedder" linkNodeOffset="-2 0 0" volumeScale="1.2" fadeIn="0.3" fadeOut="2"/>
+            <work template="tractorPTO" linkNode="attacherJoint" volumeScale="0.8" innerRadius="1" outerRadius="30"/>
+        </sounds>
+    </turnOnVehicle>
+
+    <ai>
+        <needsLowering value="true"/>
+        <areaMarkers leftNode="areaMarkerLeft" rightNode="areaMarkerRight" backNode="areaMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="8.3" height="2"/>
+        <agentAttachment width="2.8" height="3.15" length="2.1"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.0" maxX="1.0" minZ="-0.8" maxZ="0.45" yOffset="0.29"/>
+        <bendingNode minX="-0.45" maxX="0.45" minZ="-0.4" maxZ="0.25" yOffset="-0.65" node="componentJointAttacher"/>
+        <bendingNode minX="-0.17" maxX="1.57" minZ="-0.8" maxZ="0.45" yOffset="-0.35" node="vendroKW820Highland_armLeft01_component3"/>
+        <bendingNode minX="-0.7" maxX="0.7" minZ="-0.8" maxZ="0.45" yOffset="-0.35" node="vendroKW820Highland_armLeft03_component4"/>
+        <bendingNode minX="-1.57" maxX="0.17" minZ="-0.8" maxZ="0.45" yOffset="-0.35" node="vendroKW820Highland_armRight01_component5"/>
+        <bendingNode minX="-0.7" maxX="0.7" minZ="-0.8" maxZ="0.45" yOffset="-0.35" node="vendroKW820Highland_armRight03_component6"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="vendroKW820Highland_main_component1" node="0>" />
+        <i3dMapping id="vendroKW820Highland_vis" node="0>0" />
+        <i3dMapping id="ptoInputNode" node="0>0|0|0|0" />
+        <i3dMapping id="ptoDetachNode" node="0>0|0|0|1" />
+        <i3dMapping id="supportArmBack" node="0>0|0|1|0" />
+        <i3dMapping id="supportArmBackLock" node="0>0|0|1|0|0" />
+        <i3dMapping id="electric" node="0>0|0|2|0" />
+        <i3dMapping id="electric_detached" node="0>0|0|2|0|0" />
+        <i3dMapping id="electric_connector" node="0>0|0|2|0|0|0" />
+        <i3dMapping id="hydraulicIn01" node="0>0|0|2|1" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|0|2|1|0" />
+        <i3dMapping id="hydraulicIn01_connector" node="0>0|0|2|1|0|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|0|2|2" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|0|2|2|0" />
+        <i3dMapping id="hydraulicOut01_connector" node="0>0|0|2|2|0|0" />
+        <i3dMapping id="kroneRearLight01_left" node="0>0|1|0|0" />
+        <i3dMapping id="kroneRearLight01_right" node="0>0|1|0|1" />
+        <i3dMapping id="backLightsHigh" node="0>0|1|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|1|2|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|1|2|1" />
+        <i3dMapping id="componentJointAttacher" node="0>0|2|0" />
+        <i3dMapping id="componentJointArmLeft01" node="0>0|3|0" />
+        <i3dMapping id="componentJointArmRight01" node="0>0|4|0" />
+        <i3dMapping id="attacherBlockRefFrame" node="0>0|5|0" />
+        <i3dMapping id="attacherBlock" node="0>0|5|0|0" />
+        <i3dMapping id="ptoMount" node="0>0|5|0|0|0|0|0|0" />
+        <i3dMapping id="supportArmFront" node="0>0|5|0|0|0|1|0|0" />
+        <i3dMapping id="supportArmFrontSpringRef" node="0>0|5|0|0|0|1|0|0|0" />
+        <i3dMapping id="supportArmFrontSpring" node="0>0|5|0|0|0|1|1" />
+        <i3dMapping id="steeringHydraulicLeftRef" node="0>0|5|0|0|1|0" />
+        <i3dMapping id="steeringHydraulicRightRef" node="0>0|5|0|0|1|1" />
+        <i3dMapping id="armLeft01RefFrame" node="0>0|5|1" />
+        <i3dMapping id="armLeft01" node="0>0|5|1|0" />
+        <i3dMapping id="armLeft02" node="0>0|5|1|0|0" />
+        <i3dMapping id="armLeft03" node="0>0|5|1|0|0|0" />
+        <i3dMapping id="wheelLeft04Axle" node="0>0|5|1|0|0|0|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft03RefFrame" node="0>0|5|1|0|0|0|0|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft03" node="0>0|5|1|0|0|0|0|0|0|0" />
+        <i3dMapping id="tedderLeft04" node="0>0|5|1|0|0|0|0|1" />
+        <i3dMapping id="ptoArmLeft03" node="0>0|5|1|0|0|0|0|2" />
+        <i3dMapping id="armLeft03AlignRef" node="0>0|5|1|0|0|0|1|0" />
+        <i3dMapping id="particleLeft04" node="0>0|5|1|0|0|0|1|1" />
+        <i3dMapping id="wheelLeft03Axle" node="0>0|5|1|0|0|1|0" />
+        <i3dMapping id="borderSpreadingBarLeft02RefFrame" node="0>0|5|1|0|0|1|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft02" node="0>0|5|1|0|0|1|0|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft03Ref" node="0>0|5|1|0|0|1|0|0|0|0" />
+        <i3dMapping id="tedderLeft03" node="0>0|5|1|0|0|1|1" />
+        <i3dMapping id="ptoArmLeft02" node="0>0|5|1|0|0|1|2" />
+        <i3dMapping id="armLeft03AlignRefFrame" node="0>0|5|1|0|0|1|3" />
+        <i3dMapping id="armLeft03Align" node="0>0|5|1|0|0|1|3|0" />
+        <i3dMapping id="armLeft03AlignPartRefFrame" node="0>0|5|1|0|0|1|3|0|0" />
+        <i3dMapping id="armLeft03AlignPart" node="0>0|5|1|0|0|1|3|0|0|0" />
+        <i3dMapping id="armLeft03AlignDamperRefFrame" node="0>0|5|1|0|0|1|3|0|1" />
+        <i3dMapping id="armLeft03AlignDamper" node="0>0|5|1|0|0|1|3|0|1|0" />
+        <i3dMapping id="armLeft03AlignDamperPunch" node="0>0|5|1|0|0|1|3|0|1|0|0" />
+        <i3dMapping id="armLeft02AlignRefFrame" node="0>0|5|1|0|0|1|4" />
+        <i3dMapping id="armLeft02Align" node="0>0|5|1|0|0|1|4|0" />
+        <i3dMapping id="armLeft01AlignRef" node="0>0|5|1|0|0|2|0" />
+        <i3dMapping id="armLeftHydraulicMainRef" node="0>0|5|1|0|0|2|1" />
+        <i3dMapping id="particleLeft03" node="0>0|5|1|0|0|2|2" />
+        <i3dMapping id="wheelLeft02Axle" node="0>0|5|1|0|1|0" />
+        <i3dMapping id="borderSpreadingBarLeft01RefFrame" node="0>0|5|1|0|1|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft01" node="0>0|5|1|0|1|0|0|0" />
+        <i3dMapping id="borderSpreadingBarLeft02Ref" node="0>0|5|1|0|1|0|0|0|0" />
+        <i3dMapping id="tedderLeft02" node="0>0|5|1|0|1|1" />
+        <i3dMapping id="ptoArmLeft01" node="0>0|5|1|0|1|2" />
+        <i3dMapping id="particleLeft02" node="0>0|5|1|0|2|0" />
+        <i3dMapping id="armLeft02AlignRef" node="0>0|5|1|0|2|1" />
+        <i3dMapping id="yellowRound_02_01" node="0>0|5|1|0|2|2" />
+        <i3dMapping id="armLeftHydraulicMain" node="0>0|5|2" />
+        <i3dMapping id="armLeftHydraulicMainPunch" node="0>0|5|2|0" />
+        <i3dMapping id="armLeft01AlignRefFrame" node="0>0|5|3" />
+        <i3dMapping id="armLeft01Align" node="0>0|5|3|0" />
+        <i3dMapping id="armLeft01AlignPartRefFrame" node="0>0|5|3|0|0" />
+        <i3dMapping id="armLeft01AlignPart" node="0>0|5|3|0|0|0" />
+        <i3dMapping id="armLeft03AlignDamperRef" node="0>0|5|3|0|0|0|0" />
+        <i3dMapping id="armRight01RefFrame" node="0>0|5|4" />
+        <i3dMapping id="armRight01" node="0>0|5|4|0" />
+        <i3dMapping id="armRight02" node="0>0|5|4|0|0" />
+        <i3dMapping id="armRight03" node="0>0|5|4|0|0|0" />
+        <i3dMapping id="wheelRight04AxleRefFrame" node="0>0|5|4|0|0|0|0|0" />
+        <i3dMapping id="wheelRight04Axle" node="0>0|5|4|0|0|0|0|0|0" />
+        <i3dMapping id="borderSpreadingBarRight03RefFrame" node="0>0|5|4|0|0|0|0|0|0|0" />
+        <i3dMapping id="borderSpreadingBarRight03" node="0>0|5|4|0|0|0|0|0|0|0|0" />
+        <i3dMapping id="tedderRight04" node="0>0|5|4|0|0|0|0|1" />
+        <i3dMapping id="ptoArmRight03" node="0>0|5|4|0|0|0|0|2" />
+        <i3dMapping id="particleRight04" node="0>0|5|4|0|0|0|1|0" />
+        <i3dMapping id="armRight03AlignRef" node="0>0|5|4|0|0|0|1|1" />
+        <i3dMapping id="wheelRight03Axle" node="0>0|5|4|0|0|1|0" />
+        <i3dMapping id="borderSpreadingBarRight02RefFrame" node="0>0|5|4|0|0|1|0|0" />
+        <i3dMapping id="borderSpreadingBarRight02" node="0>0|5|4|0|0|1|0|0|0" />
+        <i3dMapping id="borderSpreadingBarRight03Ref" node="0>0|5|4|0|0|1|0|0|0|0" />
+        <i3dMapping id="tedderRight03" node="0>0|5|4|0|0|1|1" />
+        <i3dMapping id="ptoArmRight02" node="0>0|5|4|0|0|1|2" />
+        <i3dMapping id="armRight03AlignRefFrame" node="0>0|5|4|0|0|1|3" />
+        <i3dMapping id="armRight03Align" node="0>0|5|4|0|0|1|3|0" />
+        <i3dMapping id="armRight03AlignPartRefFrame" node="0>0|5|4|0|0|1|3|0|0" />
+        <i3dMapping id="armRight03AlignPart" node="0>0|5|4|0|0|1|3|0|0|0" />
+        <i3dMapping id="armRight03AlignDamperRefFrame" node="0>0|5|4|0|0|1|3|0|1" />
+        <i3dMapping id="armRight03AlignDamper" node="0>0|5|4|0|0|1|3|0|1|0" />
+        <i3dMapping id="armRight03AlignDamperPunch" node="0>0|5|4|0|0|1|3|0|1|0|0" />
+        <i3dMapping id="armRight02AlignRefFrame" node="0>0|5|4|0|0|1|4" />
+        <i3dMapping id="armRight02Align" node="0>0|5|4|0|0|1|4|0" />
+        <i3dMapping id="particleRight03" node="0>0|5|4|0|0|2|0" />
+        <i3dMapping id="armRightHydraulicMainRef" node="0>0|5|4|0|0|2|1" />
+        <i3dMapping id="armRight01AlignRef" node="0>0|5|4|0|0|2|2" />
+        <i3dMapping id="wheelRight02Axle" node="0>0|5|4|0|1|0" />
+        <i3dMapping id="borderSpreadingBarRight01RefFrame" node="0>0|5|4|0|1|0|0" />
+        <i3dMapping id="borderSpreadingBarRight01" node="0>0|5|4|0|1|0|0|0" />
+        <i3dMapping id="borderSpreadingBarRight02Ref" node="0>0|5|4|0|1|0|0|0|0" />
+        <i3dMapping id="tedderRight02" node="0>0|5|4|0|1|1" />
+        <i3dMapping id="ptoArmRight01" node="0>0|5|4|0|1|2" />
+        <i3dMapping id="particleRight02" node="0>0|5|4|0|2|0" />
+        <i3dMapping id="armRight02AlignRef" node="0>0|5|4|0|2|1" />
+        <i3dMapping id="yellowRound_02_02" node="0>0|5|4|0|2|2" />
+        <i3dMapping id="armRightHydraulicMain" node="0>0|5|5" />
+        <i3dMapping id="armRightHydraulicMainPunch" node="0>0|5|5|0" />
+        <i3dMapping id="armRight01AlignRefFrame" node="0>0|5|6" />
+        <i3dMapping id="armRight01Align" node="0>0|5|6|0" />
+        <i3dMapping id="armRight01AlignPartRefFrame" node="0>0|5|6|0|0" />
+        <i3dMapping id="armRight01AlignPart" node="0>0|5|6|0|0|0" />
+        <i3dMapping id="armRight03AlignDamperRef" node="0>0|5|6|0|0|0|0" />
+        <i3dMapping id="steeringHydraulicLeft" node="0>0|5|7" />
+        <i3dMapping id="steeringHydraulicLeftPunch" node="0>0|5|7|0" />
+        <i3dMapping id="steeringHydraulicRight" node="0>0|5|8" />
+        <i3dMapping id="steeringHydraulicRightPunch" node="0>0|5|8|0" />
+        <i3dMapping id="tedderLeft01" node="0>0|5|9|0" />
+        <i3dMapping id="tedderRight01" node="0>0|5|9|1" />
+        <i3dMapping id="ptoCenterLeft01" node="0>0|5|10|0" />
+        <i3dMapping id="ptoCenterRight01" node="0>0|5|10|1" />
+        <i3dMapping id="wheelLeft01Axle" node="0>0|5|11|0" />
+        <i3dMapping id="wheelLeft01" node="0>0|5|11|0|0" />
+        <i3dMapping id="borderSpreadingBarMainRef" node="0>0|5|11|0|1" />
+        <i3dMapping id="wheelRight01Axle" node="0>0|5|11|1" />
+        <i3dMapping id="wheelRight01" node="0>0|5|11|1|0" />
+        <i3dMapping id="borderSpreadingBarMain" node="0>0|5|11|1|1" />
+        <i3dMapping id="borderSpreadingBarLeft01Ref" node="0>0|5|11|1|1|0" />
+        <i3dMapping id="borderSpreadingBarRight01Ref" node="0>0|5|11|1|1|1" />
+        <i3dMapping id="borderSpreadingHydraulicRef" node="0>0|5|11|1|2" />
+        <i3dMapping id="borderSpreadingHydraulic" node="0>0|5|11|2" />
+        <i3dMapping id="borderSpreadingHydraulicPunch" node="0>0|5|11|2|0" />
+        <i3dMapping id="workAreaLeft01Start" node="0>0|6|0" />
+        <i3dMapping id="workAreaLeft01Width" node="0>0|6|1" />
+        <i3dMapping id="workAreaLeft01Height" node="0>0|6|2" />
+        <i3dMapping id="workAreaLeft02Start" node="0>0|6|3" />
+        <i3dMapping id="workAreaLeft02Width" node="0>0|6|4" />
+        <i3dMapping id="workAreaLeft02Height" node="0>0|6|5" />
+        <i3dMapping id="workAreaRight01Start" node="0>0|6|6" />
+        <i3dMapping id="workAreaRight01Width" node="0>0|6|7" />
+        <i3dMapping id="workAreaRight01Height" node="0>0|6|8" />
+        <i3dMapping id="workAreaRight02Start" node="0>0|6|9" />
+        <i3dMapping id="workAreaRight02Width" node="0>0|6|10" />
+        <i3dMapping id="workAreaRight02Height" node="0>0|6|11" />
+        <i3dMapping id="dropAreas" node="0>0|7" />
+        <i3dMapping id="dropAreaLeft01Start" node="0>0|7|0" />
+        <i3dMapping id="dropAreaLeft01Width" node="0>0|7|1" />
+        <i3dMapping id="dropAreaLeft01Height" node="0>0|7|2" />
+        <i3dMapping id="dropAreaLeft02Start" node="0>0|7|3" />
+        <i3dMapping id="dropAreaLeft02Width" node="0>0|7|4" />
+        <i3dMapping id="dropAreaLeft02Height" node="0>0|7|5" />
+        <i3dMapping id="dropAreaRight01Start" node="0>0|7|6" />
+        <i3dMapping id="dropAreaRight01Width" node="0>0|7|7" />
+        <i3dMapping id="dropAreaRight01Height" node="0>0|7|8" />
+        <i3dMapping id="dropAreaRight02Start" node="0>0|7|9" />
+        <i3dMapping id="dropAreaRight02Width" node="0>0|7|10" />
+        <i3dMapping id="dropAreaRight02Height" node="0>0|7|11" />
+        <i3dMapping id="particleLeft01" node="0>0|8|0" />
+        <i3dMapping id="particleRight01" node="0>0|8|1" />
+        <i3dMapping id="aiCollisionNode" node="0>0|9|0" />
+        <i3dMapping id="areaMarkerLeft" node="0>0|9|1" />
+        <i3dMapping id="areaMarkerRight" node="0>0|9|2" />
+        <i3dMapping id="areaMarkerBack" node="0>0|9|3" />
+        <i3dMapping id="exteriorColorMask01_decals" node="0>0|10|1" />
+        <i3dMapping id="exteriorColorMask02_decals" node="0>0|10|2" />
+        <i3dMapping id="hoses" node="0>1|0" />
+        <i3dMapping id="vendroKW820Highland_attacher_component2" node="1>" />
+        <i3dMapping id="attacherJoint" node="1>0|0" />
+        <i3dMapping id="topReferenceNode" node="1>0|1" />
+        <i3dMapping id="supportArmFrontPhy" node="1>0|2" />
+        <i3dMapping id="attacherBlockRef" node="1>1" />
+        <i3dMapping id="vendroKW820Highland_armLeft01_component3" node="2>" />
+        <i3dMapping id="armLeft02Phy" node="2>0|0" />
+        <i3dMapping id="componentJointArmLeft03" node="2>0|0|0" />
+        <i3dMapping id="wheelLeft03AxlePhys" node="2>0|0|1|0" />
+        <i3dMapping id="wheelLeft03" node="2>0|0|1|0|0" />
+        <i3dMapping id="wheelLeft02AxlePhys" node="2>1" />
+        <i3dMapping id="wheelLeft02" node="2>1|0" />
+        <i3dMapping id="armLeft01Ref" node="2>2" />
+        <i3dMapping id="vendroKW820Highland_armLeft03_component4" node="3>" />
+        <i3dMapping id="wheelLeft04AxlePhys" node="3>0|0" />
+        <i3dMapping id="wheelLeft04" node="3>0|0|0" />
+        <i3dMapping id="armLeft03Ref" node="3>1" />
+        <i3dMapping id="vendroKW820Highland_armRight01_component5" node="4>" />
+        <i3dMapping id="armRight02Phy" node="4>0|0" />
+        <i3dMapping id="componentJointArmRight03" node="4>0|0|0" />
+        <i3dMapping id="wheelRight03AxlePhys" node="4>0|0|1|0" />
+        <i3dMapping id="wheelRight03" node="4>0|0|1|0|0" />
+        <i3dMapping id="wheelRight02AxlePhys" node="4>1" />
+        <i3dMapping id="wheelRight02" node="4>1|0" />
+        <i3dMapping id="armRight01Ref" node="4>2" />
+        <i3dMapping id="vendroKW820Highland_armRight03_component6" node="5>" />
+        <i3dMapping id="wheelRight04AxlePhys" node="5>0|0" />
+        <i3dMapping id="wheelRight04" node="5>0|0|0" />
+        <i3dMapping id="armRight03Ref" node="5>1" />
+    </i3dMappings>
+</vehicle>

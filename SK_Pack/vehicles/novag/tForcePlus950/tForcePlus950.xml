@@ -1,0 +1,1927 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="fertilizingSowingMachine" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>T-ForcePlus 950</name>
+        <specs>
+            <neededPower>415</neededPower>
+            <workingWidth>9.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_sowingMachine</function>
+            <function>$l10n_function_sowingMachineDirect</function>
+        </functions>
+        <image>$data/vehicles/novag/tForcePlus950/store_tForcePlus950.png</image>
+        <price>312000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>NOVAG</brand>
+        <category>seeders</category>
+        <shopLoadingDelay initial="0.3" />
+        <shopIgnoreLastComponentPositions>true</shopIgnoreLastComponentPositions>
+        <shopTranslationOffset>0 -0.051 0</shopTranslationOffset>
+        <shopRotationOffset>2.892 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>5538816</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1842944</indexBufferMemoryUsage>
+        <textureMemoryUsage>1245184</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_sowingMachine</typeDesc>
+        <filename>$data/vehicles/novag/tForcePlus950/tForcePlus950.i3d</filename>
+        <size width="3" length="10.65" height="4.15" lengthOffset="0.64"/>
+        <speedLimit value="30"/>
+        <components maxMass="29000">
+            <component centerOfMass="0 0.6 -1.2" solverIterationCount="10" mass="5480"/>
+            <component centerOfMass="0 0 0"      solverIterationCount="20" mass="1500"/>
+            <component centerOfMass="0 0 0"      solverIterationCount="20" mass="2500"/>
+            <component centerOfMass="0 0 0"      solverIterationCount="20" mass="2500"/>
+            <component centerOfMass="0 0 0"      solverIterationCount="20" mass="2500"/>
+            <component centerOfMass="0 0 0"      solverIterationCount="20" mass="2500"/>
+
+            <joint component1="1" component2="2" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="3" node="componentJointBoggieLeft" rotLimit="10 0 0" transLimit="0 0 0" rotLimitSpring="500 0 0" rotLimitDamping="500 0 0" />
+            <joint component1="1" component2="4" node="componentJointBoggieRight" rotLimit="10 0 0" transLimit="0 0 0" rotLimitSpring="500 0 0" rotLimitDamping="500 0 0" />
+            <joint component1="1" component2="5" node="componentJointArmLeft01" rotLimit="0 0 0" transLimit="0 0 0" />
+            <joint component1="1" component2="6" node="componentJointArmRight01" rotLimit="0 0 0" transLimit="0 0 0" />
+
+            <collisionPair component1="3" component2="5" enabled="false"/>
+            <collisionPair component1="3" component2="6" enabled="false"/>
+            <collisionPair component1="4" component2="5" enabled="false"/>
+            <collisionPair component1="4" component2="6" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <sounds volumeFactor="1.3"/>
+        <mapHotspot type="TOOL_TRAILED" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="VREDESTEIN" saveId="DEFAULT">
+                <wheels>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="3.9" repr="crawlerLeftFrontWheel"                                            radius="0.452" width="0.78" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.07" spring="215" damper="65" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="3.9" repr="crawlerLeftBackWheel" driveNode="crawlerLeftBackWheelDriveNode"   radius="0.452" width="0.78" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.07" spring="215" damper="65" supportsWheelSink="false"/>
+                        <tire tireTrackAtlasIndex="7"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="4.1" repr="crawlerRightFrontWheel"                                           radius="0.452" width="0.78" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.07" spring="215" damper="65" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="4.1" repr="crawlerRightBackWheel" driveNode="crawlerRightBackWheelDriveNode" radius="0.452" width="0.78" mass="0.2" frictionScale="2" tireType="crawler" initialCompression="25" suspTravel="0.07" spring="215" damper="65" supportsWheelSink="false"/>
+                        <tire tireTrackAtlasIndex="7"/>
+                    </wheel>
+
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/520_50R17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.4" repr="armLeft02WheelPhys"  forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="20" damper="10" brakeFactor="0.05" yOffset="0.02" supportsWheelSink="false" useReprDirection="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/520_50R17.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.4" repr="armRight02WheelPhys" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="20" damper="10" brakeFactor="0.05" yOffset="0.003" supportsWheelSink="false" useReprDirection="true"/>
+                    </wheel>
+                </wheels>
+
+                <crawlers>
+                    <crawler filename="$data/shared/crawlers/novag/tForcePlus950Crawler/tForcePlus950Crawler.xml" linkWheelNodes="crawlerLeftBackWheel crawlerLeftFrontWheel" isLeft="true"/>
+                    <crawler filename="$data/shared/crawlers/novag/tForcePlus950Crawler/tForcePlus950Crawler.xml" linkWheelNodes="crawlerRightBackWheel crawlerRightFrontWheel" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <hubs>
+            <hub linkNode="armLeft02WheelPhys" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true" scale="0.25 0.25 0.25" offset="-0.003"/>
+            <hub linkNode="armRight02WheelPhys" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.25 0.25 0.25" offset="-0.003"/>
+        </hubs>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit01Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit02Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit03Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit04Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit05Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit06Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit07Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit08Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit09Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit10Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+        <speedRotatingPart shaderNode="armLeft01SeederUnit11Rolls" groundReferenceNodeIndex="1" radius="-0.25"/>
+
+        <speedRotatingPart shaderNode="armLeft02SeederUnit01Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armLeft02SeederUnit02Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armLeft02SeederUnit03Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armLeft02SeederUnit04Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armLeft02SeederUnit05Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+
+        <speedRotatingPart shaderNode="armMiddleSeederUnit01Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armMiddleSeederUnit02Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armMiddleSeederUnit03Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armMiddleSeederUnit04Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+
+        <speedRotatingPart shaderNode="armRight01SeederUnit01Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit02Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit03Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit04Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit05Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit06Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit07Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit08Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit09Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit10Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight01SeederUnit11Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+
+        <speedRotatingPart shaderNode="armRight02SeederUnit01Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight02SeederUnit02Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight02SeederUnit03Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight02SeederUnit04Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+        <speedRotatingPart shaderNode="armRight02SeederUnit05Rolls" groundReferenceNodeIndex="1" radius="-0.28"/>
+    </speedRotatingParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" rootNode="tForcePlus950_drawbar_component2" jointType="trailerLow" attacherHeight="0.71"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="1.7" maxForce="2.5" maxForceMass="28500"/>
+        <sounds>
+            <active file="$data/sounds/tools/cultivator/generalRattle_01.wav" innerRadius="10" outerRadius="50" volumeScale="4" isLocalSound="true" pitchScale="1.0">
+                <volume indoor="0.7" outdoor="0.9" >
+                    <modifier type="WHEEL_SUSPENSION" value="-0.06" modifiedValue="0.25"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.04" modifiedValue="0.2"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.02" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.01" modifiedValue="0.00"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.00" modifiedValue="0.0"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.01" modifiedValue="0.00"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.02" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.04" modifiedValue="0.2"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.06" modifiedValue="0.25"/>
+
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0"/>
+                    <modifier type="SPEED" value="2.0" modifiedValue="1.0"/>
+                    <modifier type="SPEED" value="40.0" modifiedValue="1.0"/>
+                </volume>
+                <lowpassCutoffFrequency indoor="250" outdoor="20000" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </active>
+        </sounds>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn01"  length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicIn01_connector" adapterMaterialTemplateName="SHARED_BLUE1">
+           <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicOut01_connector" adapterMaterialTemplateName="SHARED_BLUE1">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn02"  length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicIn02_connector" adapterMaterialTemplateName="WALTERSCHEID_YELLOW1">
+           <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut02" length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicOut02_connector" adapterMaterialTemplateName="WALTERSCHEID_YELLOW1">
+            <objectChange node="hydraulicOut02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn03"  length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicIn03_connector" adapterMaterialTemplateName="SALEK_GREEN1">
+           <objectChange node="hydraulicIn03_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut03" length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicOut03_connector" adapterMaterialTemplateName="FENDT_BLACK1">
+            <objectChange node="hydraulicOut03_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn04"  length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicIn04_connector" adapterMaterialTemplateName="LIZARD_PURPLE1">
+           <objectChange node="hydraulicIn04_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut04" length="1.4" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="hydraulicOut04_connector" adapterMaterialTemplateName="LIZARD_PURPLE1">
+            <objectChange node="hydraulicOut04_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.1" diameter="0.013" straighteningFactor="1" minDeltaY="-0.3" adapterNode="electric_connector">
+            <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+    </connectionHoses>
+
+    <powerConsumer forceNode="tForcePlus950_main_component1" maxForce="36" ptoRpm="470" neededMaxPtoPower="20">
+        <speedLimitModifier offset="-8" minPowerHp="0"   maxPowerHp="320"/>
+        <speedLimitModifier offset="-6" minPowerHp="320" maxPowerHp="350"/>
+        <speedLimitModifier offset="-4" minPowerHp="350" maxPowerHp="380"/>
+        <speedLimitModifier offset="-2" minPowerHp="380" maxPowerHp="400"/>
+    </powerConsumer>
+
+    <lights>
+        <sharedLight linkNode="rearLight33_left" filename="$data/shared/assets/lights/lizard/rearLight33_left.xml" />
+        <sharedLight linkNode="rearLight33_right" filename="$data/shared/assets/lights/lizard/rearLight33_right.xml" />
+        <sharedLight linkNode="rearLight26White_01" filename="$data/shared/assets/lights/lizard/rearLight26White.xml" />
+        <sharedLight linkNode="rearLight26White_02" filename="$data/shared/assets/lights/lizard/rearLight26White.xml" />
+        <sharedLight linkNode="sideMarker05White_01" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml" />
+        <sharedLight linkNode="sideMarker05White_02" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml" />
+        <sharedLight linkNode="hellaWorkingLight01_01" filename="$data/shared/assets/lights/hella/hellaWorkingLight01.xml" />
+        <sharedLight linkNode="hellaWorkingLight01_02" filename="$data/shared/assets/lights/hella/hellaWorkingLight01.xml" />
+
+        <realLights>
+            <high>
+                <light          node="backLightsHigh" lightTypes="0"/>
+                <light          node="licensePlateLightHigh" lightTypes="0"/>
+                <light          node="workLightBackHigh" lightTypes="1"/>
+                <turnLightLeft  node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <brakeLight     node="backLightsHigh"/>
+                <reverseLight   node="reverseLightHigh" />
+            </high>
+        </realLights>
+
+        <beaconLights>
+           <beaconLight node="beaconLight04_01" speed="0.015" filename="$data/shared/assets/beaconLights/lizard/beaconLight07.xml" />
+        </beaconLights>
+    </lights>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="SQUARISH" placementArea="0.07 0.3 0.3 0.137"/>
+    </licensePlates>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" forceFactor="1" threshold="0.25"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="sowingMachine" functionName="processSowingMachineArea">
+            <area startNode="workAreaLeftStart" widthNode="workAreaLeftWidth" heightNode="workAreaLeftHeight"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.125"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+        <workArea type="sowingMachine" functionName="processSowingMachineArea">
+            <area startNode="workAreaRightStart" widthNode="workAreaRightWidth" heightNode="workAreaRightHeight"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.125"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+    </workAreas>
+
+    <workParticles>
+        <effect workAreaIndex="1">
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="seederEffectLeftLinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/novag/tForcePlus950/seederEffectLeftArray.dds" numRows="50" rowLength="18" density="0.5" shapeScale="0.4" maxShapeScale="0.5" speedScale="0.7"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="seederEffectMiddleLinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/novag/tForcePlus950/seederEffectMiddleArray.dds" numRows="20" rowLength="18" density="0.5" shapeScale="0.4" maxShapeScale="0.5" speedScale="0.7"/>
+            </effectNode>
+        </effect>
+        <effect workAreaIndex="2">
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="seederEffectRightLinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/novag/tForcePlus950/seederEffectRightArray.dds" numRows="50" rowLength="18" density="0.5" shapeScale="0.9" maxShapeScale="0.5" speedScale="0.7"/>
+            </effectNode>
+        </effect>
+        <particle>
+            <node node="smokeEmitter" refNodeIndex="1" particleType="SOIL_SMOKE" emitCountScale="1.0" />
+        </particle>
+    </workParticles>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.1" turnOnFoldMinLimit="0" turnOnFoldMaxLimit="0.125">
+                    <foldingPart animationName="folding" speedScale="0.8" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="componentJointDrawbar" startTime="0" endTime="1.0" startRot="4 0 0" endRot="-8 0 0"/>
+            <part node="armSupport" startTime="0" endTime="1.0" startRot="0 0 0" endRot="-5 0 0"/>
+
+            <sound template="hydraulicOpen06"  startTime="0.1" endTime="0.99" direction="1"     volumeScale="1.2" startPitchScale="0.6" endPitchScale="0.55" fadeIn="0.1" fadeOut="0.5"/>
+            <sound template="hydraulicClose01" startTime="0.1" endTime="0.99" direction="-1"    volumeScale="2.4" pitchScale="0.6"      fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="grabImp"          startTime="0.1" direction="-1" volumeScale="1.2" pitchScale="0.9"  fadeIn="0.1"/>
+        </animation>
+
+        <animation name="folding" >
+            <!-- lowering -->
+            <part node="groundReferenceNode" startTime="0" endTime="1.0" startTrans="0 -0.312 0" endTrans="0 0 0"/>
+
+            <part node="groundAdjustedNodeArmLeft01SeederUnit01" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmLeft01SeederUnit05" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmLeft01SeederUnit08" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmLeft02SeederUnit01" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmLeft02SeederUnit03" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmMiddleSeederUnit01" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight01SeederUnit01" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight01SeederUnit04" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight01SeederUnit07" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight01SeederUnit10" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight02SeederUnit01" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+            <part node="groundAdjustedNodeArmRight02SeederUnit04" startTime="0.0" endTime="1.0" startGroundAdjustScale="1" endGroundAdjustScale="0"/>
+
+            <!-- folding -->
+            <part node="armLeft02"                startTime="1.0" endTime="3.9" startRot="0 0 0" endRot="0 0 180" />
+            <part node="armLeft02Phys"            startTime="1.0" endTime="3.9" startRot="0 0 0" endRot="0 0 180" />
+            <part node="armRight02"               startTime="1.0" endTime="3.9" startRot="0 0 0" endRot="0 0 -180" />
+            <part node="armRight02Phys"           startTime="1.0" endTime="3.9" startRot="0 0 0" endRot="0 0 -180" />
+            <part node="armLeft02WheelArm"        startTime="1.0" endTime="3.9" startRot="15 0 0" endRot="45 0 0" />
+            <part node="armLeft02WheelArmPhys"    startTime="1.0" endTime="3.9" startRot="15 0 0" endRot="45 0 0" />
+            <part node="armRight02WheelArm"       startTime="1.0" endTime="3.9" startRot="15 0 0" endRot="45 0 0" />
+            <part node="armRight02WheelArmPhys"   startTime="1.0" endTime="3.9" startRot="15 0 0" endRot="45 0 0" />
+            <part node="componentJointArmLeft01"  startTime="4.0" endTime="9.2" startRot="0 0 0" endRot="0 0 90" />
+            <part node="componentJointArmRight01" startTime="4.3" endTime="9.5" startRot="0 0 0" endRot="0 0 -90" />
+            <part componentIndex="5" startTime="9.9" endTime="10" startCenterOfMass="2 -0.3 -0.2" endCenterOfMass="-1 0 0"/>
+            <part componentIndex="6" startTime="9.9" endTime="10" startCenterOfMass="-2 -0.3 -0.2" endCenterOfMass="1 0 0"/>
+
+            <part node="armLeft01Spring02" startTime="1.0" endTime="3.9" startRot="-14.382 -77.047 4.155" endRot="-0.978 -77.047 4.155" />
+            <part node="armLeft02Spring01" startTime="1.0" endTime="3.9" startRot="0.0 0.0 0.0" endRot="-13.848 -9.641 -10.474" />
+            <part node="armLeft02Spring02" startTime="1.0" endTime="3.9" startRot="0.0 0.0 0.0" endRot="-25.641 3.913 -34.315" />
+            <part node="armRight01Spring02" startTime="1.0" endTime="3.9" startRot="-12.634 78.658 -3.007" endRot="-26.618 76.068 -27.921" />
+            <part node="armRight02Spring01" startTime="1.0" endTime="2.45" startRot="-1.734 0.0 0.0" endRot="-4.59 1.01 12.868" />
+            <part node="armRight02Spring01" startTime="2.45" endTime="3.9" startRot="-4.59 1.01 12.868" endRot="-6.929 -7.969 24.069" />
+            <part node="armRight02Spring02" startTime="1.0" endTime="2.45" startRot="0.0 0.0 0.0" endRot="3.433 5.584 18.266" />
+            <part node="armRight02Spring02" startTime="2.45" endTime="3.9" startRot="3.433 5.584 18.266" endRot="-5.242 0.033 29.658" />
+
+            <part node="armLeftLockArm"  startTime="8.2" endTime="8.8" startRot="0 0 16.8" endRot="0 0 30" />
+            <part node="armRightLockArm" startTime="8.5" endTime="9.1" startRot="0 0 -16.8" endRot="0 0 -30" />
+            <part node="armLeftLockArm"  startTime="9.1" endTime="9.4" startRot="0 0 30" endRot="0 0 16.8" />
+            <part node="armRightLockArm" startTime="9.3" endTime="9.9" startRot="0 0 -30" endRot="0 0 -16.8" />
+
+            <!-- animated left joints -->
+            <part node="armLeftAnimJoint05" startTime="1.0" endTime="3.9" startTrans="0.823 2.229 -1.176" endTrans="0.831 2.212 -1.093" startRot="-33.252 -58.033 21.642" endRot="-55.647 -38.394 20.016" />
+            <part node="armLeftAnimJoint06" startTime="1.0" endTime="2.74" startTrans="1.631 1.876 -1.651" endTrans="1.516 1.608 -1.515" startRot="-33.252 -58.033 21.642" endRot="-31.044 -37.823 28.72" />
+            <part node="armLeftAnimJoint06" startTime="2.74" endTime="3.9" startTrans="1.516 1.608 -1.515" endTrans="1.489 1.384 -1.27" startRot="-31.044 -37.823 28.72" endRot="-50.516 -8.002 39.185" />
+            <part node="armLeftAnimJoint07" startTime="1.0" endTime="2.74" startTrans="2.456 1.56 -2.1" endTrans="2.401 1.061 -1.9" startRot="-33.252 -58.033 21.642" endRot="-29.933 -25.654 84.611" />
+            <part node="armLeftAnimJoint07" startTime="2.74" endTime="3.9" startTrans="2.401 1.061 -1.9" endTrans="2.216 1.119 -1.779" startRot="-29.933 -25.654 84.611" endRot="-17.194 8.366 115.096" />
+            <part node="armLeftAnimJoint08" startTime="1.0" endTime="2.74" startTrans="3.282 1.246 -2.541" endTrans="2.905 1.235 -2.349" startRot="-33.252 -58.033 21.642" endRot="-25.509 -15.09 81.392" />
+            <part node="armLeftAnimJoint08" startTime="2.74" endTime="3.9" startTrans="2.905 1.235 -2.349" endTrans="2.497 1.334 -2.304" startRot="-25.509 -15.09 81.392" endRot="-13.632 3.697 141.472" />
+            <part node="armLeftAnimJoint09" startTime="1.0" endTime="2.45" startTrans="-2.018 -0.193 2.53" endTrans="-2.018 -0.201 2.475" startRot="-63.589 0.0 0.0" endRot="-89.475 0.0 0.0" />
+            <part node="armLeftAnimJoint09" startTime="2.45" endTime="3.9" startTrans="-2.018 -0.201 2.475" endTrans="-2.018 -0.209 2.421" startRot="-89.475 0.0 0.0" endRot="-115.361 0.0 0.0" />
+            <part node="armLeftAnimJoint10" startTime="1.0" endTime="2.45" startTrans="-2.018 0.03 2.702" endTrans="-2.018 -0.025 2.554" startRot="-17.055 0.0 0.0" endRot="-43.868 0.0 0.0" />
+            <part node="armLeftAnimJoint10" startTime="2.45" endTime="3.9" startTrans="-2.018 -0.025 2.554" endTrans="-2.018 -0.079 2.407" startRot="-43.868 0.0 0.0" endRot="-2.654 0.0 0.0" />
+            <part node="armLeftAnimJoint11" startTime="1.0" endTime="2.45" startTrans="-2.023 -0.057 2.839" endTrans="-1.976 -0.014 2.691" startRot="66.622 0.0 0.0" endRot="-12.222 0.0 0.0" />
+            <part node="armLeftAnimJoint11" startTime="2.45" endTime="3.9" startTrans="-1.976 -0.014 2.691" endTrans="-2.023 -0.145 2.549" startRot="-12.222 0.0 0.0" endRot="-7.556 0.0 0.0" />
+
+            <part node="armLeft02AnimJoint01" startTime="1.0" endTime="3.9" startTrans="0.553 0.202 -1.91" endTrans="0.67 0.086 -2.053" startRot="0.0 0.0 0.0" endRot="-13.042 15.408 -13.23" />
+            <part node="armLeft02AnimJoint02" startTime="1.0" endTime="3.9" startTrans="0.317 0.202 -1.91" endTrans="0.504 0.148 -1.913" startRot="0.0 0.0 0.0" endRot="-1.965 9.671 0.832" />
+
+            <!-- animated right joints -->
+            <part node="armRightAnimJoint05" startTime="1.0" endTime="3.9" startTrans="-0.811 2.221 -1.162" endTrans="-0.725 2.025 -0.98" startRot="-36.47 -26.421 21.621" endRot="-60.568 -26.89 40.985" />
+            <part node="armRightAnimJoint06" startTime="1.0" endTime="3.9" startTrans="-1.632 1.894 -1.618" endTrans="-1.387 1.434 -1.195" startRot="-36.47 -26.421 21.621" endRot="-104.915 -32.231 43.537" />
+            <part node="armRightAnimJoint07" startTime="1.0" endTime="3.9" startTrans="-2.466 1.563 -2.08" endTrans="-1.869 0.851 -1.613" startRot="-36.47 -26.421 21.621" endRot="-104.309 -37.054 27.718" />
+            <part node="armRightAnimJoint08" startTime="1.0" endTime="3.9" startTrans="-3.287 1.246 -2.541" endTrans="-2.399 0.729 -2.11" startRot="-36.47 -26.421 21.621" endRot="-127.495 -48.417 -5.98" />
+            <part node="armRightAnimJoint09" startTime="1.0" endTime="2.45" startTrans="2.017 -0.184 2.53" endTrans="2.017 -0.198 2.454" startRot="-68.326 0.0 0.0" endRot="-104.725 0.0 0.0" />
+            <part node="armRightAnimJoint09" startTime="2.45" endTime="3.9" startTrans="2.017 -0.198 2.454" endTrans="2.017 -0.212 2.379" startRot="-104.725 0.0 0.0" endRot="-141.123 0.0 0.0" />
+            <part node="armRightAnimJoint10" startTime="1.0" endTime="2.45" startTrans="2.024 -0.066 2.853" endTrans="2.023 -0.009 2.695" startRot="84.613 0.0 0.0" endRot="10.515 0.0 0.0" />
+            <part node="armRightAnimJoint10" startTime="2.45" endTime="3.9" startTrans="2.023 -0.009 2.695" endTrans="2.024 -0.152 2.556" startRot="10.515 0.0 0.0" endRot="26.1 0.0 0.0" />
+            <part node="armRightAnimJoint11" startTime="1.0" endTime="2.45" startTrans="2.024 0.031 2.696" endTrans="2.024 -0.052 2.565" startRot="-9.489 0.0 0.0" endRot="-40.326 0.0 0.0" />
+            <part node="armRightAnimJoint11" startTime="2.45" endTime="3.9" startTrans="2.024 -0.052 2.565" endTrans="2.024 -0.088 2.395" startRot="-40.326 0.0 0.0" endRot="5.79 0.0 0.0" />
+
+            <part node="armRight02AnimJoint01" startTime="0.0" endTime="1.0" startTrans="-0.512 0.239 -1.844" endTrans="-0.621 -0.309 -1.97" startRot="0.0 16.406 0.0" endRot="-15.769 16.406 -0.0" />
+
+            <part node="armLeft01SeederUnit08AnimJoint" startTime="1.0" endTime="3.9" startTrans="0.555 0.42 0.671" endTrans="0.555 0.287 0.572" />
+            <part node="armRight01SeederUnit11AnimJoint" startTime="1.0" endTime="3.9" startTrans="-0.73 0.45 0.661" endTrans="-0.651 0.384 0.612" startRot="0.0 0.0 -8.682" endRot="0.0 0.0 -48.516" />
+
+            <sound template="hydraulicOpen02"  startTime="4"    endTime="9.4"  volumeScale="1.2" direction="-1" startPitchScale="1.1" endPitchScale="1.3" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicOpen05"  startTime="4.3"  endTime="9.2"  volumeScale="1.2" direction="-1" startPitchScale="1.1" endPitchScale="1.3" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicClose01" startTime="4"    endTime="9.6"  volumeScale="1.7" direction="1"  pitchScale="0.8"                          fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicClose02" startTime="4.3"  endTime="9.2"  volumeScale="1.7" direction="1"  pitchScale="1"                            fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicClose02" startTime="1.01" endTime="3.9"  volumeScale="1.5" direction="0"  pitchScale="1.3"                          fadeIn="0.1" fadeOut="0.1" linkNode="armLeft02"/>
+            <sound template="hydraulicClose03" startTime="1.01" endTime="3.9"  volumeScale="1.5" direction="0"  pitchScale="1.4"                          fadeIn="0.1" fadeOut="0.1" linkNode="armRight02"/>
+            <sound template="foldStartMed02"   startTime="9.4"  direction="0"  volumeScale="2.5" pitchScale="0.6" />
+            <sound template="clackVar4"        startTime="9.4"  direction="0"  volumeScale="1.5" pitchScale="0.4" />
+            <sound template="foldStartMed02"   startTime="9.2"  direction="0"  volumeScale="2.5" pitchScale="0.9" />
+            <sound template="clackVar4"        startTime="9.2"  direction="0"  volumeScale="1.5" pitchScale="0.6" />
+            <sound template="vibratingImp"     startTime="9.2"  direction="1"  volumeScale="1.2" pitchScale="1.2" />
+            <sound template="metalImpHigh03"   startTime="9.2"  direction="1"  volumeScale="0.5" pitchScale="0.7" />
+            <sound template="vibratingImp"     startTime="4.3"  direction="-1" volumeScale="1.3" pitchScale="0.9" linkNode="armRight01Spring01"/>
+            <sound template="metalImpHigh02"   startTime="4.3"  direction="-1" volumeScale="0.6" pitchScale="0.9" linkNode="armRight01Spring01"/>
+            <sound template="vibratingImp"     startTime="4.0"  direction="-1" volumeScale="1.3" pitchScale="1.1" linkNode="armLeft01Spring01"/>
+            <sound template="metalImpHigh03"   startTime="4.0"  direction="-1" volumeScale="0.6" pitchScale="0.9" linkNode="armLeft01Spring01"/>
+            <sound template="clackVar4"        startTime="4.0"  direction="-1" volumeScale="1.6" pitchScale="0.6" linkNode="armLeft01Spring01"/>
+            <sound template="vibratingImp"     startTime="1.01" direction="-1" volumeScale="0.7" pitchScale="0.9" linkNode="armLeft01Spring01"/>
+            <sound template="foldStartMed02"   startTime="1.01" direction="-1" volumeScale="1.4" pitchScale="0.9" linkNode="armLeft01Spring01"/>
+            <sound template="vibratingImp"     startTime="1.01" direction="-1" volumeScale="0.7" pitchScale="1.1" linkNode="armRight01Spring01"/>
+            <sound template="vibratingImp"     startTime="3.9"  direction="1"  volumeScale="0.7" pitchScale="0.9" />
+            <sound template="foldStartMed02"   startTime="3.9"  direction="1"  volumeScale="1.4" pitchScale="1.2" />
+            <sound template="vibratingImp"     startTime="3.9"  direction="1"  volumeScale="0.7" pitchScale="1.1" />
+            <sound template="clackVar4"        startTime="3.9"  direction="1"  volumeScale="1.6" pitchScale="0.7" />
+            <sound template="hydraulicOpen02"  startTime="0.01" endTime="0.99" volumeScale="1.7" pitchScale="1.3" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="foldStartMed02"   startTime="0.01" direction="-1" volumeScale="1.4" pitchScale="1.2" />
+            <sound template="vibratingImp"     startTime="0.01" direction="-1" volumeScale="0.7" pitchScale="1.1" />
+            <sound template="clackVar4"        startTime="0.01" direction="-1" volumeScale="1.6" pitchScale="0.7" />
+            <sound template="foldStartMed02"   startTime="0.99" direction="1"  volumeScale="1.4" pitchScale="1.5" />
+            <sound template="vibratingImp"     startTime="0.99" direction="1"  volumeScale="0.7" pitchScale="1.1" />
+            <sound template="hingeImp"         startTime="0.9"  direction="1"  volumeScale="0.6" pitchScale="0.8" />
+        </animation>
+
+        <animation name="toggleCover">
+            <part node="ladderLock" startTime="0.0" endTime="0.3" startRot="0 0 0" endRot="0 0 150"/>
+            <part node="ladder" startTime="0.3" endTime="1.2" startRot="0 0 186" endRot="0 0 0"/>
+            <part node="coverOpened" startTime="0.0" endTime="1.2" visibility="true" />
+            <part node="coverClosed" startTime="0.0" endTime="1.2" visibility="false" />
+            <part node="coverOpened" startTime="1.2" endTime="1.3" visibility="false" />
+            <part node="coverClosed" startTime="1.2" endTime="1.3" visibility="true" />
+
+            <sound template="fabricCover1"   startTime="1.0"  direction="1"  volumeScale="1.4" pitchScale="1.3" />
+            <sound template="fabricCover2"   startTime="1.29" direction="-1" volumeScale="1.1" pitchScale="1.2" />
+            <sound template="slideOpen"      startTime="0.3"  endTime="1.29" volumeScale="2"   pitchScale="1.2" linkNode="ladder"/>
+            <sound template="vibratingImp"   startTime="0.3"  direction="-1" volumeScale="1"   pitchScale="1.4" linkNode="ladder"/>
+            <sound template="vibratingImp"   startTime="1.29" direction="1"  volumeScale="1"   pitchScale="1.4" linkNode="ladder"/>
+        </animation>
+
+        <animation name="armLeftHoses" resetOnStart="false">
+            <part node="armLeftAnimJoint01" startTime="0.0" endTime="1.0" startTrans="2.28 1.528 -0.065" endTrans="0.633 2.57 -0.065" startRot="0.0 0.0 64.616" endRot="0.0 0.0 189.484" />
+            <part node="armLeftAnimJoint02" startTime="0.0" endTime="1.0" startTrans="1.5 1.989 -0.315" endTrans="0.654 1.709 -0.315" startRot="0.0 0.0 64.616" endRot="0.0 0.0 164.668" />
+            <part node="armLeftAnimJoint03" startTime="0.0" endTime="1.0" startTrans="0.936 2.281 -0.458" endTrans="0.593 2.044 -0.458" startRot="0.0 0.0 64.616" endRot="0.0 0.0 -0.416" />
+            <part node="armLeftAnimJoint04" startTime="0.0" endTime="1.0" startTrans="0.475 2.502 -0.61" endTrans="0.476 2.5 -0.61" startRot="4.033 -12.225 -18.414" endRot="12.563 -10.454 -71.569" />
+            <part node="armLeftAnimJoint05" startTime="0.2" endTime="0.5" startTrans="0.831 2.212 -1.093" endTrans="0.791 2.001 -0.996" startRot="-55.647 -38.394 20.016" endRot="-46.699 -7.509 20.233" />
+            <part node="armLeftAnimJoint05" startTime="0.5" endTime="0.8" startTrans="0.791 2.001 -0.996" endTrans="0.881 2.014 -1.014" startRot="-46.699 -7.509 20.233" endRot="-54.399 19.677 26.979" />
+            <part node="armLeftAnimJoint05" startTime="0.8" endTime="1.0" startTrans="0.881 2.014 -1.014" endTrans="0.91 2.031 -1.046" startRot="-54.399 19.677 26.979" endRot="-53.412 23.132 29.684" />
+            <part node="armLeftAnimJoint06" startTime="0.2" endTime="0.5" startTrans="1.489 1.384 -1.27" endTrans="1.481 1.488 -1.342" startRot="-50.516 -8.002 39.185" endRot="-18.418 10.121 96.564" />
+            <part node="armLeftAnimJoint06" startTime="0.5" endTime="0.8" startTrans="1.481 1.488 -1.342" endTrans="1.194 1.554 -1.594" startRot="-18.418 10.121 96.564" endRot="-2.916 20.736 150.557" />
+            <part node="armLeftAnimJoint06" startTime="0.8" endTime="1.0" startTrans="1.194 1.554 -1.594" endTrans="1.006 1.681 -1.855" startRot="-2.916 20.736 150.557" endRot="-14.746 -19.676 141.605" />
+            <part node="armLeftAnimJoint07" startTime="0.2" endTime="0.5" startTrans="2.216 1.119 -1.779" endTrans="1.833 1.529 -1.829" startRot="-17.194 8.366 115.096" endRot="-23.874 22.089 131.308" />
+            <part node="armLeftAnimJoint07" startTime="0.5" endTime="0.8" startTrans="1.833 1.529 -1.829" endTrans="1.337 2.084 -2.03" startRot="-23.874 22.089 131.308" endRot="-45.705 41.093 174.647" />
+            <part node="armLeftAnimJoint07" startTime="0.8" endTime="1.0" startTrans="1.337 2.084 -2.03" endTrans="0.771 2.455 -2.048" startRot="-45.705 41.093 174.647" endRot="-57.564 10.366 179.919" />
+            <part node="armLeftAnimJoint08" startTime="0.2" endTime="0.8" startTrans="2.497 1.334 -2.304" endTrans="1.358 2.633 -2.125" startRot="-13.632 3.697 141.472" endRot="0.136 42.381 236.902" />
+            <part node="armLeftAnimJoint08" startTime="0.8" endTime="1.0" startTrans="1.358 2.633 -2.125" endTrans="0.731 3.043 -2.126" />
+
+            <part node="armLeft01SeederUnit02AnimJoint" startTime="0.0" endTime="1.0" startTrans="0.016 0.594 0.639" endTrans="0.073 0.369 0.473" startRot="-2.316 37.642 4.623" endRot="-12.974 68.181 -26.212" />
+            <part node="armLeft01SeederUnit03AnimJoint" startTime="0.0" endTime="0.6" startTrans="0.02 0.544 0.66" endTrans="0.145 0.278 0.62" startRot="-40.624 0.0 0.0" endRot="-9.81 4.092 -34.652" />
+            <part node="armLeft01SeederUnit03AnimJoint" startTime="0.6" endTime="1.0" startTrans="0.145 0.278 0.62" endTrans="0.349 0.41 0.58" startRot="-9.81 4.092 -34.652" endRot="-78.427 49.956 -81.657" />
+            <part node="armLeft01SeederUnit04AnimJoint" startTime="0.0" endTime="1.0" startTrans="0.021 0.637 0.742" endTrans="0.19 0.305 0.564" startRot="-33.15 0.0 0.0" endRot="-91.116 53.787 -102.039" />
+            <part node="armLeft01SeederUnit05AnimJoint" startTime="0.0" endTime="1.0" startTrans="0.015 0.684 0.879" endTrans="-0.034 0.34 0.727" startRot="-24.946 0.0 0.0" endRot="-32.391 -49.901 33.533" />
+
+            <part node="armMiddleAnimJoint01" startTime="0.0" endTime="1.0" startTrans="0.441 1.584 -3.671" endTrans="0.441 1.588 -3.662" startRot="59.909 -64.125 -71.789" endRot="45.99 -66.586 26.738" />
+        </animation>
+
+        <animation name="armRightHoses" resetOnStart="false">
+            <part node="armRightAnimJoint01" startTime="0.0" endTime="1.0" startTrans="-0.485 2.498 -0.606" endTrans="-0.485 2.489 -0.606" startRot="3.348 14.792 27.843" endRot="8.113 12.847 47.604" />
+            <part node="armRightAnimJoint02" startTime="0.0" endTime="1.0" startTrans="-0.872 2.302 -0.484" endTrans="-0.613 2.03 -0.484" startRot="8.957 -2.011 120.811" endRot="0.508 -9.164 195.071" />
+            <part node="armRightAnimJoint03" startTime="0.0" endTime="1.0" startTrans="-1.318 2.027 -0.355" endTrans="-0.271 1.603 -0.317" startRot="15.288 -2.011 120.811" endRot="40.052 -10.953 158.071" />
+            <part node="armRightAnimJoint04" startTime="0.0" endTime="0.4" startTrans="-2.01 1.654 -0.176" endTrans="-1.433 1.845 -0.189" startRot="15.288 -2.011 120.811" endRot="4.683 5.05 55.226" />
+            <part node="armRightAnimJoint04" startTime="0.4" endTime="1.0" startTrans="-1.433 1.845 -0.189" endTrans="-0.707 1.897 -0.205" startRot="4.683 5.05 55.226" endRot="-8.733 12.754 -11.336" />
+            <part node="armRightAnimJoint05" startTime="0.0" endTime="0.4" startTrans="-0.725 2.025 -0.98" endTrans="-0.774 2.03 -0.905" startRot="-60.568 -26.89 40.985" endRot="-100.03 -49.34 63.403" />
+            <part node="armRightAnimJoint05" startTime="0.4" endTime="0.7" startTrans="-0.774 2.03 -0.905" endTrans="-0.706 2.135 -0.99" startRot="-100.03 -49.34 63.403" endRot="-110.247 -43.725 73.97" />
+            <part node="armRightAnimJoint05" startTime="0.7" endTime="1.0" startTrans="-0.706 2.135 -0.99" endTrans="-0.72 2.14 -0.922" startRot="-110.247 -43.725 73.97" endRot="-122.192 -37.267 79.057" />
+            <part node="armRightAnimJoint06" startTime="0.0" endTime="0.4" startTrans="-1.387 1.434 -1.195" endTrans="-1.208 1.526 -1.244" startRot="-104.915 -32.231 43.537" endRot="-114.567 -38.139 -9.784" />
+            <part node="armRightAnimJoint06" startTime="0.4" endTime="0.7" startTrans="-1.208 1.526 -1.244" endTrans="-1.01 1.518 -1.353" startRot="-114.567 -38.139 -9.784" endRot="-135.299 -41.261 8.024" />
+            <part node="armRightAnimJoint06" startTime="0.7" endTime="1.0" startTrans="-1.01 1.518 -1.353" endTrans="-0.94 1.541 -1.452" startRot="-135.299 -41.261 8.024" endRot="-115.738 -66.2 -26.969" />
+            <part node="armRightAnimJoint07" startTime="0.0" endTime="0.4" startTrans="-1.869 0.851 -1.613" endTrans="-1.747 1.579 -1.568" startRot="-104.309 -37.054 27.718" endRot="-129.364 -32.699 -22.717" />
+            <part node="armRightAnimJoint07" startTime="0.4" endTime="0.7" startTrans="-1.747 1.579 -1.568" endTrans="-1.486 1.913 -1.742" startRot="-129.364 -32.699 -22.717" endRot="-180.462 -40.305 -62.822" />
+            <part node="armRightAnimJoint07" startTime="0.7" endTime="1.0" startTrans="-1.486 1.913 -1.742" endTrans="-0.837 2.049 -2.022" startRot="-180.462 -40.305 -62.822" endRot="-88.499 -42.321 -89.353" />
+            <part node="armRightAnimJoint08" startTime="0.0" endTime="0.4" startTrans="-2.399 0.729 -2.11" endTrans="-2.213 1.823 -2.043" startRot="-127.495 -48.417 -5.98" endRot="-196.99 -40.769 -19.838" />
+            <part node="armRightAnimJoint08" startTime="0.4" endTime="0.7" startTrans="-2.213 1.823 -2.043" endTrans="-1.781 2.537 -2.233" startRot="-196.99 -40.769 -19.838" endRot="-191.857 -54.192 -58.296" />
+            <part node="armRightAnimJoint08" startTime="0.7" endTime="1.0" startTrans="-1.781 2.537 -2.233" endTrans="-0.864 2.909 -2.353" startRot="-191.857 -54.192 -58.296" endRot="-173.515 -54.192 -58.296" />
+
+            <part node="armRight01SeederUnit02AnimJoint" startTime="0.0" endTime="1.0" startTrans="-0.012 0.658 0.753" endTrans="-0.06 0.284 0.725" startRot="56.219 0.0 0.0" endRot="62.71 23.314 -26.781" />
+            <part node="armRight01SeederUnit03AnimJoint" startTime="0.0" endTime="1.0" startTrans="-0.012 0.604 0.737" endTrans="-0.378 0.422 0.407" startRot="59.32 0.0 0.0" endRot="36.708 -26.967 20.28" />
+            <part node="armRight01SeederUnit04AnimJoint" startTime="0.0" endTime="0.6" startTrans="-0.007 0.627 0.723" endTrans="-0.521 0.205 0.579" startRot="53.091 0.0 0.0" endRot="35.223 -37.974 74.478" />
+            <part node="armRight01SeederUnit04AnimJoint" startTime="0.6" endTime="1.0" startTrans="-0.521 0.205 0.579" endTrans="-0.624 0.277 0.688" startRot="35.223 -37.974 74.478" endRot="227.021 -38.372 -114.29" />
+            <part node="armRight01SeederUnit05AnimJoint" startTime="0.0" endTime="1.0" startTrans="-0.047 0.671 0.805" endTrans="-0.302 0.264 0.503" startRot="33.903 29.562 -16.33" endRot="42.064 13.481 5.468" />
+
+            <part node="armMiddleAnimJoint02" startTime="0.0" endTime="1.0" startTrans="-0.434 1.59 -3.67" endTrans="-0.442 1.578 -3.663" startRot="0.0 0.0 0.0" endRot="0.053 -0.238 -102.783" />
+        </animation>
+
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="componentJointDrawbar">
+                <componentJoint index="1"/>
+            </movingTool>
+            <movingTool node="componentJointBoggieLeft">
+                <componentJoint index="2"/>
+            </movingTool>
+            <movingTool node="componentJointBoggieRight">
+                <componentJoint index="3"/>
+            </movingTool>
+            <movingTool node="componentJointArmLeft01">
+                <componentJoint index="4"/>
+            </movingTool>
+            <movingTool node="componentJointArmRight01">
+                <componentJoint index="5"/>
+            </movingTool>
+
+            <movingTool node="armLeft02">
+                <dependentPart node="armLeftFoldPart01"/>
+            </movingTool>
+            <movingTool node="armRight02">
+                <dependentPart node="armRightFoldPart01"/>
+            </movingTool>
+
+            <movingTool node="armLeftLockArm">
+                <dependentPart node="armLeftLockArmHydraulic"/>
+                <dependentPart node="armLeftLockArmSpring_decal"/>
+            </movingTool>
+            <movingTool node="armRightLockArm">
+                <dependentPart node="armRightLockArmHydraulic"/>
+                <dependentPart node="armRightLockArmSpring_decal"/>
+            </movingTool>
+
+            <movingTool node="armLeft02WheelArmPhys" wheelNodes="armLeft02WheelPhys"/>
+            <movingTool node="armRight02WheelArmPhys" wheelNodes="armRight02WheelPhys"/>
+
+            <movingTool node="armLeft02WheelArm">
+                <dependentPart node="armLeft02WheelArmHydraulic"/>
+            </movingTool>
+            <movingTool node="armRight02WheelArm">
+                <dependentPart node="armRight02WheelArmHydraulic"/>
+            </movingTool>
+
+            <!-- groundAdjustNodes armLeft01 seederUnits -->
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit01">
+                <dependentPart node="armLeft01SeederUnit01Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit02">
+                <dependentPart node="armLeft01SeederUnit02Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit03">
+                <dependentPart node="armLeft01SeederUnit03Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit04">
+                <dependentPart node="armLeft01SeederUnit04Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit05">
+                <dependentPart node="armLeft01SeederUnit05Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit06">
+                <dependentPart node="armLeft01SeederUnit06Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit07">
+                <dependentPart node="armLeft01SeederUnit07Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit08">
+                <dependentPart node="armLeft01SeederUnit08Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit09">
+                <dependentPart node="armLeft01SeederUnit09Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit10">
+                <dependentPart node="armLeft01SeederUnit10Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft01SeederUnit11">
+                <dependentPart node="armLeft01SeederUnit11Arm01"/>
+            </movingTool>
+
+            <!-- groundAdjustNodes armLeft02 seederUnits -->
+            <movingTool node="groundAdjustedNodeArmLeft02SeederUnit01">
+                <dependentPart node="armLeft02SeederUnit01Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft02SeederUnit02">
+                <dependentPart node="armLeft02SeederUnit02Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft02SeederUnit03">
+                <dependentPart node="armLeft02SeederUnit03Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft02SeederUnit04">
+                <dependentPart node="armLeft02SeederUnit04Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmLeft02SeederUnit05">
+                <dependentPart node="armLeft02SeederUnit05Arm01"/>
+            </movingTool>
+
+            <!-- groundAdjustNodes armMiddle seederUnits -->
+            <movingTool node="groundAdjustedNodeArmMiddleSeederUnit01">
+                <dependentPart node="armMiddleSeederUnit01Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmMiddleSeederUnit02">
+                <dependentPart node="armMiddleSeederUnit02Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmMiddleSeederUnit03">
+                <dependentPart node="armMiddleSeederUnit03Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmMiddleSeederUnit04">
+                <dependentPart node="armMiddleSeederUnit04Arm01"/>
+            </movingTool>
+
+            <!-- groundAdjustNodes armRight01 seederUnits -->
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit01">
+                <dependentPart node="armRight01SeederUnit01Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit02">
+                <dependentPart node="armRight01SeederUnit02Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit03">
+                <dependentPart node="armRight01SeederUnit03Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit04">
+                <dependentPart node="armRight01SeederUnit04Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit05">
+                <dependentPart node="armRight01SeederUnit05Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit06">
+                <dependentPart node="armRight01SeederUnit06Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit07">
+                <dependentPart node="armRight01SeederUnit07Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit08">
+                <dependentPart node="armRight01SeederUnit08Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit09">
+                <dependentPart node="armRight01SeederUnit09Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit10">
+                <dependentPart node="armRight01SeederUnit10Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight01SeederUnit11">
+                <dependentPart node="armRight01SeederUnit11Arm01"/>
+            </movingTool>
+
+            <!-- groundAdjustNodes armRight02 seederUnits -->
+            <movingTool node="groundAdjustedNodeArmRight02SeederUnit01">
+                <dependentPart node="armRight02SeederUnit01Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight02SeederUnit02">
+                <dependentPart node="armRight02SeederUnit02Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight02SeederUnit03">
+                <dependentPart node="armRight02SeederUnit03Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight02SeederUnit04">
+                <dependentPart node="armRight02SeederUnit04Arm01"/>
+            </movingTool>
+            <movingTool node="groundAdjustedNodeArmRight02SeederUnit05">
+                <dependentPart node="armRight02SeederUnit05Arm01"/>
+            </movingTool>
+        </movingTools>
+
+
+        <movingParts>
+            <!-- Boogie alignment -->
+            <movingPart node="crawlerLeftBackWheelLinkNode" referencePoint="crawlerLeftFrontWheel" referenceFrame="tForcePlus950_main_component1" isActiveDirty="true" maxUpdateDistance="40">
+                <dependentPart node="crawlerRightBackWheelLinkNode"/>
+            </movingPart>
+            <movingPart node="crawlerRightBackWheelLinkNode" referencePoint="crawlerRightFrontWheel" referenceFrame="tForcePlus950_main_component1"/>
+
+            <!-- drawbar -->
+            <movingPart node="drawbar" referencePoint="drawbarRef" referenceFrame="drawbarRefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentPart node="drawbarHydraulic"/>
+            </movingPart>
+            <movingPart node="drawbarHydraulic" referencePoint="drawbarHydraulicRef" referenceFrame="drawbarHydraulicRef">
+                <translatingPart node="drawbarHydraulicPunch" />
+            </movingPart>
+
+            <!-- armLeft -->
+            <movingPart node="armLeft01" referencePoint="armLeft01Ref" referenceFrame="armLeft01RefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentAnimation name="armLeftHoses" rotationAxis="1" minValue="-45" maxValue="45" invert="true"/>
+                <dependentPart node="armLeftHydraulic01"/>
+                <dependentPart node="armLeftHydraulic02"/>
+            </movingPart>
+            <movingPart node="armLeftFoldPart01" localReferencePoint="armLeftFoldPart02" referencePoint="armLeftFoldPartRef" referenceFrame="armLeftFoldPart01RefFrame" wheelIndices="3 4">
+                <dependentPart node="armLeftFoldPart02" />
+                <dependentPart node="armLeftHydraulic02" />
+            </movingPart>
+            <movingPart node="armLeftFoldPart02" referencePoint="armLeftFoldPartRef" referenceFrame="armLeftFoldPartRef"/>
+            <movingPart node="armLeftHydraulic01" referencePoint="armLeftHydraulic01Ref" referenceFrame="armLeftHydraulic01Ref">
+                <translatingPart node="armLeftHydraulic01Punch" />
+            </movingPart>
+            <movingPart node="armLeftHydraulic02" referencePoint="armLeftHydraulic02Ref" referenceFrame="armLeftHydraulic02RefFrame">
+                <translatingPart node="armLeftHydraulic02Punch" />
+            </movingPart>
+            <movingPart node="armLeftLockArmHydraulic" referencePoint="armLeftLockArmHydraulicRef" referenceFrame="armLeftLockArmHydraulicRef">
+                <translatingPart node="armLeftLockArmHydraulicPunch" />
+            </movingPart>
+            <movingPart node="armLeftLockArmSpring_decal" referencePoint="armLeftLockArmSpringRef" referenceFrame="armLeftLockArmSpringRef" scaleZ="true"/>
+            <movingPart node="armLeft02WheelArmHydraulic" referencePoint="armLeft02WheelArmHydraulicRef" referenceFrame="armLeft02WheelArmHydraulicRef">
+                <translatingPart node="armLeft02WheelArmHydraulicPunch" />
+            </movingPart>
+
+            <!-- armRight -->
+            <movingPart node="armRight01" referencePoint="armRight01Ref" referenceFrame="armRight01RefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="300">
+                <dependentAnimation name="armRightHoses" rotationAxis="1" minValue="-45" maxValue="45" invert="true"/>
+                <dependentPart node="armRightHydraulic01"/>
+                <dependentPart node="armRightHydraulic02"/>
+            </movingPart>
+            <movingPart node="armRightFoldPart01" localReferencePoint="armRightFoldPart02" referencePoint="armRightFoldPartRef" referenceFrame="armRightFoldPart01RefFrame" wheelIndices="3 4">
+                <dependentPart node="armRightFoldPart02" />
+                <dependentPart node="armRightHydraulic02" />
+            </movingPart>
+            <movingPart node="armRightFoldPart02" referencePoint="armRightFoldPartRef" referenceFrame="armRightFoldPartRef"/>
+            <movingPart node="armRightHydraulic01" referencePoint="armRightHydraulic01Ref" referenceFrame="armRightHydraulic01Ref">
+                <translatingPart node="armRightHydraulic01Punch" />
+            </movingPart>
+            <movingPart node="armRightHydraulic02" referencePoint="armRightHydraulic02Ref" referenceFrame="armRightHydraulic02RefFrame">
+                <translatingPart node="armRightHydraulic02Punch" />
+            </movingPart>
+            <movingPart node="armRightLockArmHydraulic" referencePoint="armRightLockArmHydraulicRef" referenceFrame="armRightLockArmHydraulicRef">
+                <translatingPart node="armRightLockArmHydraulicPunch" />
+            </movingPart>
+            <movingPart node="armRightLockArmSpring_decal" referencePoint="armRightLockArmSpringRef" referenceFrame="armRightLockArmSpringRef" scaleZ="true"/>
+            <movingPart node="armRight02WheelArmHydraulic" referencePoint="armRight02WheelArmHydraulicRef" referenceFrame="armRight02WheelArmHydraulicRef">
+                <translatingPart node="armRight02WheelArmHydraulicPunch" />
+            </movingPart>
+
+            <!-- seederUnits armLeft01 -->
+            <movingPart node="armLeft01SeederUnit01Arm01" referencePoint="armLeft01SeederUnit01Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit01Arm02"/>
+                <dependentPart node="armLeft01SeederUnit01"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit01Arm02" referenceFrame="armLeft01SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit01Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit01" referenceFrame="armLeft01SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit01Hydraulic" referencePoint="armLeft01SeederUnit01HydraulicRef" referenceFrame="armLeft01SeederUnit01HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit01HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit02Arm01" referencePoint="armLeft01SeederUnit02Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit02Arm02"/>
+                <dependentPart node="armLeft01SeederUnit02"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit02Arm02" referenceFrame="armLeft01SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit02Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit02" referenceFrame="armLeft01SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit02Hydraulic" referencePoint="armLeft01SeederUnit02HydraulicRef" referenceFrame="armLeft01SeederUnit02HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit02HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit03Arm01" referencePoint="armLeft01SeederUnit03Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit03Arm02"/>
+                <dependentPart node="armLeft01SeederUnit03"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit03Arm02" referenceFrame="armLeft01SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit03Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit03" referenceFrame="armLeft01SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit03Hydraulic" referencePoint="armLeft01SeederUnit03HydraulicRef" referenceFrame="armLeft01SeederUnit03HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit03HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit04Arm01" referencePoint="armLeft01SeederUnit04Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit04Arm02"/>
+                <dependentPart node="armLeft01SeederUnit04"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit04Arm02" referenceFrame="armLeft01SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit04Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit04" referenceFrame="armLeft01SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit04Hydraulic" referencePoint="armLeft01SeederUnit04HydraulicRef" referenceFrame="armLeft01SeederUnit04HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit04HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit05Arm01" referencePoint="armLeft01SeederUnit05Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit05Arm02"/>
+                <dependentPart node="armLeft01SeederUnit05"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit05Arm02" referenceFrame="armLeft01SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit05Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit05" referenceFrame="armLeft01SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit05Hydraulic" referencePoint="armLeft01SeederUnit05HydraulicRef" referenceFrame="armLeft01SeederUnit05HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit05HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit06Arm01" referencePoint="armLeft01SeederUnit06Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit06Arm02"/>
+                <dependentPart node="armLeft01SeederUnit06"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit06Arm02" referenceFrame="armLeft01SeederUnit06Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit06Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit06" referenceFrame="armLeft01SeederUnit06Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit06Hydraulic" referencePoint="armLeft01SeederUnit06HydraulicRef" referenceFrame="armLeft01SeederUnit06HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit06HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit07Arm01" referencePoint="armLeft01SeederUnit07Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit07Arm02"/>
+                <dependentPart node="armLeft01SeederUnit07"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit07Arm02" referenceFrame="armLeft01SeederUnit07Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit07Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit07" referenceFrame="armLeft01SeederUnit07Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit07Hydraulic" referencePoint="armLeft01SeederUnit07HydraulicRef" referenceFrame="armLeft01SeederUnit07HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit07HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit08Arm01" referencePoint="armLeft01SeederUnit08Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit08Arm02"/>
+                <dependentPart node="armLeft01SeederUnit08"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit08Arm02" referenceFrame="armLeft01SeederUnit08Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit08Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit08" referenceFrame="armLeft01SeederUnit08Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit08Hydraulic" referencePoint="armLeft01SeederUnit08HydraulicRef" referenceFrame="armLeft01SeederUnit07HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit08HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit09Arm01" referencePoint="armLeft01SeederUnit09Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit09Arm02"/>
+                <dependentPart node="armLeft01SeederUnit09"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit09Arm02" referenceFrame="armLeft01SeederUnit09Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit09Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit09" referenceFrame="armLeft01SeederUnit09Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit09Hydraulic" referencePoint="armLeft01SeederUnit09HydraulicRef" referenceFrame="armLeft01SeederUnit09HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit09HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit10Arm01" referencePoint="armLeft01SeederUnit10Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit10Arm02"/>
+                <dependentPart node="armLeft01SeederUnit10"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit10Arm02" referenceFrame="armLeft01SeederUnit10Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit10Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit10" referenceFrame="armLeft01SeederUnit10Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit10Hydraulic" referencePoint="armLeft01SeederUnit10HydraulicRef" referenceFrame="armLeft01SeederUnit10HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit10HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft01SeederUnit11Arm01" referencePoint="armLeft01SeederUnit11Arm01Ref" referenceFrame="armLeft01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft01SeederUnit11Arm02"/>
+                <dependentPart node="armLeft01SeederUnit11"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit11Arm02" referenceFrame="armLeft01SeederUnit11Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft01SeederUnit11Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft01SeederUnit11" referenceFrame="armLeft01SeederUnit11Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft01SeederUnit11Hydraulic" referencePoint="armLeft01SeederUnit11HydraulicRef" referenceFrame="armLeft01SeederUnit11HydraulicRef">
+                <translatingPart node="armLeft01SeederUnit11HydraulicPunch" />
+            </movingPart>
+
+            <!-- seederUnits armLeft02 -->
+            <movingPart node="armLeft02SeederUnit01Arm01" referencePoint="armLeft02SeederUnit01Arm01Ref" referenceFrame="armLeft02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft02SeederUnit01Arm02"/>
+                <dependentPart node="armLeft02SeederUnit01"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit01Arm02" referenceFrame="armLeft02SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft02SeederUnit01Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit01" referenceFrame="armLeft02SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft02SeederUnit01Hydraulic" referencePoint="armLeft02SeederUnit01HydraulicRef" referenceFrame="armLeft02SeederUnit01HydraulicRef">
+                <translatingPart node="armLeft02SeederUnit01HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft02SeederUnit02Arm01" referencePoint="armLeft02SeederUnit02Arm01Ref" referenceFrame="armLeft02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft02SeederUnit02Arm02"/>
+                <dependentPart node="armLeft02SeederUnit02"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit02Arm02" referenceFrame="armLeft02SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft02SeederUnit02Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit02" referenceFrame="armLeft02SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft02SeederUnit02Hydraulic" referencePoint="armLeft02SeederUnit02HydraulicRef" referenceFrame="armLeft02SeederUnit02HydraulicRef">
+                <translatingPart node="armLeft02SeederUnit02HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft02SeederUnit03Arm01" referencePoint="armLeft02SeederUnit03Arm01Ref" referenceFrame="armLeft02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft02SeederUnit03Arm02"/>
+                <dependentPart node="armLeft02SeederUnit03"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit03Arm02" referenceFrame="armLeft02SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft02SeederUnit03Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit03" referenceFrame="armLeft02SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft02SeederUnit03Hydraulic" referencePoint="armLeft02SeederUnit03HydraulicRef" referenceFrame="armLeft02SeederUnit03HydraulicRef">
+                <translatingPart node="armLeft02SeederUnit03HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft02SeederUnit04Arm01" referencePoint="armLeft02SeederUnit04Arm01Ref" referenceFrame="armLeft02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft02SeederUnit04Arm02"/>
+                <dependentPart node="armLeft02SeederUnit04"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit04Arm02" referenceFrame="armLeft02SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft02SeederUnit04Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit04" referenceFrame="armLeft02SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft02SeederUnit04Hydraulic" referencePoint="armLeft02SeederUnit04HydraulicRef" referenceFrame="armLeft02SeederUnit04HydraulicRef">
+                <translatingPart node="armLeft02SeederUnit04HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armLeft02SeederUnit05Arm01" referencePoint="armLeft02SeederUnit05Arm01Ref" referenceFrame="armLeft02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armLeft02SeederUnit05Arm02"/>
+                <dependentPart node="armLeft02SeederUnit05"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit05Arm02" referenceFrame="armLeft02SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armLeft02SeederUnit05Hydraulic"/>
+            </movingPart>
+            <movingPart node="armLeft02SeederUnit05" referenceFrame="armLeft02SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armLeft02SeederUnit05Hydraulic" referencePoint="armLeft02SeederUnit05HydraulicRef" referenceFrame="armLeft02SeederUnit05HydraulicRef">
+                <translatingPart node="armLeft02SeederUnit05HydraulicPunch" />
+            </movingPart>
+
+            <!-- seederUnits armMiddle -->
+            <movingPart node="armMiddleSeederUnit01Arm01" referencePoint="armMiddleSeederUnit01Arm01Ref" referenceFrame="armMiddleSeederUnitsRefFrame" limitedAxis="1">
+                <dependentPart node="armMiddleSeederUnit01Arm02"/>
+                <dependentPart node="armMiddleSeederUnit01"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit01Arm02" referenceFrame="armMiddleSeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armMiddleSeederUnit01Hydraulic"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit01" referenceFrame="armMiddleSeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armMiddleSeederUnit01Hydraulic" referencePoint="armMiddleSeederUnit01HydraulicRef" referenceFrame="armMiddleSeederUnit01HydraulicRef">
+                <translatingPart node="armMiddleSeederUnit01HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armMiddleSeederUnit02Arm01" referencePoint="armMiddleSeederUnit02Arm01Ref" referenceFrame="armMiddleSeederUnitsRefFrame" limitedAxis="1">
+                <dependentPart node="armMiddleSeederUnit02Arm02"/>
+                <dependentPart node="armMiddleSeederUnit02"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit02Arm02" referenceFrame="armMiddleSeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armMiddleSeederUnit02Hydraulic"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit02" referenceFrame="armMiddleSeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armMiddleSeederUnit02Hydraulic" referencePoint="armMiddleSeederUnit02HydraulicRef" referenceFrame="armMiddleSeederUnit02HydraulicRef">
+                <translatingPart node="armMiddleSeederUnit02HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armMiddleSeederUnit03Arm01" referencePoint="armMiddleSeederUnit03Arm01Ref" referenceFrame="armMiddleSeederUnitsRefFrame" limitedAxis="1">
+                <dependentPart node="armMiddleSeederUnit03Arm02"/>
+                <dependentPart node="armMiddleSeederUnit03"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit03Arm02" referenceFrame="armMiddleSeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armMiddleSeederUnit03Hydraulic"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit03" referenceFrame="armMiddleSeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armMiddleSeederUnit03Hydraulic" referencePoint="armMiddleSeederUnit03HydraulicRef" referenceFrame="armMiddleSeederUnit03HydraulicRef">
+                <translatingPart node="armMiddleSeederUnit03HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armMiddleSeederUnit04Arm01" referencePoint="armMiddleSeederUnit04Arm01Ref" referenceFrame="armMiddleSeederUnitsRefFrame" limitedAxis="1">
+                <dependentPart node="armMiddleSeederUnit04Arm02"/>
+                <dependentPart node="armMiddleSeederUnit04"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit04Arm02" referenceFrame="armMiddleSeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armMiddleSeederUnit04Hydraulic"/>
+            </movingPart>
+            <movingPart node="armMiddleSeederUnit04" referenceFrame="armMiddleSeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armMiddleSeederUnit04Hydraulic" referencePoint="armMiddleSeederUnit04HydraulicRef" referenceFrame="armMiddleSeederUnit04HydraulicRef">
+                <translatingPart node="armMiddleSeederUnit04HydraulicPunch" />
+            </movingPart>
+
+            <!-- seederUnits armRight01 -->
+            <movingPart node="armRight01SeederUnit01Arm01" referencePoint="armRight01SeederUnit01Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit01Arm02"/>
+                <dependentPart node="armRight01SeederUnit01"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit01Arm02" referenceFrame="armRight01SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit01Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit01" referenceFrame="armRight01SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit01Hydraulic" referencePoint="armRight01SeederUnit01HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit01HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit02Arm01" referencePoint="armRight01SeederUnit02Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit02Arm02"/>
+                <dependentPart node="armRight01SeederUnit02"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit02Arm02" referenceFrame="armRight01SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit02Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit02" referenceFrame="armRight01SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit02Hydraulic" referencePoint="armRight01SeederUnit02HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit02HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit03Arm01" referencePoint="armRight01SeederUnit03Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit03Arm02"/>
+                <dependentPart node="armRight01SeederUnit03"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit03Arm02" referenceFrame="armRight01SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit03Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit03" referenceFrame="armRight01SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit03Hydraulic" referencePoint="armRight01SeederUnit03HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit03HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit04Arm01" referencePoint="armRight01SeederUnit04Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit04Arm02"/>
+                <dependentPart node="armRight01SeederUnit04"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit04Arm02" referenceFrame="armRight01SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit04Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit04" referenceFrame="armRight01SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit04Hydraulic" referencePoint="armRight01SeederUnit04HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit04HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit05Arm01" referencePoint="armRight01SeederUnit05Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit05Arm02"/>
+                <dependentPart node="armRight01SeederUnit05"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit05Arm02" referenceFrame="armRight01SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit05Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit05" referenceFrame="armRight01SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit05Hydraulic" referencePoint="armRight01SeederUnit05HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit05HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit06Arm01" referencePoint="armRight01SeederUnit06Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit06Arm02"/>
+                <dependentPart node="armRight01SeederUnit06"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit06Arm02" referenceFrame="armRight01SeederUnit06Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit06Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit06" referenceFrame="armRight01SeederUnit06Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit06Hydraulic" referencePoint="armRight01SeederUnit06HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit06HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit07Arm01" referencePoint="armRight01SeederUnit07Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit07Arm02"/>
+                <dependentPart node="armRight01SeederUnit07"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit07Arm02" referenceFrame="armRight01SeederUnit07Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit07Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit07" referenceFrame="armRight01SeederUnit07Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit07Hydraulic" referencePoint="armRight01SeederUnit07HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit07HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit08Arm01" referencePoint="armRight01SeederUnit08Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit08Arm02"/>
+                <dependentPart node="armRight01SeederUnit08"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit08Arm02" referenceFrame="armRight01SeederUnit08Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit08Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit08" referenceFrame="armRight01SeederUnit08Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit08Hydraulic" referencePoint="armRight01SeederUnit08HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit08HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit09Arm01" referencePoint="armRight01SeederUnit09Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit09Arm02"/>
+                <dependentPart node="armRight01SeederUnit09"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit09Arm02" referenceFrame="armRight01SeederUnit09Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit09Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit09" referenceFrame="armRight01SeederUnit09Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit09Hydraulic" referencePoint="armRight01SeederUnit09HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit09HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit10Arm01" referencePoint="armRight01SeederUnit10Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit10Arm02"/>
+                <dependentPart node="armRight01SeederUnit10"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit10Arm02" referenceFrame="armRight01SeederUnit10Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit10Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit10" referenceFrame="armRight01SeederUnit10Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit10Hydraulic" referencePoint="armRight01SeederUnit10HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit10HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight01SeederUnit11Arm01" referencePoint="armRight01SeederUnit11Arm01Ref" referenceFrame="armRight01SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight01SeederUnit11Arm02"/>
+                <dependentPart node="armRight01SeederUnit11"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit11Arm02" referenceFrame="armRight01SeederUnit11Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight01SeederUnit11Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight01SeederUnit11" referenceFrame="armRight01SeederUnit11Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight01SeederUnit11Hydraulic" referencePoint="armRight01SeederUnit11HydraulicRef" referenceFrame="armRight01SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight01SeederUnit11HydraulicPunch" />
+            </movingPart>
+
+            <!-- seederUnits armRight02 -->
+            <movingPart node="armRight02SeederUnit01Arm01" referencePoint="armRight02SeederUnit01Arm01Ref" referenceFrame="armRight02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight02SeederUnit01Arm02"/>
+                <dependentPart node="armRight02SeederUnit01"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit01Arm02" referenceFrame="armRight02SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight02SeederUnit01Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit01" referenceFrame="armRight02SeederUnit01Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight02SeederUnit01Hydraulic" referencePoint="armRight02SeederUnit01HydraulicRef" referenceFrame="armRight02SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight02SeederUnit01HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight02SeederUnit02Arm01" referencePoint="armRight02SeederUnit02Arm01Ref" referenceFrame="armRight02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight02SeederUnit02Arm02"/>
+                <dependentPart node="armRight02SeederUnit02"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit02Arm02" referenceFrame="armRight02SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight02SeederUnit02Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit02" referenceFrame="armRight02SeederUnit02Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight02SeederUnit02Hydraulic" referencePoint="armRight02SeederUnit02HydraulicRef" referenceFrame="armRight02SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight02SeederUnit02HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight02SeederUnit03Arm01" referencePoint="armRight02SeederUnit03Arm01Ref" referenceFrame="armRight02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight02SeederUnit03Arm02"/>
+                <dependentPart node="armRight02SeederUnit03"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit03Arm02" referenceFrame="armRight02SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight02SeederUnit03Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit03" referenceFrame="armRight02SeederUnit03Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight02SeederUnit03Hydraulic" referencePoint="armRight02SeederUnit03HydraulicRef" referenceFrame="armRight02SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight02SeederUnit03HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight02SeederUnit04Arm01" referencePoint="armRight02SeederUnit04Arm01Ref" referenceFrame="armRight02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight02SeederUnit04Arm02"/>
+                <dependentPart node="armRight02SeederUnit04"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit04Arm02" referenceFrame="armRight02SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight02SeederUnit04Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit04" referenceFrame="armRight02SeederUnit04Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight02SeederUnit04Hydraulic" referencePoint="armRight02SeederUnit04HydraulicRef" referenceFrame="armRight02SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight02SeederUnit04HydraulicPunch" />
+            </movingPart>
+
+            <movingPart node="armRight02SeederUnit05Arm01" referencePoint="armRight02SeederUnit05Arm01Ref" referenceFrame="armRight02SeederUnitRefFrame" limitedAxis="1">
+                <dependentPart node="armRight02SeederUnit05Arm02"/>
+                <dependentPart node="armRight02SeederUnit05"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit05Arm02" referenceFrame="armRight02SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="1">
+                <dependentPart node="armRight02SeederUnit05Hydraulic"/>
+            </movingPart>
+            <movingPart node="armRight02SeederUnit05" referenceFrame="armRight02SeederUnit05Arm01" doDirectionAlignment="false" doRotationAlignment="true" rotMultiplier="-1"/>
+            <movingPart node="armRight02SeederUnit05Hydraulic" referencePoint="armRight02SeederUnit05HydraulicRef" referenceFrame="armRight02SeederUnitHydraulicRefFrame">
+                <translatingPart node="armRight02SeederUnit05HydraulicPunch" />
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <groundAdjustedNodes>
+        <!-- seederUnits armLeft01 -->
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit01" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit02" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit03" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit04" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit01Raycast" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit02Raycast" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit05" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit06" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit07" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit02Raycast" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit03Raycast" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit08" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit09" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit10" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmLeft01SeederUnit11" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit04Raycast" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft01SeederUnit05Raycast" updateFrame="4"/>
+        </groundAdjustedNode>
+
+        <!-- seederUnits armLeft02 -->
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmLeft02SeederUnit01" minY="-1.3" maxY="-0.587" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.587"/>
+            <adjustNode node="groundAdjustedNodeArmLeft02SeederUnit02" minY="-1.3" maxY="-0.587" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.587"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft02SeederUnit01Raycast" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmLeft02SeederUnit03" minY="-1.3" maxY="-0.587" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.587"/>
+            <adjustNode node="groundAdjustedNodeArmLeft02SeederUnit04" minY="-1.3" maxY="-0.587" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.587"/>
+            <adjustNode node="groundAdjustedNodeArmLeft02SeederUnit05" minY="-1.3" maxY="-0.587" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.587"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft02SeederUnit02Raycast" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmLeft02SeederUnit03Raycast" updateFrame="4"/>
+        </groundAdjustedNode>
+
+        <!-- seederUnits armMiddle -->
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmMiddleSeederUnit01" minY="-0.5" maxY="0.334" moveSpeed="0.5" resetIfNotActive="true" inActiveY="0.334"/>
+            <adjustNode node="groundAdjustedNodeArmMiddleSeederUnit02" minY="-0.5" maxY="0.334" moveSpeed="0.5" resetIfNotActive="true" inActiveY="0.334"/>
+            <adjustNode node="groundAdjustedNodeArmMiddleSeederUnit03" minY="-0.5" maxY="0.334" moveSpeed="0.5" resetIfNotActive="true" inActiveY="0.334"/>
+            <adjustNode node="groundAdjustedNodeArmMiddleSeederUnit04" minY="-0.5" maxY="0.334" moveSpeed="0.5" resetIfNotActive="true" inActiveY="0.334"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmMiddleSeederUnitRaycast01" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmMiddleSeederUnitRaycast02" updateFrame="4"/>
+        </groundAdjustedNode>
+
+        <!-- seederUnits armRight01 -->
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit01" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit02" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit03" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast01" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast02" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit04" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit05" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit06" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast02" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast03" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit07" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit08" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit09" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast04" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast05" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit10" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+            <adjustNode node="groundAdjustedNodeArmRight01SeederUnit11" minY="-1.5" maxY="-0.686" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.686"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast05" updateFrame="4"/>
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight01SeederUnitRaycast06" updateFrame="4"/>
+        </groundAdjustedNode>
+
+        <!-- seederUnits armRight02 -->
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight02SeederUnit01" minY="-1.5" maxY="-0.586" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.586"/>
+            <adjustNode node="groundAdjustedNodeArmRight02SeederUnit02" minY="-1.5" maxY="-0.586" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.586"/>
+            <adjustNode node="groundAdjustedNodeArmRight02SeederUnit03" minY="-1.5" maxY="-0.586" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.586"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight02SeederUnitRaycast01" updateFrame="4"/>
+        </groundAdjustedNode>
+        <groundAdjustedNode activationTime="2">
+            <adjustNode node="groundAdjustedNodeArmRight02SeederUnit04" minY="-1.5" maxY="-0.586" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.586"/>
+            <adjustNode node="groundAdjustedNodeArmRight02SeederUnit05" minY="-1.5" maxY="-0.586" moveSpeed="0.5" resetIfNotActive="true" inActiveY="-0.586"/>
+
+            <raycastNode distance="1" node="groundAdjustedNodeArmRight02SeederUnitRaycast02" updateFrame="4"/>
+        </groundAdjustedNode>
+    </groundAdjustedNodes>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="18" offset="0 0 -5.7"/>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="seeds" capacity="10000" startFillType="seeds" startFillLevel="10000">
+                        <exactFillRootNode node="exaktFillRootNodeSeeds" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="fertilizer" capacity="10000" startFillType="fertilizer" startFillLevel="10000">
+                        <exactFillRootNode node="exaktFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume01" fillUnitIndex="2" maxDelta="0.1"/>
+                    <volume node="fillVolume02" fillUnitIndex="2" maxDelta="0.1"/>
+                    <volume node="fillVolume03" fillUnitIndex="1" maxDelta="0.1"/>
+                    <volume node="fillVolume04" fillUnitIndex="1" maxDelta="0.1"/>
+                    <volume node="fillVolume05" fillUnitIndex="1" maxDelta="0.1"/>
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+    </fillVolume>
+
+    <sowingMachine fillUnitIndex="1">
+        <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
+        <needsActivation value="true"/>
+        <useDirectPlanting value="true"/>
+        <fieldGroundType value="SOWN"/>
+        <sounds>
+            <work template="defaultSowingWork" linkNode="0>" volumeScale="1.2"/>
+            <airBlower template="defaultSowingAirBlower_02" pitchScale="1.2" fadeIn="0.1" fadeOut="0.2" volumeScale="0.7"/>
+        </sounds>
+    </sowingMachine>
+
+    <sprayer fillUnitIndex="2" fillVolumeIndex="2">
+        <usageScales workingWidth="9" scale="1" />
+    </sprayer>
+
+    <cover>
+        <coverConfigurations>
+            <coverConfiguration name="$l10n_configuration_valueYes" price="0" openCoverWhileTipping="true">
+                <cover openAnimation="toggleCover" fillUnitIndices="1"/>
+            </coverConfiguration>
+        </coverConfigurations>
+    </cover>
+
+    <turnOnVehicle turnOffIfNotAllowed="true"/>
+
+    <ai>
+        <needsLowering value="true"/>
+        <collisionTrigger node="aiCollisionNode" width="9.5" height="2.6"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <toolReverserDirectionNode node="aiMarkerBack"/>
+        <turningRadiusLimitation rotationJointNode="attacherJoint" wheelIndices="1 2 3 4"/>
+        <allowTurnBackward value="false"/>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2 3 4" width="3.05" height="4.15" length="10.65" lengthOffset="2.6"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.55" maxX="1.55" minZ="-4.7" maxZ="0.7" yOffset="0.25"/>
+        <bendingNode minX="-0.8" maxX="0.8" minZ="0.7" maxZ="3.1" yOffset="0.4"/>
+        <bendingNode minX="-0.4" maxX="0.4" minZ="3.1" maxZ="5.5" yOffset="0.4"/>
+        <bendingNode minX="-2.25" maxX="3.15" minZ="0.91" maxZ="2.55" yOffset="-0.77" node="armLeft01"/>
+        <bendingNode minX="-0.19" maxX="1.4" minZ="-3.15" maxZ="2.25" yOffset="-0.67" node="armLeft02"/>
+        <bendingNode minX="-3.15" maxX="2.25" minZ="0.91" maxZ="2.55" yOffset="-0.77" node="armRight01"/>
+        <bendingNode minX="-1.4" maxX="0.19" minZ="-3.15" maxZ="2.25" yOffset="-0.67" node="armRight02"/>
+    </foliageBending>
+
+    <designConfigurations title="$l10n_configuration_additionalWeight">
+        <designConfiguration name="$l10n_configuration_valueNo"/>
+        <designConfiguration name="2400 KG" price="3500">
+            <objectChange node="additionalWeightLeft" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="additionalWeightRight" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="additionalWeightMiddleCol" compoundChildActive="true" compoundChildInactive="false" />
+            <objectChange node="tForcePlus950_main_component1" massActive="7880"/>
+        </designConfiguration>
+        <designConfiguration name="4400 KG" price="8750">
+            <objectChange node="additionalWeightMiddle" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="additionalWeightLeft" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="additionalWeightRight" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="additionalWeightMiddleCol" compoundChildActive="true" compoundChildInactive="false" />
+            <objectChange node="tForcePlus950_main_component1" massActive="9880"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="tForcePlus950_main_component1" node="0>" />
+        <i3dMapping id="tForcePlus950B_vis" node="0>0" />
+        <i3dMapping id="armSupport" node="0>0|0|0" />
+        <i3dMapping id="supportCol" node="0>0|0|0|0" />
+        <i3dMapping id="beaconLight04_01" node="0>0|1|0|0" />
+        <i3dMapping id="rearLight33_left" node="0>0|1|0|1" />
+        <i3dMapping id="rearLight33_right" node="0>0|1|0|2" />
+        <i3dMapping id="yellowRound_02_01" node="0>0|1|0|3" />
+        <i3dMapping id="yellowRound_02_02" node="0>0|1|0|4" />
+        <i3dMapping id="yellowRound_02_03" node="0>0|1|0|5" />
+        <i3dMapping id="yellowRound_02_04" node="0>0|1|0|6" />
+        <i3dMapping id="yellowRound_02_05" node="0>0|1|0|7" />
+        <i3dMapping id="yellowRound_02_06" node="0>0|1|0|8" />
+        <i3dMapping id="hellaWorkingLight01_01" node="0>0|1|0|9" />
+        <i3dMapping id="hellaWorkingLight01_02" node="0>0|1|0|10" />
+        <i3dMapping id="rearLight26White_01" node="0>0|1|0|11" />
+        <i3dMapping id="rearLight26White_02" node="0>0|1|0|12" />
+        <i3dMapping id="sideMarker05White_01" node="0>0|1|0|13" />
+        <i3dMapping id="sideMarker05White_02" node="0>0|1|0|14" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|1|1|0" />
+        <i3dMapping id="workLightBackHigh" node="0>0|1|2|0" />
+        <i3dMapping id="backLightsHigh" node="0>0|1|3|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|1|4|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|1|4|1" />
+        <i3dMapping id="reverseLightHigh" node="0>0|1|5|0" />
+        <i3dMapping id="drawbarHydraulic" node="0>0|2|0|0" />
+        <i3dMapping id="drawbarHydraulicPunch" node="0>0|2|0|0|0" />
+        <i3dMapping id="drawbarRefFrame" node="0>0|2|0|1" />
+        <i3dMapping id="drawbar" node="0>0|2|0|1|0" />
+        <i3dMapping id="drawbarHydraulicRef" node="0>0|2|0|1|0|0" />
+        <i3dMapping id="hydraulicIn01" node="0>0|2|0|1|0|1|0" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|2|0|1|0|1|0|0" />
+        <i3dMapping id="hydraulicIn01_connector" node="0>0|2|0|1|0|1|0|0|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|2|0|1|0|1|1" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|2|0|1|0|1|1|0" />
+        <i3dMapping id="hydraulicOut01_connector" node="0>0|2|0|1|0|1|1|0|0" />
+        <i3dMapping id="hydraulicIn02" node="0>0|2|0|1|0|1|2" />
+        <i3dMapping id="hydraulicIn02_detached" node="0>0|2|0|1|0|1|2|0" />
+        <i3dMapping id="hydraulicIn02_connector" node="0>0|2|0|1|0|1|2|0|0" />
+        <i3dMapping id="hydraulicOut02" node="0>0|2|0|1|0|1|3" />
+        <i3dMapping id="hydraulicOut02_detached" node="0>0|2|0|1|0|1|3|0" />
+        <i3dMapping id="hydraulicOut02_connector" node="0>0|2|0|1|0|1|3|0|0" />
+        <i3dMapping id="hydraulicIn03" node="0>0|2|0|1|0|1|4" />
+        <i3dMapping id="hydraulicIn03_detached" node="0>0|2|0|1|0|1|4|0" />
+        <i3dMapping id="hydraulicIn03_connector" node="0>0|2|0|1|0|1|4|0|0" />
+        <i3dMapping id="hydraulicOut03" node="0>0|2|0|1|0|1|5" />
+        <i3dMapping id="hydraulicOut03_detached" node="0>0|2|0|1|0|1|5|0" />
+        <i3dMapping id="hydraulicOut03_connector" node="0>0|2|0|1|0|1|5|0|0" />
+        <i3dMapping id="hydraulicIn04" node="0>0|2|0|1|0|1|6" />
+        <i3dMapping id="hydraulicIn04_detached" node="0>0|2|0|1|0|1|6|0" />
+        <i3dMapping id="hydraulicIn04_connector" node="0>0|2|0|1|0|1|6|0|0" />
+        <i3dMapping id="hydraulicOut04" node="0>0|2|0|1|0|1|7" />
+        <i3dMapping id="hydraulicOut04_detached" node="0>0|2|0|1|0|1|7|0" />
+        <i3dMapping id="hydraulicOut04_connector" node="0>0|2|0|1|0|1|7|0|0" />
+        <i3dMapping id="electric" node="0>0|2|0|1|0|1|8" />
+        <i3dMapping id="electric_detached" node="0>0|2|0|1|0|1|8|0" />
+        <i3dMapping id="electric_connector" node="0>0|2|0|1|0|1|8|0|0" />
+        <i3dMapping id="coverOpened" node="0>0|2|1|0" />
+        <i3dMapping id="coverClosed" node="0>0|2|1|1" />
+        <i3dMapping id="ladder" node="0>0|2|1|2" />
+        <i3dMapping id="ladderLock" node="0>0|2|1|3" />
+        <i3dMapping id="armLeft01RefFrame" node="0>0|2|2|0" />
+        <i3dMapping id="armLeft01" node="0>0|2|2|0|0" />
+        <i3dMapping id="yellowRound_02_07" node="0>0|2|2|0|0|0|0|0" />
+        <i3dMapping id="armLeft02" node="0>0|2|2|0|0|1|0" />
+        <i3dMapping id="armLeft02WheelArm" node="0>0|2|2|0|0|1|0|0|0" />
+        <i3dMapping id="armLeft02WheelArmHydraulicRef" node="0>0|2|2|0|0|1|0|0|0|0" />
+        <i3dMapping id="armLeft02WheelArmHydraulic" node="0>0|2|2|0|0|1|0|0|1" />
+        <i3dMapping id="armLeft02WheelArmHydraulicPunch" node="0>0|2|2|0|0|1|0|0|1|0" />
+        <i3dMapping id="armLeft02Spring01" node="0>0|2|2|0|0|1|0|0|2|0" />
+        <i3dMapping id="armLeft02HoseHolder01" node="0>0|2|2|0|0|1|0|0|2|0|0" />
+        <i3dMapping id="armLeft02Spring02" node="0>0|2|2|0|0|1|0|0|3|0" />
+        <i3dMapping id="armLeft02HoseHolder02" node="0>0|2|2|0|0|1|0|0|3|0|0" />
+        <i3dMapping id="armLeft02SeederUnitRefFrame" node="0>0|2|2|0|0|1|0|0|4|0" />
+        <i3dMapping id="armLeft02SeederUnit01Arm01" node="0>0|2|2|0|0|1|0|0|4|0|0" />
+        <i3dMapping id="armLeft02SeederUnit01Arm02" node="0>0|2|2|0|0|1|0|0|4|0|1" />
+        <i3dMapping id="armLeft02SeederUnit01" node="0>0|2|2|0|0|1|0|0|4|0|1|0" />
+        <i3dMapping id="armLeft02SeederUnit01Rolls" node="0>0|2|2|0|0|1|0|0|4|0|1|0|0" />
+        <i3dMapping id="armLeft02SeederUnit01HydraulicRef" node="0>0|2|2|0|0|1|0|0|4|0|1|1" />
+        <i3dMapping id="armLeft02SeederUnit02Arm01" node="0>0|2|2|0|0|1|0|0|4|0|2" />
+        <i3dMapping id="armLeft02SeederUnit02Arm02" node="0>0|2|2|0|0|1|0|0|4|0|3" />
+        <i3dMapping id="armLeft02SeederUnit02" node="0>0|2|2|0|0|1|0|0|4|0|3|0" />
+        <i3dMapping id="armLeft02SeederUnit02Rolls" node="0>0|2|2|0|0|1|0|0|4|0|3|0|0" />
+        <i3dMapping id="armLeft02SeederUnit02HydraulicRef" node="0>0|2|2|0|0|1|0|0|4|0|3|1" />
+        <i3dMapping id="armLeft02SeederUnit03Arm01" node="0>0|2|2|0|0|1|0|0|4|0|4" />
+        <i3dMapping id="armLeft02SeederUnit03Arm02" node="0>0|2|2|0|0|1|0|0|4|0|5" />
+        <i3dMapping id="armLeft02SeederUnit03" node="0>0|2|2|0|0|1|0|0|4|0|5|0" />
+        <i3dMapping id="armLeft02SeederUnit03Rolls" node="0>0|2|2|0|0|1|0|0|4|0|5|0|0" />
+        <i3dMapping id="armLeft02SeederUnit03HydraulicRef" node="0>0|2|2|0|0|1|0|0|4|0|5|1" />
+        <i3dMapping id="armLeft02SeederUnit04Arm01" node="0>0|2|2|0|0|1|0|0|4|0|6" />
+        <i3dMapping id="armLeft02SeederUnit04Arm02" node="0>0|2|2|0|0|1|0|0|4|0|7" />
+        <i3dMapping id="armLeft02SeederUnit04" node="0>0|2|2|0|0|1|0|0|4|0|7|0" />
+        <i3dMapping id="armLeft02SeederUnit04Rolls" node="0>0|2|2|0|0|1|0|0|4|0|7|0|0" />
+        <i3dMapping id="armLeft02SeederUnit04HydraulicRef" node="0>0|2|2|0|0|1|0|0|4|0|7|1" />
+        <i3dMapping id="armLeft02SeederUnit05Arm01" node="0>0|2|2|0|0|1|0|0|4|0|8" />
+        <i3dMapping id="armLeft02SeederUnit05Arm02" node="0>0|2|2|0|0|1|0|0|4|0|9" />
+        <i3dMapping id="armLeft02SeederUnit05" node="0>0|2|2|0|0|1|0|0|4|0|9|0" />
+        <i3dMapping id="armLeft02SeederUnit05Rolls" node="0>0|2|2|0|0|1|0|0|4|0|9|0|0" />
+        <i3dMapping id="armLeft02SeederUnit05HydraulicRef" node="0>0|2|2|0|0|1|0|0|4|0|9|1" />
+        <i3dMapping id="armLeft02SeederUnit01Hydraulic" node="0>0|2|2|0|0|1|0|0|4|1" />
+        <i3dMapping id="armLeft02SeederUnit01HydraulicPunch" node="0>0|2|2|0|0|1|0|0|4|1|0" />
+        <i3dMapping id="armLeft02SeederUnit02Hydraulic" node="0>0|2|2|0|0|1|0|0|4|2" />
+        <i3dMapping id="armLeft02SeederUnit02HydraulicPunch" node="0>0|2|2|0|0|1|0|0|4|2|0" />
+        <i3dMapping id="armLeft02SeederUnit03Hydraulic" node="0>0|2|2|0|0|1|0|0|4|3" />
+        <i3dMapping id="armLeft02SeederUnit03HydraulicPunch" node="0>0|2|2|0|0|1|0|0|4|3|0" />
+        <i3dMapping id="armLeft02SeederUnit04Hydraulic" node="0>0|2|2|0|0|1|0|0|4|4" />
+        <i3dMapping id="armLeft02SeederUnit04HydraulicPunch" node="0>0|2|2|0|0|1|0|0|4|4|0" />
+        <i3dMapping id="armLeft02SeederUnit05Hydraulic" node="0>0|2|2|0|0|1|0|0|4|5" />
+        <i3dMapping id="armLeft02SeederUnit05HydraulicPunch" node="0>0|2|2|0|0|1|0|0|4|5|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit01" node="0>0|2|2|0|0|1|0|1|0" />
+        <i3dMapping id="armLeft02SeederUnit01Arm01Ref" node="0>0|2|2|0|0|1|0|1|0|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit01Raycast" node="0>0|2|2|0|0|1|0|1|1" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit02" node="0>0|2|2|0|0|1|0|1|2" />
+        <i3dMapping id="armLeft02SeederUnit02Arm01Ref" node="0>0|2|2|0|0|1|0|1|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit03" node="0>0|2|2|0|0|1|0|1|3" />
+        <i3dMapping id="armLeft02SeederUnit03Arm01Ref" node="0>0|2|2|0|0|1|0|1|3|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit02Raycast" node="0>0|2|2|0|0|1|0|1|4" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit04" node="0>0|2|2|0|0|1|0|1|5" />
+        <i3dMapping id="armLeft02SeederUnit04Arm01Ref" node="0>0|2|2|0|0|1|0|1|5|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit05" node="0>0|2|2|0|0|1|0|1|6" />
+        <i3dMapping id="armLeft02SeederUnit05Arm01Ref" node="0>0|2|2|0|0|1|0|1|6|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft02SeederUnit03Raycast" node="0>0|2|2|0|0|1|0|1|7" />
+        <i3dMapping id="armLeftFoldPartRef" node="0>0|2|2|0|0|1|0|2" />
+        <i3dMapping id="armLeft02AnimJoint01" node="0>0|2|2|0|0|1|0|4" />
+        <i3dMapping id="armLeft02AnimJoint02" node="0>0|2|2|0|0|1|0|5" />
+        <i3dMapping id="armLeftFoldPart01RefFrame" node="0>0|2|2|0|0|1|1" />
+        <i3dMapping id="armLeftFoldPart01" node="0>0|2|2|0|0|1|1|0" />
+        <i3dMapping id="armLeftFoldPart02" node="0>0|2|2|0|0|1|1|0|0" />
+        <i3dMapping id="armLeftHydraulic02Ref" node="0>0|2|2|0|0|1|1|0|1" />
+        <i3dMapping id="armLeft01Spring01" node="0>0|2|2|0|0|1|2" />
+        <i3dMapping id="armLeft01HoseHolder01" node="0>0|2|2|0|0|1|2|0" />
+        <i3dMapping id="armLeft01Spring02" node="0>0|2|2|0|0|1|3" />
+        <i3dMapping id="armLeft01HoseHolder02" node="0>0|2|2|0|0|1|3|0" />
+        <i3dMapping id="armLeft01SeederUnitRefFrame" node="0>0|2|2|0|0|1|4|0" />
+        <i3dMapping id="armLeft01SeederUnit01Arm01" node="0>0|2|2|0|0|1|4|0|0" />
+        <i3dMapping id="armLeft01SeederUnit01Arm02" node="0>0|2|2|0|0|1|4|0|1" />
+        <i3dMapping id="armLeft01SeederUnit01" node="0>0|2|2|0|0|1|4|0|1|0" />
+        <i3dMapping id="armLeft01SeederUnit01Rolls" node="0>0|2|2|0|0|1|4|0|1|0|0" />
+        <i3dMapping id="armLeft01SeederUnit01HydraulicRef" node="0>0|2|2|0|0|1|4|0|1|1" />
+        <i3dMapping id="armLeft01SeederUnit02Arm01" node="0>0|2|2|0|0|1|4|0|2" />
+        <i3dMapping id="armLeft01SeederUnit02Arm02" node="0>0|2|2|0|0|1|4|0|3" />
+        <i3dMapping id="armLeft01SeederUnit02" node="0>0|2|2|0|0|1|4|0|3|0" />
+        <i3dMapping id="armLeft01SeederUnit02Rolls" node="0>0|2|2|0|0|1|4|0|3|0|0" />
+        <i3dMapping id="armLeft01SeederUnit02AnimJoint" node="0>0|2|2|0|0|1|4|0|3|0|3" />
+        <i3dMapping id="armLeft01SeederUnit02HydraulicRef" node="0>0|2|2|0|0|1|4|0|3|1" />
+        <i3dMapping id="armLeft01SeederUnit03Arm01" node="0>0|2|2|0|0|1|4|0|4" />
+        <i3dMapping id="armLeft01SeederUnit03Arm02" node="0>0|2|2|0|0|1|4|0|5" />
+        <i3dMapping id="armLeft01SeederUnit03" node="0>0|2|2|0|0|1|4|0|5|0" />
+        <i3dMapping id="armLeft01SeederUnit03Rolls" node="0>0|2|2|0|0|1|4|0|5|0|0" />
+        <i3dMapping id="armLeft01SeederUnit03AnimJoint" node="0>0|2|2|0|0|1|4|0|5|0|3" />
+        <i3dMapping id="armLeft01SeederUnit03HydraulicRef" node="0>0|2|2|0|0|1|4|0|5|1" />
+        <i3dMapping id="armLeft01SeederUnit04Arm01" node="0>0|2|2|0|0|1|4|0|6" />
+        <i3dMapping id="armLeft01SeederUnit04Arm02" node="0>0|2|2|0|0|1|4|0|7" />
+        <i3dMapping id="armLeft01SeederUnit04" node="0>0|2|2|0|0|1|4|0|7|0" />
+        <i3dMapping id="armLeft01SeederUnit04Rolls" node="0>0|2|2|0|0|1|4|0|7|0|0" />
+        <i3dMapping id="armLeft01SeederUnit04AnimJoint" node="0>0|2|2|0|0|1|4|0|7|0|3" />
+        <i3dMapping id="armLeft01SeederUnit04HydraulicRef" node="0>0|2|2|0|0|1|4|0|7|1" />
+        <i3dMapping id="armLeft01SeederUnit05Arm01" node="0>0|2|2|0|0|1|4|0|8" />
+        <i3dMapping id="armLeft01SeederUnit05Arm02" node="0>0|2|2|0|0|1|4|0|9" />
+        <i3dMapping id="armLeft01SeederUnit05" node="0>0|2|2|0|0|1|4|0|9|0" />
+        <i3dMapping id="armLeft01SeederUnit05Rolls" node="0>0|2|2|0|0|1|4|0|9|0|0" />
+        <i3dMapping id="armLeft01SeederUnit05AnimJoint" node="0>0|2|2|0|0|1|4|0|9|0|3" />
+        <i3dMapping id="armLeft01SeederUnit05HydraulicRef" node="0>0|2|2|0|0|1|4|0|9|1" />
+        <i3dMapping id="armLeft01SeederUnit06Arm01" node="0>0|2|2|0|0|1|4|0|10" />
+        <i3dMapping id="armLeft01SeederUnit06Arm02" node="0>0|2|2|0|0|1|4|0|11" />
+        <i3dMapping id="armLeft01SeederUnit06" node="0>0|2|2|0|0|1|4|0|11|0" />
+        <i3dMapping id="armLeft01SeederUnit06Rolls" node="0>0|2|2|0|0|1|4|0|11|0|0" />
+        <i3dMapping id="armLeft01SeederUnit06HydraulicRef" node="0>0|2|2|0|0|1|4|0|11|1" />
+        <i3dMapping id="armLeft01SeederUnit07Arm01" node="0>0|2|2|0|0|1|4|0|12" />
+        <i3dMapping id="armLeft01SeederUnit07Arm02" node="0>0|2|2|0|0|1|4|0|13" />
+        <i3dMapping id="armLeft01SeederUnit07" node="0>0|2|2|0|0|1|4|0|13|0" />
+        <i3dMapping id="armLeft01SeederUnit07Rolls" node="0>0|2|2|0|0|1|4|0|13|0|0" />
+        <i3dMapping id="armLeft01SeederUnit07AnimJoint" node="0>0|2|2|0|0|1|4|0|13|0|3" />
+        <i3dMapping id="armLeft01SeederUnit07HydraulicRef" node="0>0|2|2|0|0|1|4|0|13|1" />
+        <i3dMapping id="armLeft01SeederUnit08Arm01" node="0>0|2|2|0|0|1|4|0|14" />
+        <i3dMapping id="armLeft01SeederUnit08Arm02" node="0>0|2|2|0|0|1|4|0|15" />
+        <i3dMapping id="armLeft01SeederUnit08" node="0>0|2|2|0|0|1|4|0|15|0" />
+        <i3dMapping id="armLeft01SeederUnit08Rolls" node="0>0|2|2|0|0|1|4|0|15|0|0" />
+        <i3dMapping id="armLeft01SeederUnit08AnimJoint" node="0>0|2|2|0|0|1|4|0|15|0|3" />
+        <i3dMapping id="armLeft01SeederUnit08HydraulicRef" node="0>0|2|2|0|0|1|4|0|15|2" />
+        <i3dMapping id="armLeft01SeederUnit09Arm01" node="0>0|2|2|0|0|1|4|0|16" />
+        <i3dMapping id="armLeft01SeederUnit09Arm02" node="0>0|2|2|0|0|1|4|0|17" />
+        <i3dMapping id="armLeft01SeederUnit09" node="0>0|2|2|0|0|1|4|0|17|0" />
+        <i3dMapping id="armLeft01SeederUnit09Rolls" node="0>0|2|2|0|0|1|4|0|17|0|0" />
+        <i3dMapping id="armLeft01SeederUnit09HydraulicRef" node="0>0|2|2|0|0|1|4|0|17|2" />
+        <i3dMapping id="armLeft01SeederUnit10Arm01" node="0>0|2|2|0|0|1|4|0|18" />
+        <i3dMapping id="armLeft01SeederUnit10Arm02" node="0>0|2|2|0|0|1|4|0|19" />
+        <i3dMapping id="armLeft01SeederUnit10" node="0>0|2|2|0|0|1|4|0|19|0" />
+        <i3dMapping id="armLeft01SeederUnit10Rolls" node="0>0|2|2|0|0|1|4|0|19|0|0" />
+        <i3dMapping id="armLeft01SeederUnit10HydraulicRef" node="0>0|2|2|0|0|1|4|0|19|2" />
+        <i3dMapping id="armLeft01SeederUnit11Arm01" node="0>0|2|2|0|0|1|4|0|20" />
+        <i3dMapping id="armLeft01SeederUnit11Arm02" node="0>0|2|2|0|0|1|4|0|21" />
+        <i3dMapping id="armLeft01SeederUnit11" node="0>0|2|2|0|0|1|4|0|21|0" />
+        <i3dMapping id="armLeft01SeederUnit11Rolls" node="0>0|2|2|0|0|1|4|0|21|0|0" />
+        <i3dMapping id="armLeft01SeederUnit11HydraulicRef" node="0>0|2|2|0|0|1|4|0|21|2" />
+        <i3dMapping id="armLeft01SeederUnit01Hydraulic" node="0>0|2|2|0|0|1|4|1" />
+        <i3dMapping id="armLeft01SeederUnit01HydraulicPunch" node="0>0|2|2|0|0|1|4|1|0" />
+        <i3dMapping id="armLeft01SeederUnit02Hydraulic" node="0>0|2|2|0|0|1|4|2" />
+        <i3dMapping id="armLeft01SeederUnit02HydraulicPunch" node="0>0|2|2|0|0|1|4|2|0" />
+        <i3dMapping id="armLeft01SeederUnit03Hydraulic" node="0>0|2|2|0|0|1|4|3" />
+        <i3dMapping id="armLeft01SeederUnit03HydraulicPunch" node="0>0|2|2|0|0|1|4|3|0" />
+        <i3dMapping id="armLeft01SeederUnit04Hydraulic" node="0>0|2|2|0|0|1|4|4" />
+        <i3dMapping id="armLeft01SeederUnit04HydraulicPunch" node="0>0|2|2|0|0|1|4|4|0" />
+        <i3dMapping id="armLeft01SeederUnit05Hydraulic" node="0>0|2|2|0|0|1|4|5" />
+        <i3dMapping id="armLeft01SeederUnit05HydraulicPunch" node="0>0|2|2|0|0|1|4|5|0" />
+        <i3dMapping id="armLeft01SeederUnit06Hydraulic" node="0>0|2|2|0|0|1|4|6" />
+        <i3dMapping id="armLeft01SeederUnit06HydraulicPunch" node="0>0|2|2|0|0|1|4|6|0" />
+        <i3dMapping id="armLeft01SeederUnit07Hydraulic" node="0>0|2|2|0|0|1|4|7" />
+        <i3dMapping id="armLeft01SeederUnit07HydraulicPunch" node="0>0|2|2|0|0|1|4|7|0" />
+        <i3dMapping id="armLeft01SeederUnit08Hydraulic" node="0>0|2|2|0|0|1|4|8" />
+        <i3dMapping id="armLeft01SeederUnit08HydraulicPunch" node="0>0|2|2|0|0|1|4|8|0" />
+        <i3dMapping id="armLeft01SeederUnit09Hydraulic" node="0>0|2|2|0|0|1|4|9" />
+        <i3dMapping id="armLeft01SeederUnit09HydraulicPunch" node="0>0|2|2|0|0|1|4|9|0" />
+        <i3dMapping id="armLeft01SeederUnit10Hydraulic" node="0>0|2|2|0|0|1|4|10" />
+        <i3dMapping id="armLeft01SeederUnit10HydraulicPunch" node="0>0|2|2|0|0|1|4|10|0" />
+        <i3dMapping id="armLeft01SeederUnit11Hydraulic" node="0>0|2|2|0|0|1|4|11" />
+        <i3dMapping id="armLeft01SeederUnit11HydraulicPunch" node="0>0|2|2|0|0|1|4|11|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit01" node="0>0|2|2|0|0|2|0" />
+        <i3dMapping id="armLeft01SeederUnit01Arm01Ref" node="0>0|2|2|0|0|2|0|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit01Raycast" node="0>0|2|2|0|0|2|1" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit02" node="0>0|2|2|0|0|2|2" />
+        <i3dMapping id="armLeft01SeederUnit02Arm01Ref" node="0>0|2|2|0|0|2|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit03" node="0>0|2|2|0|0|2|3" />
+        <i3dMapping id="armLeft01SeederUnit03Arm01Ref" node="0>0|2|2|0|0|2|3|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit04" node="0>0|2|2|0|0|2|4" />
+        <i3dMapping id="armLeft01SeederUnit04Arm01Ref" node="0>0|2|2|0|0|2|4|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit02Raycast" node="0>0|2|2|0|0|2|5" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit05" node="0>0|2|2|0|0|2|6" />
+        <i3dMapping id="armLeft01SeederUnit05Arm01Ref" node="0>0|2|2|0|0|2|6|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit06" node="0>0|2|2|0|0|2|7" />
+        <i3dMapping id="armLeft01SeederUnit06Arm01Ref" node="0>0|2|2|0|0|2|7|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit07" node="0>0|2|2|0|0|2|8" />
+        <i3dMapping id="armLeft01SeederUnit07Arm01Ref" node="0>0|2|2|0|0|2|8|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit03Raycast" node="0>0|2|2|0|0|2|9" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit04Raycast" node="0>0|2|2|0|0|2|10" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit08" node="0>0|2|2|0|0|2|11" />
+        <i3dMapping id="armLeft01SeederUnit08Arm01Ref" node="0>0|2|2|0|0|2|11|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit09" node="0>0|2|2|0|0|2|12" />
+        <i3dMapping id="armLeft01SeederUnit09Arm01Ref" node="0>0|2|2|0|0|2|12|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit10" node="0>0|2|2|0|0|2|13" />
+        <i3dMapping id="armLeft01SeederUnit10Arm01Ref" node="0>0|2|2|0|0|2|13|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit11" node="0>0|2|2|0|0|2|14" />
+        <i3dMapping id="armLeft01SeederUnit11Arm01Ref" node="0>0|2|2|0|0|2|14|0" />
+        <i3dMapping id="groundAdjustedNodeArmLeft01SeederUnit05Raycast" node="0>0|2|2|0|0|2|15" />
+        <i3dMapping id="additionalWeightLeft" node="0>0|2|2|0|0|3|0" />
+        <i3dMapping id="seederEffectLeftLinkNode" node="0>0|2|2|0|0|4|0" />
+        <i3dMapping id="armLeftHydraulic01Ref" node="0>0|2|2|0|0|5" />
+        <i3dMapping id="armLeftAnimJoint09" node="0>0|2|2|0|0|8" />
+        <i3dMapping id="armLeftAnimJoint10" node="0>0|2|2|0|0|9" />
+        <i3dMapping id="armLeftAnimJoint11" node="0>0|2|2|0|0|10" />
+        <i3dMapping id="armLeftHydraulic01" node="0>0|2|2|1" />
+        <i3dMapping id="armLeftHydraulic01Punch" node="0>0|2|2|1|0" />
+        <i3dMapping id="armLeftHydraulic02RefFrame" node="0>0|2|2|2" />
+        <i3dMapping id="armLeftHydraulic02" node="0>0|2|2|2|0" />
+        <i3dMapping id="armLeftHydraulic02Punch" node="0>0|2|2|2|0|0" />
+        <i3dMapping id="armLeftLockArm" node="0>0|2|2|3" />
+        <i3dMapping id="armLeftLockArmHydraulicRef" node="0>0|2|2|3|0" />
+        <i3dMapping id="armLeftLockArmHydraulic" node="0>0|2|2|4" />
+        <i3dMapping id="armLeftLockArmHydraulicPunch" node="0>0|2|2|4|0" />
+        <i3dMapping id="armLeftLockArmSpringRef" node="0>0|2|2|4|0|0" />
+        <i3dMapping id="armLeftLockArmSpring_decal" node="0>0|2|2|4|1" />
+        <i3dMapping id="armLeftAnimJoint01" node="0>0|2|2|5" />
+        <i3dMapping id="armLeftAnimJoint02" node="0>0|2|2|6" />
+        <i3dMapping id="armLeftAnimJoint03" node="0>0|2|2|7" />
+        <i3dMapping id="armLeftAnimJoint04" node="0>0|2|2|8" />
+        <i3dMapping id="armLeftAnimJoint05" node="0>0|2|2|9" />
+        <i3dMapping id="armLeftAnimJoint06" node="0>0|2|2|10" />
+        <i3dMapping id="armLeftAnimJoint07" node="0>0|2|2|11" />
+        <i3dMapping id="armLeftAnimJoint08" node="0>0|2|2|12" />
+        <i3dMapping id="armRight01RefFrame" node="0>0|2|3|0" />
+        <i3dMapping id="armRight01" node="0>0|2|3|0|0" />
+        <i3dMapping id="yellowRound_02_08" node="0>0|2|3|0|0|0|0|0" />
+        <i3dMapping id="armRight02" node="0>0|2|3|0|0|1|0" />
+        <i3dMapping id="armRight02WheelArm" node="0>0|2|3|0|0|1|0|0|0" />
+        <i3dMapping id="armRight02WheelArmHydraulicRef" node="0>0|2|3|0|0|1|0|0|0|0" />
+        <i3dMapping id="tForcePlus950B_decals" node="0>0|2|3|0|0|1|0|0|0|1" />
+        <i3dMapping id="armRight02WheelArmHydraulic" node="0>0|2|3|0|0|1|0|0|1" />
+        <i3dMapping id="armRight02WheelArmHydraulicPunch" node="0>0|2|3|0|0|1|0|0|1|0" />
+        <i3dMapping id="armRight02Spring01" node="0>0|2|3|0|0|1|0|0|2|0" />
+        <i3dMapping id="armRight02HoseHolder01" node="0>0|2|3|0|0|1|0|0|2|0|0" />
+        <i3dMapping id="armRight02Spring02" node="0>0|2|3|0|0|1|0|0|3|0" />
+        <i3dMapping id="armRight02HoseHolder02" node="0>0|2|3|0|0|1|0|0|3|0|0" />
+        <i3dMapping id="armRight02SeederUnitRefFrame" node="0>0|2|3|0|0|1|0|0|4|0" />
+        <i3dMapping id="armRight02SeederUnit01Arm01" node="0>0|2|3|0|0|1|0|0|4|0|0" />
+        <i3dMapping id="armRight02SeederUnit01Arm02" node="0>0|2|3|0|0|1|0|0|4|0|1" />
+        <i3dMapping id="armRight02SeederUnit01" node="0>0|2|3|0|0|1|0|0|4|0|1|0" />
+        <i3dMapping id="armRight02SeederUnit01Rolls" node="0>0|2|3|0|0|1|0|0|4|0|1|0|0" />
+        <i3dMapping id="armRight02SeederUnit01HydraulicRef" node="0>0|2|3|0|0|1|0|0|4|0|1|1" />
+        <i3dMapping id="armRight02SeederUnit02Arm01" node="0>0|2|3|0|0|1|0|0|4|0|2" />
+        <i3dMapping id="armRight02SeederUnit02Arm02" node="0>0|2|3|0|0|1|0|0|4|0|3" />
+        <i3dMapping id="armRight02SeederUnit02" node="0>0|2|3|0|0|1|0|0|4|0|3|0" />
+        <i3dMapping id="armRight02SeederUnit02Rolls" node="0>0|2|3|0|0|1|0|0|4|0|3|0|0" />
+        <i3dMapping id="armRight02SeederUnit02HydraulicRef" node="0>0|2|3|0|0|1|0|0|4|0|3|1" />
+        <i3dMapping id="armRight02SeederUnit03Arm01" node="0>0|2|3|0|0|1|0|0|4|0|4" />
+        <i3dMapping id="armRight02SeederUnit03Arm02" node="0>0|2|3|0|0|1|0|0|4|0|5" />
+        <i3dMapping id="armRight02SeederUnit03" node="0>0|2|3|0|0|1|0|0|4|0|5|0" />
+        <i3dMapping id="armRight02SeederUnit03Rolls" node="0>0|2|3|0|0|1|0|0|4|0|5|0|0" />
+        <i3dMapping id="armRight02SeederUnit03HydraulicRef" node="0>0|2|3|0|0|1|0|0|4|0|5|1" />
+        <i3dMapping id="armRight02SeederUnit04Arm01" node="0>0|2|3|0|0|1|0|0|4|0|6" />
+        <i3dMapping id="armRight02SeederUnit04Arm02" node="0>0|2|3|0|0|1|0|0|4|0|7" />
+        <i3dMapping id="armRight02SeederUnit04" node="0>0|2|3|0|0|1|0|0|4|0|7|0" />
+        <i3dMapping id="armRight02SeederUnit04Rolls" node="0>0|2|3|0|0|1|0|0|4|0|7|0|0" />
+        <i3dMapping id="armRight02SeederUnit04HydraulicRef" node="0>0|2|3|0|0|1|0|0|4|0|7|1" />
+        <i3dMapping id="armRight02SeederUnit05Arm01" node="0>0|2|3|0|0|1|0|0|4|0|8" />
+        <i3dMapping id="armRight02SeederUnit05Arm02" node="0>0|2|3|0|0|1|0|0|4|0|9" />
+        <i3dMapping id="armRight02SeederUnit05" node="0>0|2|3|0|0|1|0|0|4|0|9|0" />
+        <i3dMapping id="armRight02SeederUnit05Rolls" node="0>0|2|3|0|0|1|0|0|4|0|9|0|0" />
+        <i3dMapping id="armRight02SeederUnit05HydraulicRef" node="0>0|2|3|0|0|1|0|0|4|0|9|1" />
+        <i3dMapping id="armRight02SeederUnitHydraulicRefFrame" node="0>0|2|3|0|0|1|0|0|4|1" />
+        <i3dMapping id="armRight02SeederUnit01Hydraulic" node="0>0|2|3|0|0|1|0|0|4|1|0" />
+        <i3dMapping id="armRight02SeederUnit01HydraulicPunch" node="0>0|2|3|0|0|1|0|0|4|1|0|0" />
+        <i3dMapping id="armRight02SeederUnit02Hydraulic" node="0>0|2|3|0|0|1|0|0|4|1|1" />
+        <i3dMapping id="armRight02SeederUnit02HydraulicPunch" node="0>0|2|3|0|0|1|0|0|4|1|1|0" />
+        <i3dMapping id="armRight02SeederUnit03Hydraulic" node="0>0|2|3|0|0|1|0|0|4|1|2" />
+        <i3dMapping id="armRight02SeederUnit03HydraulicPunch" node="0>0|2|3|0|0|1|0|0|4|1|2|0" />
+        <i3dMapping id="armRight02SeederUnit04Hydraulic" node="0>0|2|3|0|0|1|0|0|4|1|3" />
+        <i3dMapping id="armRight02SeederUnit04HydraulicPunch" node="0>0|2|3|0|0|1|0|0|4|1|3|0" />
+        <i3dMapping id="armRight02SeederUnit05Hydraulic" node="0>0|2|3|0|0|1|0|0|4|1|4" />
+        <i3dMapping id="armRight02SeederUnit05HydraulicPunch" node="0>0|2|3|0|0|1|0|0|4|1|4|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnit01" node="0>0|2|3|0|0|1|0|1|0" />
+        <i3dMapping id="armRight02SeederUnit01Arm01Ref" node="0>0|2|3|0|0|1|0|1|0|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnitRaycast01" node="0>0|2|3|0|0|1|0|1|1" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnit02" node="0>0|2|3|0|0|1|0|1|2" />
+        <i3dMapping id="armRight02SeederUnit02Arm01Ref" node="0>0|2|3|0|0|1|0|1|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnit03" node="0>0|2|3|0|0|1|0|1|3" />
+        <i3dMapping id="armRight02SeederUnit03Arm01Ref" node="0>0|2|3|0|0|1|0|1|3|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnit04" node="0>0|2|3|0|0|1|0|1|4" />
+        <i3dMapping id="armRight02SeederUnit04Arm01Ref" node="0>0|2|3|0|0|1|0|1|4|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnit05" node="0>0|2|3|0|0|1|0|1|5" />
+        <i3dMapping id="armRight02SeederUnit05Arm01Ref" node="0>0|2|3|0|0|1|0|1|5|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight02SeederUnitRaycast02" node="0>0|2|3|0|0|1|0|1|6" />
+        <i3dMapping id="armRightFoldPartRef" node="0>0|2|3|0|0|1|0|2" />
+        <i3dMapping id="armRight02AnimJoint01" node="0>0|2|3|0|0|1|0|4" />
+        <i3dMapping id="armRightFoldPart01RefFrame" node="0>0|2|3|0|0|1|1" />
+        <i3dMapping id="armRightFoldPart01" node="0>0|2|3|0|0|1|1|0" />
+        <i3dMapping id="armRightFoldPart02" node="0>0|2|3|0|0|1|1|0|0" />
+        <i3dMapping id="armRightHydraulic02Ref" node="0>0|2|3|0|0|1|1|0|1" />
+        <i3dMapping id="armRight01Spring01" node="0>0|2|3|0|0|1|2" />
+        <i3dMapping id="armRight01HoseHolder01" node="0>0|2|3|0|0|1|2|0" />
+        <i3dMapping id="armRight01Spring02" node="0>0|2|3|0|0|1|3" />
+        <i3dMapping id="armRight01HoseHolder02" node="0>0|2|3|0|0|1|3|0" />
+        <i3dMapping id="armRight01SeederUnits" node="0>0|2|3|0|0|1|4" />
+        <i3dMapping id="armRight01SeederUnitRefFrame" node="0>0|2|3|0|0|1|4|0" />
+        <i3dMapping id="armRight01SeederUnit01Arm01" node="0>0|2|3|0|0|1|4|0|0" />
+        <i3dMapping id="armRight01SeederUnit01Arm02" node="0>0|2|3|0|0|1|4|0|1" />
+        <i3dMapping id="armRight01SeederUnit01" node="0>0|2|3|0|0|1|4|0|1|0" />
+        <i3dMapping id="armRight01SeederUnit01Rolls" node="0>0|2|3|0|0|1|4|0|1|0|0" />
+        <i3dMapping id="armRight01SeederUnit01HydraulicRef" node="0>0|2|3|0|0|1|4|0|1|1" />
+        <i3dMapping id="armRight01SeederUnit02Arm01" node="0>0|2|3|0|0|1|4|0|2" />
+        <i3dMapping id="armRight01SeederUnit02Arm02" node="0>0|2|3|0|0|1|4|0|3" />
+        <i3dMapping id="armRight01SeederUnit02" node="0>0|2|3|0|0|1|4|0|3|0" />
+        <i3dMapping id="armRight01SeederUnit02Rolls" node="0>0|2|3|0|0|1|4|0|3|0|0" />
+        <i3dMapping id="armRight01SeederUnit02AnimJoint" node="0>0|2|3|0|0|1|4|0|3|0|3" />
+        <i3dMapping id="armRight01SeederUnit02HydraulicRef" node="0>0|2|3|0|0|1|4|0|3|1" />
+        <i3dMapping id="armRight01SeederUnit03Arm01" node="0>0|2|3|0|0|1|4|0|4" />
+        <i3dMapping id="armRight01SeederUnit03Arm02" node="0>0|2|3|0|0|1|4|0|5" />
+        <i3dMapping id="armRight01SeederUnit03" node="0>0|2|3|0|0|1|4|0|5|0" />
+        <i3dMapping id="armRight01SeederUnit03Rolls" node="0>0|2|3|0|0|1|4|0|5|0|0" />
+        <i3dMapping id="armRight01SeederUnit03AnimJoint" node="0>0|2|3|0|0|1|4|0|5|0|3" />
+        <i3dMapping id="armRight01SeederUnit03HydraulicRef" node="0>0|2|3|0|0|1|4|0|5|1" />
+        <i3dMapping id="armRight01SeederUnit04Arm01" node="0>0|2|3|0|0|1|4|0|6" />
+        <i3dMapping id="armRight01SeederUnit04Arm02" node="0>0|2|3|0|0|1|4|0|7" />
+        <i3dMapping id="armRight01SeederUnit04" node="0>0|2|3|0|0|1|4|0|7|0" />
+        <i3dMapping id="armRight01SeederUnit04Rolls" node="0>0|2|3|0|0|1|4|0|7|0|0" />
+        <i3dMapping id="armRight01SeederUnit04AnimJoint" node="0>0|2|3|0|0|1|4|0|7|0|3" />
+        <i3dMapping id="armRight01SeederUnit04HydraulicRef" node="0>0|2|3|0|0|1|4|0|7|1" />
+        <i3dMapping id="armRight01SeederUnit05Arm01" node="0>0|2|3|0|0|1|4|0|8" />
+        <i3dMapping id="armRight01SeederUnit05Arm02" node="0>0|2|3|0|0|1|4|0|9" />
+        <i3dMapping id="armRight01SeederUnit05" node="0>0|2|3|0|0|1|4|0|9|0" />
+        <i3dMapping id="armRight01SeederUnit05Rolls" node="0>0|2|3|0|0|1|4|0|9|0|0" />
+        <i3dMapping id="armRight01SeederUnit05AnimJoint" node="0>0|2|3|0|0|1|4|0|9|0|3" />
+        <i3dMapping id="armRight01SeederUnit05HydraulicRef" node="0>0|2|3|0|0|1|4|0|9|1" />
+        <i3dMapping id="armRight01SeederUnit06Arm01" node="0>0|2|3|0|0|1|4|0|10" />
+        <i3dMapping id="armRight01SeederUnit06Arm02" node="0>0|2|3|0|0|1|4|0|11" />
+        <i3dMapping id="armRight01SeederUnit06" node="0>0|2|3|0|0|1|4|0|11|0" />
+        <i3dMapping id="armRight01SeederUnit06Rolls" node="0>0|2|3|0|0|1|4|0|11|0|0" />
+        <i3dMapping id="armRight01SeederUnit06HydraulicRef" node="0>0|2|3|0|0|1|4|0|11|1" />
+        <i3dMapping id="armRight01SeederUnit07Arm01" node="0>0|2|3|0|0|1|4|0|12" />
+        <i3dMapping id="armRight01SeederUnit07Arm02" node="0>0|2|3|0|0|1|4|0|13" />
+        <i3dMapping id="armRight01SeederUnit07" node="0>0|2|3|0|0|1|4|0|13|0" />
+        <i3dMapping id="armRight01SeederUnit07Rolls" node="0>0|2|3|0|0|1|4|0|13|0|0" />
+        <i3dMapping id="armRight01SeederUnit07HydraulicRef" node="0>0|2|3|0|0|1|4|0|13|1" />
+        <i3dMapping id="armRight01SeederUnit08Arm01" node="0>0|2|3|0|0|1|4|0|14" />
+        <i3dMapping id="armRight01SeederUnit08Arm02" node="0>0|2|3|0|0|1|4|0|15" />
+        <i3dMapping id="armRight01SeederUnit08" node="0>0|2|3|0|0|1|4|0|15|0" />
+        <i3dMapping id="armRight01SeederUnit08Rolls" node="0>0|2|3|0|0|1|4|0|15|0|0" />
+        <i3dMapping id="armRight01SeederUnit08HydraulicRef" node="0>0|2|3|0|0|1|4|0|15|1" />
+        <i3dMapping id="armRight01SeederUnit09Arm01" node="0>0|2|3|0|0|1|4|0|16" />
+        <i3dMapping id="armRight01SeederUnit09Arm02" node="0>0|2|3|0|0|1|4|0|17" />
+        <i3dMapping id="armRight01SeederUnit09" node="0>0|2|3|0|0|1|4|0|17|0" />
+        <i3dMapping id="armRight01SeederUnit09Rolls" node="0>0|2|3|0|0|1|4|0|17|0|0" />
+        <i3dMapping id="armRight01SeederUnit09HydraulicRef" node="0>0|2|3|0|0|1|4|0|17|1" />
+        <i3dMapping id="armRight01SeederUnit10Arm01" node="0>0|2|3|0|0|1|4|0|18" />
+        <i3dMapping id="armRight01SeederUnit10Arm02" node="0>0|2|3|0|0|1|4|0|19" />
+        <i3dMapping id="armRight01SeederUnit10" node="0>0|2|3|0|0|1|4|0|19|0" />
+        <i3dMapping id="armRight01SeederUnit10Rolls" node="0>0|2|3|0|0|1|4|0|19|0|0" />
+        <i3dMapping id="armRight01SeederUnit10HydraulicRef" node="0>0|2|3|0|0|1|4|0|19|1" />
+        <i3dMapping id="armRight01SeederUnit11Arm01" node="0>0|2|3|0|0|1|4|0|20" />
+        <i3dMapping id="armRight01SeederUnit11Arm02" node="0>0|2|3|0|0|1|4|0|21" />
+        <i3dMapping id="armRight01SeederUnit11" node="0>0|2|3|0|0|1|4|0|21|0" />
+        <i3dMapping id="armRight01SeederUnit11Rolls" node="0>0|2|3|0|0|1|4|0|21|0|0" />
+        <i3dMapping id="armRight01SeederUnit11AnimJoint" node="0>0|2|3|0|0|1|4|0|21|0|3" />
+        <i3dMapping id="armRight01SeederUnit11HydraulicRef" node="0>0|2|3|0|0|1|4|0|21|1" />
+        <i3dMapping id="armRight01SeederUnitHydraulicRefFrame" node="0>0|2|3|0|0|1|4|1" />
+        <i3dMapping id="armRight01SeederUnit01Hydraulic" node="0>0|2|3|0|0|1|4|1|0" />
+        <i3dMapping id="armRight01SeederUnit01HydraulicPunch" node="0>0|2|3|0|0|1|4|1|0|0" />
+        <i3dMapping id="armRight01SeederUnit02Hydraulic" node="0>0|2|3|0|0|1|4|1|1" />
+        <i3dMapping id="armRight01SeederUnit02HydraulicPunch" node="0>0|2|3|0|0|1|4|1|1|0" />
+        <i3dMapping id="armRight01SeederUnit03Hydraulic" node="0>0|2|3|0|0|1|4|1|2" />
+        <i3dMapping id="armRight01SeederUnit03HydraulicPunch" node="0>0|2|3|0|0|1|4|1|2|0" />
+        <i3dMapping id="armRight01SeederUnit04Hydraulic" node="0>0|2|3|0|0|1|4|1|3" />
+        <i3dMapping id="armRight01SeederUnit04HydraulicPunch" node="0>0|2|3|0|0|1|4|1|3|0" />
+        <i3dMapping id="armRight01SeederUnit05Hydraulic" node="0>0|2|3|0|0|1|4|1|4" />
+        <i3dMapping id="armRight01SeederUnit05HydraulicPunch" node="0>0|2|3|0|0|1|4|1|4|0" />
+        <i3dMapping id="armRight01SeederUnit06Hydraulic" node="0>0|2|3|0|0|1|4|1|5" />
+        <i3dMapping id="armRight01SeederUnit06HydraulicPunch" node="0>0|2|3|0|0|1|4|1|5|0" />
+        <i3dMapping id="armRight01SeederUnit07Hydraulic" node="0>0|2|3|0|0|1|4|1|6" />
+        <i3dMapping id="armRight01SeederUnit07HydraulicPunch" node="0>0|2|3|0|0|1|4|1|6|0" />
+        <i3dMapping id="armRight01SeederUnit08Hydraulic" node="0>0|2|3|0|0|1|4|1|7" />
+        <i3dMapping id="armRight01SeederUnit08HydraulicPunch" node="0>0|2|3|0|0|1|4|1|7|0" />
+        <i3dMapping id="armRight01SeederUnit09Hydraulic" node="0>0|2|3|0|0|1|4|1|8" />
+        <i3dMapping id="armRight01SeederUnit09HydraulicPunch" node="0>0|2|3|0|0|1|4|1|8|0" />
+        <i3dMapping id="armRight01SeederUnit10Hydraulic" node="0>0|2|3|0|0|1|4|1|9" />
+        <i3dMapping id="armRight01SeederUnit10HydraulicPunch" node="0>0|2|3|0|0|1|4|1|9|0" />
+        <i3dMapping id="armRight01SeederUnit11Hydraulic" node="0>0|2|3|0|0|1|4|1|10" />
+        <i3dMapping id="armRight01SeederUnit11HydraulicPunch" node="0>0|2|3|0|0|1|4|1|10|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast01" node="0>0|2|3|0|0|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit01" node="0>0|2|3|0|0|2|1" />
+        <i3dMapping id="armRight01SeederUnit01Arm01Ref" node="0>0|2|3|0|0|2|1|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit02" node="0>0|2|3|0|0|2|2" />
+        <i3dMapping id="armRight01SeederUnit02Arm01Ref" node="0>0|2|3|0|0|2|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit03" node="0>0|2|3|0|0|2|3" />
+        <i3dMapping id="armRight01SeederUnit03Arm01Ref" node="0>0|2|3|0|0|2|3|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast02" node="0>0|2|3|0|0|2|4" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit04" node="0>0|2|3|0|0|2|5" />
+        <i3dMapping id="armRight01SeederUnit04Arm01Ref" node="0>0|2|3|0|0|2|5|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit05" node="0>0|2|3|0|0|2|6" />
+        <i3dMapping id="armRight01SeederUnit05Arm01Ref" node="0>0|2|3|0|0|2|6|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit06" node="0>0|2|3|0|0|2|7" />
+        <i3dMapping id="armRight01SeederUnit06Arm01Ref" node="0>0|2|3|0|0|2|7|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast03" node="0>0|2|3|0|0|2|8" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast04" node="0>0|2|3|0|0|2|9" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit07" node="0>0|2|3|0|0|2|10" />
+        <i3dMapping id="armRight01SeederUnit07Arm01Ref" node="0>0|2|3|0|0|2|10|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit08" node="0>0|2|3|0|0|2|11" />
+        <i3dMapping id="armRight01SeederUnit08Arm01Ref" node="0>0|2|3|0|0|2|11|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit09" node="0>0|2|3|0|0|2|12" />
+        <i3dMapping id="armRight01SeederUnit09Arm01Ref" node="0>0|2|3|0|0|2|12|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast05" node="0>0|2|3|0|0|2|13" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit10" node="0>0|2|3|0|0|2|14" />
+        <i3dMapping id="armRight01SeederUnit10Arm01Ref" node="0>0|2|3|0|0|2|14|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnit11" node="0>0|2|3|0|0|2|15" />
+        <i3dMapping id="armRight01SeederUnit11Arm01Ref" node="0>0|2|3|0|0|2|15|0" />
+        <i3dMapping id="groundAdjustedNodeArmRight01SeederUnitRaycast06" node="0>0|2|3|0|0|2|16" />
+        <i3dMapping id="additionalWeightRight" node="0>0|2|3|0|0|3|0" />
+        <i3dMapping id="seederEffectRightLinkNode" node="0>0|2|3|0|0|4|0" />
+        <i3dMapping id="armRightHydraulic01Ref" node="0>0|2|3|0|0|5" />
+        <i3dMapping id="armRightAnimJoint09" node="0>0|2|3|0|0|8" />
+        <i3dMapping id="armRightAnimJoint10" node="0>0|2|3|0|0|9" />
+        <i3dMapping id="armRightAnimJoint11" node="0>0|2|3|0|0|10" />
+        <i3dMapping id="armRightHydraulic01" node="0>0|2|3|1" />
+        <i3dMapping id="armRightHydraulic01Punch" node="0>0|2|3|1|0" />
+        <i3dMapping id="armRightHydraulic02RefFrame" node="0>0|2|3|2" />
+        <i3dMapping id="armRightHydraulic02" node="0>0|2|3|2|0" />
+        <i3dMapping id="armRightHydraulic02Punch" node="0>0|2|3|2|0|0" />
+        <i3dMapping id="armRightLockArm" node="0>0|2|3|3" />
+        <i3dMapping id="armRightLockArmHydraulicRef" node="0>0|2|3|3|0" />
+        <i3dMapping id="armRightLockArmHydraulic" node="0>0|2|3|4" />
+        <i3dMapping id="armRightLockArmHydraulicPunch" node="0>0|2|3|4|0" />
+        <i3dMapping id="armRightLockArmSpringRef" node="0>0|2|3|4|0|0" />
+        <i3dMapping id="armRightLockArmSpring_decal" node="0>0|2|3|4|1" />
+        <i3dMapping id="armRightAnimJoint01" node="0>0|2|3|5" />
+        <i3dMapping id="armRightAnimJoint02" node="0>0|2|3|6" />
+        <i3dMapping id="armRightAnimJoint03" node="0>0|2|3|7" />
+        <i3dMapping id="armRightAnimJoint04" node="0>0|2|3|8" />
+        <i3dMapping id="armRightAnimJoint05" node="0>0|2|3|9" />
+        <i3dMapping id="armRightAnimJoint06" node="0>0|2|3|10" />
+        <i3dMapping id="armRightAnimJoint07" node="0>0|2|3|11" />
+        <i3dMapping id="armRightAnimJoint08" node="0>0|2|3|12" />
+        <i3dMapping id="armMiddleSeederUnitsRefFrame" node="0>0|2|4|0" />
+        <i3dMapping id="armMiddleSeederUnit01Arm01" node="0>0|2|4|0|0" />
+        <i3dMapping id="armMiddleSeederUnit01Arm02" node="0>0|2|4|0|1" />
+        <i3dMapping id="armMiddleSeederUnit01" node="0>0|2|4|0|1|0" />
+        <i3dMapping id="armMiddleSeederUnit01Rolls" node="0>0|2|4|0|1|0|0" />
+        <i3dMapping id="armMiddleSeederUnit01HydraulicRef" node="0>0|2|4|0|1|1" />
+        <i3dMapping id="armMiddleSeederUnit02Arm01" node="0>0|2|4|0|2" />
+        <i3dMapping id="armMiddleSeederUnit02Arm02" node="0>0|2|4|0|3" />
+        <i3dMapping id="armMiddleSeederUnit02" node="0>0|2|4|0|3|0" />
+        <i3dMapping id="armMiddleSeederUnit02Rolls" node="0>0|2|4|0|3|0|0" />
+        <i3dMapping id="armMiddleSeederUnit02HydraulicRef" node="0>0|2|4|0|3|1" />
+        <i3dMapping id="armMiddleSeederUnit03Arm01" node="0>0|2|4|0|4" />
+        <i3dMapping id="armMiddleSeederUnit03Arm02" node="0>0|2|4|0|5" />
+        <i3dMapping id="armMiddleSeederUnit03" node="0>0|2|4|0|5|0" />
+        <i3dMapping id="armMiddleSeederUnit03Rolls" node="0>0|2|4|0|5|0|0" />
+        <i3dMapping id="armMiddleSeederUnit03HydraulicRef" node="0>0|2|4|0|5|1" />
+        <i3dMapping id="armMiddleSeederUnit04Arm01" node="0>0|2|4|0|6" />
+        <i3dMapping id="armMiddleSeederUnit04Arm02" node="0>0|2|4|0|7" />
+        <i3dMapping id="armMiddleSeederUnit04" node="0>0|2|4|0|7|0" />
+        <i3dMapping id="armMiddleSeederUnit04Rolls" node="0>0|2|4|0|7|0|0" />
+        <i3dMapping id="armMiddleSeederUnit04HydraulicRef" node="0>0|2|4|0|7|1" />
+        <i3dMapping id="armMiddleSeederUnit01Hydraulic" node="0>0|2|4|1" />
+        <i3dMapping id="armMiddleSeederUnit01HydraulicPunch" node="0>0|2|4|1|0" />
+        <i3dMapping id="armMiddleSeederUnit02Hydraulic" node="0>0|2|4|2" />
+        <i3dMapping id="armMiddleSeederUnit02HydraulicPunch" node="0>0|2|4|2|0" />
+        <i3dMapping id="armMiddleSeederUnit03Hydraulic" node="0>0|2|4|3" />
+        <i3dMapping id="armMiddleSeederUnit03HydraulicPunch" node="0>0|2|4|3|0" />
+        <i3dMapping id="armMiddleSeederUnit04Hydraulic" node="0>0|2|4|4" />
+        <i3dMapping id="armMiddleSeederUnit04HydraulicPunch" node="0>0|2|4|4|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnitRaycast01" node="0>0|2|5|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnit01" node="0>0|2|5|1" />
+        <i3dMapping id="armMiddleSeederUnit01Arm01Ref" node="0>0|2|5|1|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnit02" node="0>0|2|5|2" />
+        <i3dMapping id="armMiddleSeederUnit02Arm01Ref" node="0>0|2|5|2|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnit03" node="0>0|2|5|3" />
+        <i3dMapping id="armMiddleSeederUnit03Arm01Ref" node="0>0|2|5|3|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnit04" node="0>0|2|5|4" />
+        <i3dMapping id="armMiddleSeederUnit04Arm01Ref" node="0>0|2|5|4|0" />
+        <i3dMapping id="groundAdjustedNodeArmMiddleSeederUnitRaycast02" node="0>0|2|5|5" />
+        <i3dMapping id="groundReferenceNode" node="0>0|2|6|0" />
+        <i3dMapping id="armMiddleAnimJoint01" node="0>0|2|7" />
+        <i3dMapping id="armMiddleAnimJoint02" node="0>0|2|8" />
+        <i3dMapping id="fillVolume01" node="0>0|3|0" />
+        <i3dMapping id="fillVolume02" node="0>0|3|1" />
+        <i3dMapping id="fillVolume03" node="0>0|3|2" />
+        <i3dMapping id="fillVolume04" node="0>0|3|3" />
+        <i3dMapping id="fillVolume05" node="0>0|3|4" />
+        <i3dMapping id="exaktFillRootNodeSeeds" node="0>0|3|5" />
+        <i3dMapping id="exaktFillRootNodeFertilizer" node="0>0|3|6" />
+        <i3dMapping id="additionalWeightMiddle" node="0>0|4|0" />
+        <i3dMapping id="additionalWeightMiddleCol" node="0>0|4|0|1" />
+        <i3dMapping id="seederEffectMiddleLinkNode" node="0>0|5|0" />
+        <i3dMapping id="smokeEmitter" node="0>0|5|1" />
+        <i3dMapping id="workAreaLeftStart" node="0>0|6|0" />
+        <i3dMapping id="workAreaLeftWidth" node="0>0|6|1" />
+        <i3dMapping id="workAreaLeftHeight" node="0>0|6|2" />
+        <i3dMapping id="workAreaRightStart" node="0>0|6|3" />
+        <i3dMapping id="workAreaRightWidth" node="0>0|6|4" />
+        <i3dMapping id="workAreaRightHeight" node="0>0|6|5" />
+        <i3dMapping id="aiCollisionNode" node="0>0|7|0" />
+        <i3dMapping id="aiMarkerLeft" node="0>0|7|1" />
+        <i3dMapping id="aiMarkerRight" node="0>0|7|2" />
+        <i3dMapping id="aiMarkerBack" node="0>0|7|3" />
+        <i3dMapping id="licensePlateBack" node="0>0|8|5" />
+        <i3dMapping id="componentJointDrawbar" node="0>0|9" />
+        <i3dMapping id="componentJointBoggieLeft" node="0>0|10" />
+        <i3dMapping id="componentJointBoggieRight" node="0>0|11" />
+        <i3dMapping id="componentJointArmLeft01" node="0>0|12" />
+        <i3dMapping id="componentJointArmRight01" node="0>0|13" />
+        <i3dMapping id="hoses1" node="0>1|3" />
+        <i3dMapping id="hoses2" node="0>1|4" />
+        <i3dMapping id="tForcePlus950_drawbar_component2" node="1>" />
+        <i3dMapping id="attacherJoint" node="1>0" />
+        <i3dMapping id="drawbarRef" node="1>1" />
+        <i3dMapping id="tForcePlus950_boggieLeft_component3" node="2>" />
+        <i3dMapping id="crawlerLeftFrontWheel" node="2>0" />
+        <i3dMapping id="crawlerLeftBackWheel" node="2>1" />
+        <i3dMapping id="crawlerLeftBackWheelDriveNode" node="2>1|0" />
+        <i3dMapping id="crawlerLeftBackWheelLinkNode" node="2>1|1" />
+        <i3dMapping id="tForcePlus950_boggieRight_component4" node="3>" />
+        <i3dMapping id="crawlerRightFrontWheel" node="3>0" />
+        <i3dMapping id="crawlerRightBackWheel" node="3>1" />
+        <i3dMapping id="crawlerRightBackWheelDriveNode" node="3>1|0" />
+        <i3dMapping id="crawlerRightBackWheelLinkNode" node="3>1|1" />
+        <i3dMapping id="tForcePlus950_armLeft01_component5" node="4>" />
+        <i3dMapping id="armLeft02Phys" node="4>0" />
+        <i3dMapping id="armLeft02WheelArmPhys" node="4>0|0" />
+        <i3dMapping id="armLeft02WheelPhys" node="4>0|0|0" />
+        <i3dMapping id="armLeft01Ref" node="4>1" />
+        <i3dMapping id="tForcePlus950_armRight01_component6" node="5>" />
+        <i3dMapping id="armRight02Phys" node="5>0" />
+        <i3dMapping id="armRight02WheelArmPhys" node="5>0|0" />
+        <i3dMapping id="armRight02WheelPhys" node="5>0|0|0" />
+        <i3dMapping id="armRight01Ref" node="5>1" />
+    </i3dMappings>
+</vehicle>

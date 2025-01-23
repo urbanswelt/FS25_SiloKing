@@ -18,7 +18,7 @@ jobs:
           mod_name="${repo_name#*/}"  # Extract the part after the '/'
           zip_file="${mod_name}.zip"  # Create the dynamic file name
           rm -rf "$zip_file"  # Remove existing zip file if any
-          zip -r "$zip_file" * -x ".git/*" ".github/*" "LICENSE" "README.md" "urls.txt" "*.ps1"
+          zip -r "$zip_file" * -x ".git/*" ".github/*" "LICENSE" "README.md" "urls.txt" "*.ps1" "Giants/*"
           echo "zipfile=$zip_file" >> $GITHUB_ENV  # Export the variable to the environment
 
       - name: Upload Release Asset
