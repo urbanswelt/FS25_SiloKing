@@ -54,15 +54,15 @@ jobs:
                           diff = DeepDiff(giants_data, sk_pack_data, ignore_order=True)
 
                           if diff:
-                              summary.append(f"Changes in {relative_path}:\\n{diff}\\n")
+                              summary.append(f"Changes in {relative_path}:\n{diff}\n")
                       else:
-                          summary.append(f"File missing in SK_Pack: {relative_path}\\n")
+                          summary.append(f"File missing in SK_Pack: {relative_path}\n")
 
           if not summary:
               print("No changes detected.")
           else:
               with open('summary.txt', 'w') as summary_file:
-                  summary_file.write(\"\\n\".join(summary))
+                  summary_file.write("\n".join(summary))
           EOF
           python compare_xml.py
 
