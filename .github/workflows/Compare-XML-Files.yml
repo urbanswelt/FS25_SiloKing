@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: xml-comparison-summary
-          path: Giants/data/vehicles/vehicle.md
+          path: Giants/data/vehicles/comparison_summary.txt
