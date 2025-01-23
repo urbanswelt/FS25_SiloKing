@@ -5,7 +5,7 @@ from deepdiff import DeepDiff
 # Paths
 giants_path = "Giants/data/vehicles"
 sk_pack_path = "SK_Pack/vehicles"
-markdown_file = os.path.join(giants_path, "vehicle.md")
+output_file = os.path.join(giants_path, "comparison_summary.txt")
 
 # Function to read and parse XML files
 def read_xml(file_path):
@@ -30,19 +30,19 @@ for root, _, files in os.walk(giants_path):
                 diff = DeepDiff(giants_data, sk_pack_data, ignore_order=True)
 
                 if diff:
-                    diff_text = str(diff).replace('\n', '\n    ')
-                    summary.append(
-                        f"### Changes in {relative_path}\n```text\n{diff_text}\n```\n"
-                    )
+                    summary.append(f"Changes detected in: {relative_path}")
+                    summary.append(str(diff))
+                    summary.append("")  # Add a blank line for readability
             else:
-                summary.append(f"### File missing in SK_Pack\n- {relative_path}\n")
+                summary.append(f"File missing in SK_Pack: {relative_path}")
+                summary.append("")  # Add a blank line for readability
 
-# Generating the Markdown output
+# Generating the output
 if not summary:
-    output = "# XML Comparison Summary\n\nNo changes detected."
+    output = "XML Comparison Summary\n\nNo changes detected."
 else:
-    output = "# XML Comparison Summary\n\n" + "\n".join(summary)
+    output = "XML Comparison Summary\n\n" + "\n".join(summary)
 
-# Writing to the Markdown file
-with open(markdown_file, "w") as md_file:
-    md_file.write(output)
+# Writing to the output file
+with open(output_file, "w") as out_file:
+    out_file.write(output)
