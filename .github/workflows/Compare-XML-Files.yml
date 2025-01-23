@@ -22,7 +22,7 @@ jobs:
       - name: Install required Python libraries
         run: |
           python -m pip install --upgrade pip
-          pip install xmltodict deepdiff matplotlib
+          pip install xmltodict deepdiff matplotlib networkx dash
 
       - name: Run Comparison Script
         run: |
@@ -32,6 +32,15 @@ jobs:
         run: |
           python .github/scripts/generate_visualization.py
 
+      - name: Generate Tree Structure
+        run: |
+          python .github/scripts/generate_tree_structure.py
+
+      - name: Start Dynamic Dashboard
+        run: |
+          python .github/scripts/start_dashboard.py &
+          sleep 10
+
       - name: Upload Results
         uses: actions/upload-artifact@v4
         with:
@@ -39,3 +48,4 @@ jobs:
           path: |
             Giants/data/vehicles/comparison_summary.txt
             Giants/data/vehicles/change_summary_chart.png
+            Giants/data/vehicles/change_tree_structure.png
