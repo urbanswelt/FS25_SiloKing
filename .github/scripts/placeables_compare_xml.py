@@ -3,9 +3,9 @@ import xmltodict
 from deepdiff import DeepDiff
 
 # Paths
-giants_path = "Giants/data/vehicles"
-sk_pack_path = "SK_Pack/vehicles"
-output_file = os.path.join(giants_path, "comparison_summary.txt")
+giants_path = "Giants/data/placeables"
+sk_pack_path = "SK_Pack/placeables"
+output_file = os.path.join(giants_path, "placeables_comparison_summary.txt")
 
 # Function to read and parse XML files
 def read_xml(file_path):
