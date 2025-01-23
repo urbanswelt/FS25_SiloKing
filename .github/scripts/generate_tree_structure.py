@@ -16,7 +16,10 @@ with open(input_file, "r") as file:
         if line.startswith("Changes detected in:"):
             current_file = line.split(":")[1].strip()
         elif current_file and line:
-            file_changes[current_file].append(line)
+            # Truncate and sanitize changes for better rendering
+            truncated_line = (line[:50] + "...") if len(line) > 50 else line
+            sanitized_line = truncated_line.replace("'", "").replace('"', "")
+            file_changes[current_file].append(sanitized_line)
 
 # Build the graph
 graph = nx.DiGraph()
@@ -27,8 +30,16 @@ for file, changes in file_changes.items():
 
 # Plot the graph
 plt.figure(figsize=(12, 8))
-pos = nx.spring_layout(graph, k=0.3, iterations=50)
-nx.draw(graph, pos, with_labels=True, node_color="skyblue", node_size=3000, font_size=10, font_weight="bold")
+pos = nx.spring_layout(graph, k=0.5, iterations=50)
+nx.draw(
+    graph,
+    pos,
+    with_labels=True,
+    node_color="skyblue",
+    node_size=3000,
+    font_size=8,
+    font_weight="bold",
+)
 plt.title("Tree Structure of Changes", fontsize=14)
 plt.savefig(output_image)
-plt.show()
+plt.close()
