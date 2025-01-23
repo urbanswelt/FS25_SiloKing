@@ -33,6 +33,7 @@ jobs:
 
           giants_path = "Giants/data/vehicles"
           sk_pack_path = "SK_Pack/vehicles"
+          markdown_file = os.path.join(giants_path, "vehicle.md")
 
           def read_xml(file_path):
               with open(file_path, 'r', encoding='utf-8') as file:
@@ -54,15 +55,17 @@ jobs:
                           diff = DeepDiff(giants_data, sk_pack_data, ignore_order=True)
 
                           if diff:
-                              summary.append(f"Changes in {relative_path}:\n{diff}\n")
+                              summary.append(f"### Changes in {relative_path}\n```json\n{diff}\n```\n")
                       else:
-                          summary.append(f"File missing in SK_Pack: {relative_path}\n")
+                          summary.append(f"### File missing in SK_Pack\n- {relative_path}\n")
 
           if not summary:
-              print("No changes detected.")
+              output = "# XML Comparison Summary\n\nNo changes detected."
           else:
-              with open('summary.txt', 'w') as summary_file:
-                  summary_file.write("\n".join(summary))
+              output = "# XML Comparison Summary\n\n" + "\n".join(summary)
+
+          with open(markdown_file, 'w') as md_file:
+              md_file.write(output)
           EOF
           python compare_xml.py
 
@@ -70,4 +73,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: xml-comparison-summary
-          path: summary.txt
+          path: Giants/data/vehicles/vehicle.md
