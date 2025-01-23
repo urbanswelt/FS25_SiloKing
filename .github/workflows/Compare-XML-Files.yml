@@ -55,21 +55,23 @@ jobs:
                           diff = DeepDiff(giants_data, sk_pack_data, ignore_order=True)
 
                           if diff:
+                              diff_text = str(diff).replace('\\n', '\\n    ')
                               summary.append(
-                                  f"### Changes in {relative_path}\n```text\n{str(diff)}\n```\n"
+                                  f\"### Changes in {relative_path}\\n\\n    {diff_text}\\n\\n\"
                               )
                       else:
-                          summary.append(f"### File missing in SK_Pack\n- {relative_path}\n")
+                          summary.append(f\"### File missing in SK_Pack\\n- {relative_path}\\n\")
 
           if not summary:
-              output = "# XML Comparison Summary\n\nNo changes detected."
+              output = "# XML Comparison Summary\\n\\nNo changes detected."
           else:
-              output = "# XML Comparison Summary\n\n" + "\n".join(summary)
+              output = "# XML Comparison Summary\\n\\n" + "\\n".join(summary)
 
           with open(markdown_file, "w") as md_file:
               md_file.write(output)
           EOF
           python compare_xml.py
+
 
       - name: Upload Summary
         uses: actions/upload-artifact@v4
