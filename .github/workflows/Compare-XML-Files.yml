@@ -38,4 +38,4 @@ jobs:
           name: xml-comparison-results
           path: |
             Giants/data/vehicles/vehicle_comparison_summary.txt
-            Giants/data/vehicles/placeables_comparison_summary.txt
+            Giants/data/placeables/placeables_comparison_summary.txt
