@@ -30,7 +30,6 @@ jobs:
           import os
           import xmltodict
           from deepdiff import DeepDiff
-          import json
 
           giants_path = "Giants/data/vehicles"
           sk_pack_path = "SK_Pack/vehicles"
@@ -56,9 +55,8 @@ jobs:
                           diff = DeepDiff(giants_data, sk_pack_data, ignore_order=True)
 
                           if diff:
-                              diff_json = json.dumps(diff, indent=2)
                               summary.append(
-                                  f"### Changes in {relative_path}\n```json\n{diff_json}\n```\n"
+                                  f"### Changes in {relative_path}\n```text\n{str(diff)}\n```\n"
                               )
                       else:
                           summary.append(f"### File missing in SK_Pack\n- {relative_path}\n")
