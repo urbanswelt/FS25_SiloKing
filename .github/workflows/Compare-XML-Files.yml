@@ -22,14 +22,20 @@ jobs:
       - name: Install required Python libraries
         run: |
           python -m pip install --upgrade pip
-          pip install xmltodict deepdiff
+          pip install xmltodict deepdiff matplotlib
 
       - name: Run Comparison Script
         run: |
           python .github/scripts/compare_xml.py
 
-      - name: Upload Summary
+      - name: Generate Visualization
+        run: |
+          python .github/scripts/generate_visualization.py
+
+      - name: Upload Results
         uses: actions/upload-artifact@v4
         with:
-          name: xml-comparison-summary
-          path: Giants/data/vehicles/comparison_summary.txt
+          name: xml-comparison-results
+          path: |
+            Giants/data/vehicles/comparison_summary.txt
+            Giants/data/vehicles/change_summary_chart.png
