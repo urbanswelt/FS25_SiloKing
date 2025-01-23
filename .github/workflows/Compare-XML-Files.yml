@@ -28,14 +28,9 @@ jobs:
         run: |
           python .github/scripts/compare_xml.py
 
-      - name: Generate HTML Report
-        run: |
-          python .github/scripts/generate_html_report.py
-
       - name: Upload Results
         uses: actions/upload-artifact@v4
         with:
           name: xml-comparison-results
           path: |
             Giants/data/vehicles/comparison_summary.txt
-            Giants/data/vehicles/comparison_report.html
