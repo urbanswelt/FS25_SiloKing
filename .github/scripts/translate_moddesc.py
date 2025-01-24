@@ -11,7 +11,7 @@ def translate_moddesc(file_path):
 
     # Locate the <description> and its <en> tag
     description = root.find(".//description")
-    en_description = description.find("en").text.strip()  # Strip unnecessary whitespace
+    en_description = description.find("en").text.strip()  # Extract and strip whitespace
 
     # Translate English to German
     translated = translator.translate(en_description, src="en", dest="de").text
@@ -21,8 +21,9 @@ def translate_moddesc(file_path):
     if de_description is None:
         de_description = etree.SubElement(description, "de")
     
-    # Add CDATA to <de>
-    de_description.text = f"<![CDATA[{translated}]]>"
+    # Add CDATA to <de> (handling proper CDATA formatting)
+    de_cdata = etree.CDATA(translated)
+    de_description.text = de_cdata
 
     # Save the updated XML with proper formatting
     tree.write(file_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
