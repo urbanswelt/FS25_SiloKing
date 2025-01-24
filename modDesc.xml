@@ -217,9 +217,9 @@ Soweit ich weiß, erlaubt Vanille dies nur an bestimmten Orten.
 Dieser Mod erweitert diese Funktionalität auf die meisten XML -Dateien, einschließlich Platzierungen und Fahrzeuge.
 
 - Ermöglicht die Verwendung von $ mapdir $ path/to/Dateiname.xml
-- Ermöglicht die Verwendung von $ moddir $ fs22_mod_name/path/to/Dateiname.xml
+- Ermöglicht die Verwendung von $ moddir $ fs25_mod_name/path/to/Dateiname.xml
 - Ermöglicht die Verwendung von $ pdlcdir $ path/to/Dateiname.xml
-- Ermöglicht die Verwendung von $ fs22_mod_name $ path/to/Dateiname.xml
+- Ermöglicht die Verwendung von $ fs25_mod_name $ path/to/Dateiname.xml
 
 - Jede Art von Datei (XML, I3D, PNG, DDS usw.) kann dynamisch geladen werden
 
