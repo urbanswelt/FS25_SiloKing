@@ -1,7 +1,7 @@
 
 # Silo King Configurations
 
-**Version:** 1.0.2.0  
+**Version:** 2.0.0.0  
 **Author:** SiloKing  
 
 ## Description
@@ -68,6 +68,9 @@ NOVACAT A10 Cross Flow(MOD)
 
 Bednar MM8000 Batwing(MOD)
 - Working speed: 30 kph
+
+John Deere S7 Series
+- Capacity: 100,000 L
 
 Placeable items:
 
