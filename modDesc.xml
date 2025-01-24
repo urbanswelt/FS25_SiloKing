@@ -89,7 +89,7 @@ ThundR - Extended Filenames
 
 Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. 
 As far as I know, vanilla only allows this in certain places. 
-This mod extends that functionality to most xml files, including placeables and vehicles.
+This mod extends that functionality to most xml files, including placeable items and vehicles.
 
 - Allows use of $mapdir$path/to/filename.xml
 - Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
