@@ -1,7 +1,7 @@
 
 # Silo King Configurations
 
-**Version:** 2.0.1.0  
+**Version:** 2.0.2.0  
 **Author:** SiloKing  
 
 ## Description
@@ -93,9 +93,9 @@ As far as I know, vanilla only allows this in certain places.
 This mod extends that functionality to most xml files, including placeable items and vehicles.
 
 - Allows use of $mapdir$path/to/filename.xml
-- Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+- Allows use of $moddir$FS25_MOD_NAME/path/to/filename.xml
 - Allows use of $pdlcdir$path/to/filename.xml
-- Allows use of $FS22_MOD_NAME$path/to/filename.xml
+- Allows use of $FS25_MOD_NAME$path/to/filename.xml
 
 - Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
 
@@ -146,9 +146,9 @@ As far as I know, vanilla only allows this in certain places.
 This mod extends that functionality to most xml files, including placeable items and vehicles.
 
 - Allows use of $mapdir$path/to/filename.xml
-- Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+- Allows use of $moddir$FS25_MOD_NAME/path/to/filename.xml
 - Allows use of $pdlcdir$path/to/filename.xml
-- Allows use of $FS22_MOD_NAME$path/to/filename.xml
+- Allows use of $FS25_MOD_NAME$path/to/filename.xml
 
 - Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
 
