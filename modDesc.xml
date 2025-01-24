@@ -5,8 +5,9 @@
     <title>
         <en>Silo King Configurations</en>
     </title>
-    <description>
-<en>Silo King Configurations - The ultimate loading capacity for your farm!
+    <description><en> <![CDATA[
+
+Silo King Configurations - The ultimate loading capacity for your farm!
 
 Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
 
@@ -125,7 +126,10 @@ From external sources
 - FS25_AutoDrive_T_intersection
 - FS25_AutoDrive_reverseToMarker
 
+
+]]>
 </en>
+
 <de>&lt;![CDATA[Silo King -Konfigurationen - Die ultimative Ladekapazität für Ihre Farm!
 
 HINWEIS: Denken Sie daran, die Option "Trailer Fill Limit" zu deaktivieren, um die große Ladekapazität voll zu genießen!
