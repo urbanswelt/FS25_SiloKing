@@ -17,7 +17,7 @@ def extract_data():
 
     # Extract detailed sections (vehicles, placeables, etc.)
     vehicles_section = description.split("Vehicles:")[1].split("Placeables:")[0].strip()
-    placeables_section = description.split("Placeables:")[1].split("Script Mods:")[0].strip()
+    placeables_section = description.split("Placeable items:")[1].split("Script Mods:")[0].strip()
     script_mods_section = description.split("Script Mods:")[1].split("Mod Dependencies:")[0].strip()
     dependencies_section = description.split("Mod Dependencies:")[1].strip()
 
