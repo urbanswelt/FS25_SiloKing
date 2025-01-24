@@ -26,7 +26,7 @@ jobs:
 
       - name: Translate modDesc.xml
         run: |
-          python .github/scripts/translate_moddesc.py
+          python .github/scripts/translate_moddescs.py
 
       - name: Commit and push changes
         run: |
