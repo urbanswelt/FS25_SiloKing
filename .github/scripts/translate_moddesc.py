@@ -17,7 +17,7 @@ def translate_moddesc(file_path):
      de_description = description.find("de")
      if de_description is None:
          de_description = etree.SubElement(description, "de")
-     de_description.text = f"<![CDATA[{translated}]]>"
+     de_description.text = "<![CDATA[{translated}]]>"
 
      # Save the updated XML
      tree.write(file_path, encoding="utf-8", xml_declaration=True)
