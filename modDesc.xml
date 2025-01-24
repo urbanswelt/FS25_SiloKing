@@ -71,6 +71,9 @@ NOVACAT A10 Cross Flow(MOD)
 Bednar MM8000 Batwing(MOD)
 - Working speed: 30 kph
 
+John Deere S7 Series
+- Capacity: 100,000 L
+
 Placeable items:
 
 Diesel + Silage Additive Tank
@@ -294,6 +297,7 @@ Aus externen Quellen
         <storeItem xmlFilename="SK_Pack/vehicles/vaderstad/rexius1230/rexius1230.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/krone/swadroTS970/swadroTS970.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/krone/vendroKW820Highland/vendroKW820Highland.xml"/>
+        <storeItem xmlFilename="SK_Pack/vehicles/johnDeere/seriesS7/seriesS7.xml"/>
         <!-- mods -->
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
