@@ -5,7 +5,7 @@
     <title>
         <en>Silo King Configurations</en>
     </title>
-    <description><en><![CDATA[
+    <description><en>
 
 Silo King Configurations - The ultimate loading capacity for your farm!
 
@@ -127,10 +127,127 @@ From external sources
 - FS25_AutoDrive_reverseToMarker
 
 
-]]>
+
 </en>
 
-<de><![CDATA[]]></de>
+<de>&lt;![CDATA[Silo King -Konfigurationen - Die ultimative Ladekapazität für Ihre Farm!
+
+HINWEIS: Denken Sie daran, die Option "Trailer Fill Limit" zu deaktivieren, um die große Ladekapazität voll zu genießen!
+
+Fahrzeuge:
+
+Poettinger Jumbo 8450 dB
+- Arbeitsgeschwindigkeit: 30 km / h
+- Kapazität: 400.000 l
+- Silage Additive Tank: 10.000 l
+- Vorgefüllter Silage -Additiv: 10.000 l
+
+Dalbo Maxiroll 630 Greenline
+- Arbeitsgeschwindigkeit: 30 km / h
+- Saatkapazität: 10.000 l
+- Vorgefüllter Samen: 10.000 l
+
+Goeweil Vario-Master V140
+- Kapazität: 400.000 l
+- Silage Additive Tank: 10.000 l
+- Vorgefüllter Silage -Additiv: 10.000 l
+
+Amazone UX 5201 Super
+- Arbeitsgeschwindigkeit: 30 km / h
+- Sprühkapazität: 15.000 l
+
+Novag T-Forceplus 950
+- Arbeitsgeschwindigkeit: 30 km / h
+- Saatkapazität: 10.000 l
+- Düngerkapazität: 10.000 l
+- Vorgefüllter Samen: 10.000 l
+- Vorgefüllter Dünger: 10.000 l
+
+Bredal K105
+- Arbeitsgeschwindigkeit: 30 km / h
+- Düngemittel Kalkkapazität: 50.000 l
+
+AmityTechnology Crop Chaser 1000
+- Kapazität: 400.000 l
+
+Fendt vario 1000
+- maximale Geschwindigkeit: 80 km / h
+- Farbkonfigurationen
+
+Vaderstad Rexius 1230
+- Arbeitsgeschwindigkeit: 30 km / h
+
+Swadro TS 970
+- Arbeitsgeschwindigkeit: 30 km / h
+
+Vendro 820 Highland
+- Arbeitsgeschwindigkeit: 30 km / h
+
+Novacat 301 AM Ed Pro (MOD)
+- Arbeitsgeschwindigkeit: 30 km / h
+- Arbeitsbreite: 3,1 m
+
+Novacat A10 Cross Flow (MOD)
+- Arbeitsgeschwindigkeit: 30 km / h
+- Arbeitsbreite: 10,02 m
+
+Bednar MM8000 Batwing (Mod)
+- Arbeitsgeschwindigkeit: 30 km / h
+
+Platzierbare Gegenstände:
+
+Diesel + Silage -Additivtank
+- Kapazität: 200.000 l
+- Vorgefüllter Diesel: 100.000 l
+- Vorgefüllter Silage -Additiv: 100.000 l
+
+Kleine Heulüftung (Mod)
+- Kapazitätsgras: 10.000.000 l
+- Kapazität Trockenes Gras: 1.000.000 l
+- Kapazitäts Silage: 1.000.000 l
+
+Skriptmods:
+
+Thundr - erweiterte Dateinamen
+
+Ermöglicht die Verwendung von $ keyword $ path/to/Dateiname.xml -Syntax in den meisten XML -Konfigurationsdateien.
+Soweit ich weiß, erlaubt Vanille dies nur an bestimmten Orten.
+Dieser Mod erweitert diese Funktionalität auf die meisten XML -Dateien, einschließlich Platzierungen und Fahrzeuge.
+
+- Ermöglicht die Verwendung von $ mapdir $ path/to/Dateiname.xml
+- Ermöglicht die Verwendung von $ moddir $ fs22_mod_name/path/to/Dateiname.xml
+- Ermöglicht die Verwendung von $ pdlcdir $ path/to/Dateiname.xml
+- Ermöglicht die Verwendung von $ fs22_mod_name $ path/to/Dateiname.xml
+
+- Jede Art von Datei (XML, I3D, PNG, DDS usw.) kann dynamisch geladen werden
+
+- Hinzufügen "!"Nach dem Tag ($ moddir $!) Ermöglicht das Zugriff auf Dateien aus Mods, die nicht geladen werden
+
++ Verwendung mit Vorsicht, könnte unerwartete Ergebnisse verursachen
+https://fs22.com/farming-simulator-22-mods/scripts-tools/extended-filenames-v1-0/
+
+
+BRUCK_ALL_IN_ONE
+https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
+Ausrüstung für die Herstellung von Holzchips und Stumpfmahlen.
+
+
+Mod -Abhängigkeiten:
+
+- FS25_IncreavedWorkareasForPickups
+- FS25_Supercharger
+- FS25_POETTYERMOWERPACKE
+- FS25_BREMERTRALPORTWAGEN
+- FS25_ObjectBalestorage
+- FS25_HAYSTORAGEANDVENTILATION
+
+Aus externen Quellen
+- FS25_Bednarbatwing
+- FS25_Courseplay
+- FS25_Autodrive_xcrosssing
+- FS25_Autodrive
+- FS25_Autodrive_t_intersection
+- FS25_Autodrive_reversetomarker]]&gt;</de>
     </description>
     <iconFilename>store_jumbo8450DB.dds</iconFilename>
     <multiplayer supported="true"/>
