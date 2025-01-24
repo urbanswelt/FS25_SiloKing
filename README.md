@@ -1,7 +1,7 @@
 
 # Silo King Configurations
 
-**Version:** 1.0.1.0  
+**Version:** 1.0.2.0  
 **Author:** SiloKing  
 
 ## Description
@@ -45,7 +45,6 @@ Bredal K105
 AmityTechnology Crop Chaser 1000
 - Capacity: 400,000 L
 
-
 Fendt Vario 1000
 - Max speed: 80 kph
 - color configurations
@@ -70,6 +69,61 @@ NOVACAT A10 Cross Flow(MOD)
 Bednar MM8000 Batwing(MOD)
 - Working speed: 30 kph
 
+Placeable items:
+
+Diesel + Silage Additive Tank
+- Capacity: 200,000 L
+- Prefilled Diesel: 100,000 L
+- Prefilled Silage Additive: 100,000 L
+
+Small Hay Ventilation(MOD)
+- Capacity Grass: 10,000,000 L
+- Capacity Dry Grass: 1,000,000 L
+- Capacity Silage: 1,000,000 L
+
+Script Mods:
+
+ThundR - Extended Filenames
+
+Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. 
+As far as I know, vanilla only allows this in certain places. 
+This mod extends that functionality to most xml files, including placeable items and vehicles.
+
+- Allows use of $mapdir$path/to/filename.xml
+- Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
+- Allows use of $pdlcdir$path/to/filename.xml
+- Allows use of $FS22_MOD_NAME$path/to/filename.xml
+
+- Any type of file (xml, i3d, png, dds, etc.) can be loaded dynamically
+
+- Adding "!" after the tag ($moddir$!) allows accessing files from mods that are not loaded
+
++ Use with caution, could cause unexpected results
+https://fs22.com/farming-simulator-22-mods/scripts-and-tools/extended-filenames-v1-0/
+
+
+BRUCKS_ALL_IN_ONE
+https://forbidden-mods.de/filebase/file/58179-bruks-all-in-one/#comments
+Equipment for the production of wood chips and stump grinding.
+
+
+Mod Dependencies:
+
+- FS25_increasedWorkAreasForPickups
+- FS25_superCharger
+- FS25_poettingerMowerPack
+- FS25_bremerTransportwagen
+- FS25_ObjectBaleStorage
+- FS25_hayStorageAndVentilation
+
+From external sources
+- FS25_BednarBatWing
+- FS25_Courseplay
+- FS25_AutoDrive_xCrossing
+- FS25_AutoDrive
+- FS25_AutoDrive_T_intersection
+- FS25_AutoDrive_reverseToMarker
+
 ### Placeables
 Diesel + Silage Additive Tank
 - Capacity: 200,000 L
@@ -86,7 +140,7 @@ ThundR - Extended Filenames
 
 Allows the use of $KEYWORD$path/to/filename.xml syntax in most xml configuration files. 
 As far as I know, vanilla only allows this in certain places. 
-This mod extends that functionality to most xml files, including placeables and vehicles.
+This mod extends that functionality to most xml files, including placeable items and vehicles.
 
 - Allows use of $mapdir$path/to/filename.xml
 - Allows use of $moddir$FS22_MOD_NAME/path/to/filename.xml
