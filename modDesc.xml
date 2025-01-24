@@ -4,8 +4,10 @@
     <version>1.0.2.0</version>
     <title>
         <en>Silo King Configurations</en>
+        <de>Silo King Konfigurationen</de>
     </title>
-    <description><en><![CDATA[Silo King Configurations - The ultimate loading capacity for your farm!
+    <description>
+        <en><![CDATA[Silo King Configurations - The ultimate loading capacity for your farm!
 
 Note: Remember to disable the "Trailer Fill Limit" option to fully enjoy the large loading capacity!
 
@@ -124,7 +126,7 @@ From external sources
 - FS25_AutoDrive_T_intersection
 - FS25_AutoDrive_reverseToMarker]]></en>
 
-<de><![CDATA[Silo King -Konfigurationen - Die ultimative Ladekapazität für Ihre Farm!
+        <de><![CDATA[Silo King -Konfigurationen - Die ultimative Ladekapazität für Ihre Farm!
 
 HINWEIS: Denken Sie daran, die Option "Trailer Fill Limit" zu deaktivieren, um die große Ladekapazität voll zu genießen!
 
@@ -246,22 +248,22 @@ Aus externen Quellen
     <iconFilename>store_jumbo8450DB.dds</iconFilename>
     <multiplayer supported="true"/>
 
-	<extraSourceFiles>
-		<sourceFile filename="scripts/Main.lua"/>
-	</extraSourceFiles>
+    <extraSourceFiles>
+        <sourceFile filename="scripts/Main.lua"/>
+    </extraSourceFiles>
 
 
-	<vehicleTypes>
-        <type name="bruksAllInOne" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">		
-			<specialization name="groundReference"/>				
-			<specialization name="dischargeable"/> 
-			<specialization name="pipe"/>
-			<specialization name="turnOnVehicle"/>
-			<specialization name="woodCrusher"/>
-			<specialization name="treeSaw"/> 
-			<specialization name="stumpCutter"/>
-			<specialization name="attacherJointControl"/>			
-		</type>
+    <vehicleTypes>
+        <type name="bruksAllInOne" parent="baseFillable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="groundReference"/>
+            <specialization name="dischargeable"/>
+            <specialization name="pipe"/>
+            <specialization name="turnOnVehicle"/>
+            <specialization name="woodCrusher"/>
+            <specialization name="treeSaw"/>
+            <specialization name="stumpCutter"/>
+            <specialization name="attacherJointControl"/>
+        </type>
         <type name="mowerBatwing" parent="mower" filename="$dataS/scripts/vehicles/Vehicle.lua">
             <specialization name="mulcher"/>
             <specialization name="stumpCutter"/>
@@ -280,7 +282,7 @@ Aus externen Quellen
     </materialTemplates>
 
     <storeItems>
-    <!-- vehicles -->
+        <!-- vehicles -->
         <storeItem xmlFilename="SK_Pack/vehicles/poettinger/jumbo8450DB/jumbo8450DB.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/dalbo/maxiroll630Greenline/maxiroll630Greenline.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/goeweil/varioMaster/varioMaster.xml"/>
@@ -292,32 +294,32 @@ Aus externen Quellen
         <storeItem xmlFilename="SK_Pack/vehicles/vaderstad/rexius1230/rexius1230.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/krone/swadroTS970/swadroTS970.xml"/>
         <storeItem xmlFilename="SK_Pack/vehicles/krone/vendroKW820Highland/vendroKW820Highland.xml"/>
-    <!-- mods -->
+        <!-- mods -->
         <storeItem xmlFilename="SK_Pack/mods/novacat301.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/novacatA10CrossFlow.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/smallHayVentilation.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/FS25_Bruks_AIO/bruks_all_in_one.xml"/>
         <storeItem xmlFilename="SK_Pack/mods/mm8000_batwing.xml"/>
-    <!-- placeables -->    
+        <!-- placeables -->
         <storeItem xmlFilename="SK_Pack/placeables/brandless/dieselTanks/level03/dieselTanksLevel03.xml"/>
     </storeItems>
 
-<l10n filenamePrefix="languages/l10n"/>
+    <l10n filenamePrefix="languages/l10n"/>
 
-<dependencies>
-<dependency>FS25_increasedWorkAreasForPickups</dependency>
-<dependency>FS25_superCharger</dependency>
-<dependency>FS25_poettingerMowerPack</dependency>
-<dependency>FS25_bremerTransportwagen</dependency>
-<dependency>FS25_ObjectBaleStorage</dependency>
-<dependency>FS25_hayStorageAndVentilation</dependency>
-<!-- external --> 
-<dependency>FS25_BednarBatWing</dependency>
-<dependency>FS25_Courseplay</dependency>
-<dependency>FS25_AutoDrive_xCrossing</dependency>
-<dependency>FS25_AutoDrive</dependency>
-<dependency>FS25_AutoDrive_T_intersection</dependency>
-<dependency>FS25_AutoDrive_reverseToMarker</dependency>
-</dependencies>
+    <dependencies>
+        <dependency>FS25_increasedWorkAreasForPickups</dependency>
+        <dependency>FS25_superCharger</dependency>
+        <dependency>FS25_poettingerMowerPack</dependency>
+        <dependency>FS25_bremerTransportwagen</dependency>
+        <dependency>FS25_ObjectBaleStorage</dependency>
+        <dependency>FS25_hayStorageAndVentilation</dependency>
+        <!-- external -->
+        <dependency>FS25_BednarBatWing</dependency>
+        <dependency>FS25_Courseplay</dependency>
+        <dependency>FS25_AutoDrive_xCrossing</dependency>
+        <dependency>FS25_AutoDrive</dependency>
+        <dependency>FS25_AutoDrive_T_intersection</dependency>
+        <dependency>FS25_AutoDrive_reverseToMarker</dependency>
+    </dependencies>
 
 </modDesc>
