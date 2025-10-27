@@ -33,7 +33,7 @@ jobs:
           python .github/scripts/placeables_compare_xml.py
 
       - name: Upload Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: xml-comparison-results
           path: |
